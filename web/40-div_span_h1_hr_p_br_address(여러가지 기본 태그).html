@@ -4,17 +4,43 @@
 	<meta charset="UTF-8">
 	<title>div_span_h1_hr_p_br_address(여러가지 기본 태그)</title>
 	<style>
-
+		span{color:red;}
+		address{font-style:normal;}
 	</style>
 </head>
 <body>
 	<div>
-		<h1>h1 태그는 문서의 가장 큰 제목</h1>
+		<h1>h1 태그는 문서의 <span>가장 큰 제목</span></h1>
 		<h2>h2 헤드라인</h2>
 		<h3>h3 헤드라인</h3>
 		<h4>h4 헤드라인</h4>
 		<h5>h5 헤드라인</h5>
 		<h6>h6 헤드라인</h6>
+	</div>
+	
+	<hr />
+	
+	<div>
+		<p>
+			1. h1은 웹페이지에 일반적으로 반드시 딱 한번만 쓰기를 권장합니다. <br />
+			
+			2. h2~h6은 여러번 중복해서 사용할 수 있습니다. <br />
+			
+			3. br 태그는 문장과 문장의 한줄바꿈을 처리합니다. <br />
+			
+			4. br 태그를 요소와 요소를 떨어뜨리기 위해서 여러번 중복해서 사용하는건 절대로 권장하지 않습니다.(옛날방식) <br />
+			
+			5. hr 태그는 컨텐츠와 컨텐츠를 내용상 구분짓고 싶을 때 사용합니다. <br />
+			
+			6. p태그는 단락(문단)을 생성합니다. <br />
+			
+			7. 빈그릇 태그 span은 특정 텍스트에 CSS효과 적용할때 사용
+		</p>
+		
+		<hr />
+		
+		<address>&copy; Designed by 홍길동</address>
+		<address>우주특별시 지구동 화곡로 1234</address>
 	</div>
 </body>
 </html> 
