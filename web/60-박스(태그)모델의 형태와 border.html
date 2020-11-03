@@ -5,29 +5,40 @@
 	<title>60-박스(태그)모델의 형태와 border</title>
 	<style>
 		h1{
+			display:block;
 			background-color:pink;
 			border:1px solid red;
 		}
 		
 		/* > : 직계자식 */
-		div>p{border:1px solid blue;}
+		div>p{
+			display:block;
+			border:1px solid blue;
+		}
 		
 		/*
 			+ : 인접형제(동기)
 			div와 형제이면서, 
 			div 바로 다음에 나오는 p
 		*/
-		div+p{border:1px solid red;}
+		div+p{
+			display:block;
+			border:1px solid red;
+		}
 		
 		/* 
 			~ : 형제(동기)
 			div와 형제이면서,
 			div 이후에 나오는 모든 p
 		*/
-		div~p{color:red;}
+		div~p{
+			display:block;
+			color:red;
+		}
 		
 		
 		span{
+			display:inline;
 			background-color:yellow;
 			border:1px solid blue;
 		}
