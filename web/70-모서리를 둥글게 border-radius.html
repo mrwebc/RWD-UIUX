@@ -45,21 +45,33 @@
 		}
 		
 		
+		/* 클래스명이 ball인 p */
+		p.ball{
+			width:250px;
+			height:250px;
+			background-color:green;
+			border:5px solid yellow;
+			border-radius:125px;
+			box-sizing:border-box;
+		}
+		
+		/* ball 클래스가 붙은 모든 요소 */
+		.ball{color:blue;}
 	</style>
 </head>
 <body>
 	<div id="wrap">
-		<h1>UX디자인 업무</h1>
+		<h1 class="ball">UX디자인 업무</h1>
 		<p>UX디자인은 기획에 좀 더 가깝다.</p>
 		
 		<hr />
 		
 		<div>
-			<p>사용자 리서치/분석</p>
-			<p>Insight(창의적 해석)</p>
-			<p>정보를 계층화하는 IA(사이트맵)</p>
-			<p>사용자 시나리오</p>
-			<p>WireFrame 제작</p>
+			<p class="ball">사용자 리서치/분석</p>
+			<p class="ball">Insight(창의적 해석)</p>
+			<p class="ball">정보를 계층화하는 IA(사이트맵)</p>
+			<p class="ball">사용자 시나리오</p>
+			<p class="ball">WireFrame 제작</p>
 		</div>
 	</div>
 </body>
