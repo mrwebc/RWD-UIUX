@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>	
+		블럭요소와 인라인요소의 display 속성 변환</title>
+	<style>
+/*
+
+		1) div.ib와 span에 오리지널 display 속성을 명시적으로 지정
+		2) border를 줘서 모양과 영역, 줄바꿈 상태 확인
+			.box 는 빨간색
+			.container는 green
+			span은 blue
+
+		3) 각 요소에 사이즈 지정후 모양과 지배영역 재확인
+			3-1) .box에 w:100px / h:50px
+			3-2) .container에 w:100%, h:500px
+			3-3) span에 w:100px / h:50px 지정후 모양과 영역 재확인 (span은 height가 먹지 않음)
+			3-4) .d7에 {margin:50px 100px 150px 200px;} 마진 테스트
+			3-5) span.s2에  {margin:50px 100px 150px 200px;} 마진 테스트
+			
+
+		위에서 연결 진행) display:inline-block 으로 속성 변환 
+
+		4-1) div.ib와 span에 오리지널 display 속성을 삭제후 재확인
+		4-2) div.ib를 dispaly:inline 으로 변환
+		4-3) span를 display:block 으로 변환후 => 노랑배경, 폰트(파랑,이탤릭,굵게,20px)
+		4-4) div.ib와 span을 둘 다 display:inline-block 으로 변환
+*/	
+    
+    div.ib{
+		/* display:block; */
+        display:inline;
+        display:inline-block;
+    }
+	
+    .box{
+        width:100px;
+        height:50px;
+        border:1px solid red;
+    }
+    
+    div.container{
+        width:100%;
+        height:500px;
+        border:1px solid green;
+    }
+    
+    span{
+		/* display:inline; */
+        display:block;
+        display:inline-block;
+        width:100px;
+        height:50px;
+        border:1px solid blue;
+    }
+    
+    .d7{
+        margin:50px 100px 150px 200px;
+    }
+    
+    span.s2{
+        margin:50px 100px 150px 200px;
+    }
+
+ 	
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div class="d1 box ib">나는 d1</div>
+		<div class="d2 box ib">나는 d2</div>
+		<div class="d3 box ib">나는 d3</div>
+		<div class="d4 box ib">나는 d4</div>
+		<div class="d5 box ib">나는 d5</div>
+		<div class="container">
+			<span class="s1">나는 s1</span>
+			<span class="s2">나는 s2</span>
+			<span class="s3">나는 s3</span>
+			<span class="s4">나는 s4</span>
+			<span class="s5">나는 s5</span>
+		</div>
+		<div class="d6 box">나는 d6</div>
+		<div class="d7 box">나는 d7</div>
+		<div class="d8 box">나는 d8</div>
+	</div>
+</body>
+</html>
