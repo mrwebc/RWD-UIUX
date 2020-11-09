@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>100-인라인요소처럼 옆으로 붙으면서 블럭처럼 사이즈 적용이 가능한 inline-block</title>
+	<style>
+		/* 글자크기를 20px, 가운데 정렬 */
+		h1{
+			font-size:20px;
+			text-align:center;
+		}
+		
+		div>span{
+			display:inline-block;
+			width:100px;
+			height:100px;
+		}
+		
+		.box1{background-color:red;}
+		.box2{background-color:blue;}
+		.box3{background-color:yellow;}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1>inline-block</h1>
+		
+		<div>
+			<span class="box1">박스</span><span class="box2">박스</span>
+			<span class="box3">박스</span>
+		</div>
+		
+		<!--
+			1. inline-block : 인라인요소처럼 옆으로 붙으면서, 블럭요소처럼 크기적용이 가능함
+			
+			2. 요소간의 줄바꿈은 한칸의 공백으로 인식한다.
+		-->
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
