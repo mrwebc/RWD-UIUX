@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>90-블럭, 인라인요소의 특징과 overflow 개념</title>
+	<style>
+		/* embeded 방식의 style */
+		
+		/* ,(콤마) : 그룹연산자 */
+		h1,p{
+			display:block;
+			width:400px;
+			height:400px;
+			font-weight:600;
+			font-size:20px;
+			background-color:yellow;
+			border:1px solid blue;
+		}
+		
+		/* 인접형제 연산자를 이용해서 p 선택 */
+		span+p{
+			background-color:red;
+		}
+		
+		
+		div{
+			overflow:hidden;
+			width:80px;
+			height:20px;
+			background-color:green;
+		}
+		
+	</style>
+</head>
+<body>
+	
+	<h1>나는 블럭요소 h1</h1>
+	<span>나는 인라인요소 span</span>
+	<p>나는 블럭요소 p</p>
+	<div>나는 블럭요소 div</div>	
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
