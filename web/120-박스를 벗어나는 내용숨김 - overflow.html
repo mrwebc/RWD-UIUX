@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>120-박스를 벗어나는 내용숨김 - overflow</title>
+	<style>
+		#wrap{text-align:center;}
+		h2{font-size:20px;}
+		h2+p>img{border:1px solid gray;}
+		
+		.parent{
+			/* 크기가 250*100 이며 핑크배경색, 5px의 dotted 검정테두리 */
+			width:250px;
+			height:100px;
+			margin-bottom:150px;
+			background-color:pink;
+			border:5px dotted black;
+		}
+		
+		.parent>.child{
+			width:300px;
+			height:160px;
+			color:white;
+			background-color:blue;
+			border:10px solid red;
+		}
+		
+		.box_1{overflow:visible;}/*기본값*/
+		.box_2{overflow:scroll;}
+		.box_3{overflow:auto;}/* 결과적으로 scroll과 같다. */
+		.box_4{overflow:hidden;}
+		
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1>UX Design은 문제해결 과정</h1>
+		<h2>
+			"프로젝트에서 해결할 가치가 있는 Problem을 잘 찾았는지" <br />
+			혹은 "사용자들이 직면한 Problem을 잘 파악하였는지"에 <br />
+			무게중심을 둬야 합니다.
+		</h2>
+		
+		<p>
+			<img src="./images/5-whys.jpg" alt="근본원인을 도출하는 UX분석 툴" />
+		</p>
+		
+		<hr />
+		
+		<h2>Discover(탐색)</h2>
+		
+		<!--
+			div.parent.box_$*4>p.child
+		-->
+		
+		<div class="parent box_1">
+			<p class="child">Needs Statements</p>
+		</div>
+		
+		<div class="parent box_2">
+			<p class="child">관계자 인터뷰</p>
+		</div>
+		
+		<div class="parent box_3">
+			<p class="child">경쟁자 및 시장분석</p>
+		</div>
+		
+		<div class="parent box_4">
+			<p class="child">사용자 리서치</p>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
