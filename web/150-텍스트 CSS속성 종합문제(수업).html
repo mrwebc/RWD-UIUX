@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>텍스트 CSS속성 종합문제</title>
+		<!-- https://www.youtube.com/watch?v=R8QmzQRNM44&t=230s -->
+		<style>
+			#wrap{
+				width: 500px;
+				margin: 0 auto;
+				text-align: center;
+			}
+
+			h1.title {
+				text-indent:-200px;
+				border:1px dotted blue;
+             /* 
+                왼쪽으로 -200px만큼 들여쓰기
+                파랑색 외곽선을 dotted으로 표현
+              */			
+			}
+
+			p.bank {			
+             /* 줄간격을 3가지 방법으로 약 200% 설정 */
+				line-height:200%;
+				line-height:2;
+				line-height:32px;
+			}
+
+			.voice {
+				/* 글자크기를 30px으로 */
+				font-size:30px;
+			}
+
+			.sad {
+				/* 글자색을 빨간색으로 */
+				color:red;
+			}
+
+			.told {
+				/* 글자를 굵게 */
+				font-weight:800;
+			}
+
+			.for {
+				/* 글자크기를 부모의 1.5배, 굴림체로 설정 */
+				font-size:1.5em;
+				font-family:굴림;
+				
+				/* 서체를 pretty back 으로 설정하시오 */
+				font-family:"pretty back";
+				
+				/* 돋움, 굴림, sandol, pretty back, sf 서체설정 */
+				font-family:돋움,굴림,sandol,"pretty back", sf;
+			}
+
+			.return {
+				/* 밑줄을 넣음 */
+				text-decoration:underline;
+			}
+
+			.last {
+				/* 초록색의 굵은 이탤릭체로 설정 */
+				color:green;
+				font-style:italic;
+				font-weight:800;
+			}
+
+			.mind {
+				/* 글자간격을 10픽셀로 */
+				letter-spacing:10px;
+			}
+
+			.beside {
+				/* 단어간의 간격을 30픽셀, 노란배경색 적용 */
+				word-spacing:30px;
+				background-color:yellow;
+			}
+		</style>	
+	</head>
+	<body>
+		<div id="wrap">
+			<h1 class="title"> 가질 수 없는 너 - 뱅크</h1>
+			<p class="bank">
+				술에 취한 니 <span class="voice">목소리</span> 문득 생각났다던 그 말
+				<br />
+				<span class="sad">슬픈 예감</span> 가누면서 네게로 달려갔던 날 그 밤
+				<br />
+				희미한 두 눈으로 날 반기며 <span class="told">넌 말했지</span>
+				<br />
+				헤어진 <span class="for">그를 위해선 남아있는</span> 네 삶도 버릴 수 있다고
+				<br />
+				며칠 사이 야윈 널 달래고 집으로 <span class="return">돌아오면서</span>
+				<br />
+				<span class="last">마지막까지도</span> 하지 못한 말 혼자서 되뇌였었지
+				<br />
+				사랑한다는 <span class="mind">마음으로도</span> 가질 수 없는 사람이 있어
+				<br />
+				나를 봐 <span class="beside">이렇게 곁에 있어도</span> 널 갖지 못하잖아
+				<br />
+			</p>
+		</div>
+	</body>
+</html>
+
+
