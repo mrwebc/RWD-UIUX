@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>170-권장하지 않는 축약형 font 속성</title>
+	<style>
+	/*
+		폰트 축약형 정리
+		
+		1. font-size, font-family는 절대 생략불가, 순서를 반드시 지켜야 함
+		
+		2. line-height를 적용할 경우 반드시 font-size 속성 뒤에 슬래시(/)를 붙이고 기재한다.
+		
+		3. 나머지 속성들(font-weight, font-style, line-height 등)은 생략 가능
+	*/
+		p{
+			font:italic 800 30px/40px 굴림;
+			border:1px solid red;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1>font 축약형은 권장하지 않습니다.</h1>
+		<p>
+			그 이유는 브라우저가 해석해야 할 <br />
+			정보(코드)가 많아지기 때문입니다.
+		</p>
+		
+		<p>
+			font 축약형을 사용하는 것보다 <br />
+			font-style <br />
+			font-weight <br />
+			font-size <br />
+			line-height <br />
+			font-family 처럼 <br />
+			따로따로 CSS 속성을 지정하길 권장합니다.
+		</p>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
