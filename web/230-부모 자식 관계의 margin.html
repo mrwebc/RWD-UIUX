@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>230-부모 자식 관계의 margin</title>
+	<style>
+		/* 약식초기화 */
+		*{margin:0;padding:0;}
+		
+		#wrap{
+			margin-top:200px;
+			border:1px solid green;
+		}
+		
+		h1{display:none;}/* flow에서 삭제됨 */
+		
+		.parent{
+			width:250px;
+			height:250px;
+			border:1px solid red;
+		}
+		
+		/*
+			+(플러스) 값은 아래/오른쪽 방향으로 움직이고
+			-(마이너스)값은 위/왼쪽 방향으로 움직인다.
+		*/
+		
+		.parent>.child{
+			width:100px;
+			height:100px;
+			margin-top:-50px;
+			margin-left:90px;
+			line-height:100px;
+			text-align:center;
+			background-color:yellow;
+			border:1px solid blue;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1>바깥쪽 여백을 의미하는 margin</h1>
+		
+		<div class="parent">
+			<p class="child">자식박스</p>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
