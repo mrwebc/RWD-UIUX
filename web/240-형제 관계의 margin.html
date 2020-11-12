@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>240-형제 관계의 margin</title>
+	<link rel="stylesheet" href="./css/reset.css" />
+	<style>
+		h1{display:none;}
+		
+		.parent{
+			width:600px;
+			height:500px;
+			border:1px solid red;
+		}
+		
+		.parent>p{
+			display:inline-block;
+			width:100px;
+			height:100px;
+			border:1px solid blue;		
+		}
+		
+		/* 문제1) 클래스명이 child_1인 p태그에게 윗마진 100px 적용 */
+		
+		/* 문제2) 클래스명이 chlid_1인 요소에게 오른마진 100px, 왼마진 200px을 적용하세요. */
+		
+		.parent>.child_1{
+			margin-top:100px;
+			margin-right:100px;
+			margin-left:200px;
+			background-color:yellow;
+		}
+		
+		/* 문제3) 클래스명이 chlid_2인 요소에게 왼쪽마진 50px을 적용하세요 */
+			 
+		.parent>.child_2{
+			 background-color:green;
+		}		
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1>형제관계의 margin</h1>
+		
+		<div class="parent">
+			<p class="child_1">자식1</p><p class="child_2">자식2</p>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
