@@ -14,3 +14,8 @@ body{
 	line-height:1.2;
 	font-family:"Nanum Gothic",돋움,굴림;
 }
+
+.text-center{
+	line-height:100px;
+	text-align:center;
+}

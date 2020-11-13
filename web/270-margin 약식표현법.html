@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>270-margin 약식표현법</title>
+   <link rel="stylesheet" href="./css/reset.css" />
+   <style>
+      h1{display:none;}
+      .parent{
+				 overflow:hidden;
+         width:600px;
+         height:200px;
+         font-size:0;
+         border:1px solid red;
+      }
+      
+      .parent>p{
+         width:120px;
+         height:50px;
+         font-size:12px;
+         border:1px solid black;
+      }
+      
+      .child_1,
+      .child_2{
+         display:inline-block;
+      }
+			
+			/* 문제1) 자식1의 마진을 100, 150, 20, 200으로 설정하시오 */
+			/* 문제2) 자식1의 마진을 50, 100, 30, 100으로 설정하시오 */
+			/* 문제3) 자식1의 마진을 90, 120, 90, 120으로 설정하시오 */
+			/* 문제4) 자식1의 마진을 30, 30, 30, 30으로 설정하시오 */
+			
+			
+			.child_1{
+				margin:100px 150px 20px 200px;
+				margin:50px 100px 30px;
+				margin:90px 12px;
+				margin:30px;
+			}
+			
+      
+   </style>
+</head>
+<body>
+   <div id="wrap">
+      <h1>margin 약식표현법</h1>
+      
+      <div class="parent">
+         <p class="child_1">자식1(120*50)</p>
+         <p class="child_2">자식2</p>
+         <p class="child_3">자식3</p>
+      </div>
+   </div>
+</body>
+</html>

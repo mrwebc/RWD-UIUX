@@ -2,10 +2,15 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<title>270-margin 약식표현법</title>
+	<title>280-부모의 폭과 margin의 관계</title>
 	<link rel="stylesheet" href="./css/reset.css" />
 	<style>
-		h1{display:none;}
+		h1{
+			display:none;
+			height:100px;
+			background-color:pink;
+		}
+		
 		.parent{
 			width:600px;
 			height:200px;
@@ -14,31 +19,33 @@
 		}
 		
 		.parent>p{
-			width:120px;
+			display:inline-block;
+			width:150px;
 			height:50px;
 			font-size:12px;
 			border:1px solid black;
 		}
 		
-		.child_1,
-		.child_2{
-			display:inline-block;
-		}
+		/* .child_1{margin-right:400px;} */
 		
+		.child_2{margin-left:400px;}
 	</style>
 </head>
 <body>
 	<div id="wrap">
-		<h1>margin 약식표현법</h1>
+		<h1 class="text-center">부모의 폭과 margin</h1>
 		
 		<div class="parent">
-			<p class="child_1">자식1(120*50)</p>
+			<p class="child_1">자식1</p>
 			<p class="child_2">자식2</p>
-			<p class="child_3">자식3</p>
 		</div>
 	</div>
 </body>
 </html>
+
+
+
+
 
 
 
