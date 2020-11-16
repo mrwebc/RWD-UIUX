@@ -2,7 +2,9 @@ homework/
 setup/
 photoshop/
 01-UI디자인/
+개인상담/
 
+.gitignore
 *.zip
 *.pptx
 팀뷰어접속번호.txt
