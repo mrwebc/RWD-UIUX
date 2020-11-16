@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>300-부모 자식간의 margin 통합현상</title>
+	<link rel="stylesheet" href="./css/reset.css" />
+	<style>
+		.parent{
+			width:600px;
+			height:600px;
+			background-color:#FF0;
+			border:1px solid transparent;
+			box-sizing:border-box;
+		}
+		
+		.child{
+			/* display:inline-block; */
+			width:100px;
+			height:100px;
+			margin-top:100px;
+			color:#fff;
+			background-color:#00f;
+			
+			/*
+				해결방법
+				1. 자식에게 d:ib 적용
+				2. 부모에게 border 적용
+			*/
+		}
+	</style>
+</head>
+<body>
+	<div class="parent">
+		<p class="child">자식박스</p>
+	</div>
+</body>
+</html>
+
+
+
+
