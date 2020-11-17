@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>370-이미지밑에 약간 뜨는 현상</title>
+	<link rel="stylesheet" href="./css/reset.css" />
+	<style>
+		.frame{
+			display:block;
+			width:200px;
+			margin:0 auto;
+			border:1px solid red;
+		}
+		
+		.frame>img{
+			width:100%;
+			display:block;/* 이미지 밑에 약간 뜨는 현상 해결하는 코드 */
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1 class="text-center">이미지 이상현상</h1>
+		
+		<p>
+			<span class="frame">
+				<img src="./images/2.gif" alt="강진 사당리 고려청자 전시회" />
+			</span>
+		</p>
+	</div>
+</body>
+</html>
+
+
+
+
