@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>420-앵커태그-페이지 이동</title>
+	<link rel="stylesheet" href="./css/reset.css" />
+	<style>
+		ul,ol,li{list-style:none;}
+		a{text-decoration:none;}
+		
+		ol>li>a{
+			display:block;
+			width:300px;
+			height:50px;
+			margin:0 auto 50px;
+			line-height:50px;
+			text-align:center;
+			border:1px solid black;
+			/*
+				사이즈:300*50
+				검정테두리, 가세정렬,
+				박스를 부모의 중앙에 오도록 한다.
+			*/		
+		}
+		
+		ol>li>a:hover{
+			text-decoration:underline;
+			background-color:#ff0;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1 class="text-center">
+			&lt;a&gt;-원하는 문서나 사이트로 연결
+		</h1>
+		
+		
+		<ol>
+			<!-- 여기에서 #은 현재페이지를 뜻함 -->
+			<li><a href="https://www.naver.com/">네이버(외부사이트 이동)</a></li>
+			
+			<li><a href="./410-한국의 라면.html">410-한국의 라면(내부페이지)</a></li>
+			
+			<li><a href="https://www.daum.net/" target="_blank">Daum(새탭에서 열기)</a></li>
+		</ol>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
