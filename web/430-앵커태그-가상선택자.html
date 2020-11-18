@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>430-앵커태그-가상선택자</title>
+	<link rel="stylesheet" href="./css/reset.css" />
+	<style>
+		/* 앵커태그에 href 속성이 설정된 경우 */
+		a:link{color:orange;text-decoration:none;}
+		
+		/* 앵커태그에 설정된 href 주소로 한번이라도 방문한 기록이 브라우저에 저장된 경우 */
+		a:visited{color:green;}
+		
+		/*  */
+		
+		/*  */
+	
+	
+		h1+a{
+			display:block;
+			border:1px solid #f00;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1 class="text-center">전천후태그 앵커</h1>
+		
+		<a href="#">
+			<h1>html5에서 앵커태그는 블럭요소를 자식으로 가질 수 있다.</h1>
+		</a>
+		
+		<span>
+			<p>이렇게 앵커가 아닌 인라인요소로 블럭요소를 감싸면 유효성검사에서 오류 발생함</p>
+		</span>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
