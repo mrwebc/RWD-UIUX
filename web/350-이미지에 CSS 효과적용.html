@@ -1,31 +1,55 @@
 <!DOCTYPE HTML>
 <html lang="ko">
 <head>
-	<meta charset="UTF-8">
-	<title>350-이미지에 CSS 효과적용</title>
-	<style>
-
-	</style>
+   <meta charset="UTF-8">
+   <title>이미지에 CSS 효과적용</title>
+   <link rel="stylesheet" href="./css/reset.css" />
+   <style>
+      #wrap{
+         width:1000px;
+         margin:0 auto;
+         border:1px solid #f00;
+         }
+      
+      p>.pic_1{
+         width:60px;
+         border:5px solid #000;
+      }
+      
+      p>.pic_2{
+         width:80px;
+         margin:0 10px 0;
+         border:5px dotted #f00;
+      }
+      
+      p>.pic_3{
+         width:100px;
+         margin:0 10px 0;
+         border:7px dashed #00f;
+      }
+      
+      p>.pic_4{
+         width:130px;
+         margin:0 10px 0;
+         border:10px double #0f0;
+      }
+      
+      p>.pic_5{
+         width:170px;
+         margin:10px 30px;
+      }
+   </style>
 </head>
 <body>
-	<div id="wrap">
-		<h1>국립중앙박물관 전시일정</h1>
-		<p>
-			<img src="" alt="" class="pic_1" />
-			<img src="" alt="" class="pic_2" />
-			<img src="" alt="" class="pic_3" />
-			<img src="" alt="" class="pic_4" />
-			<img src="" alt="" class="pic_5" />
-		</p>
-	</div>
+   <div id="wrap">
+      <h1 class="text-center">국립중앙박물관 전시일정</h1>
+      <p>
+         <img src="./images/1.gif" alt="루벤스와 세기의 거장들" class="pic_1" />
+         <img src="./images/2.gif" alt="강진 사당리 고려청자 전시" class="pic_2" />
+         <img src="./images/3.gif" alt="신석기인, 새로운 환경에 적응하다 포스터" class="pic_3" />
+         <img src="./images/4.jpg" alt="큐레이터와의 대화 안내문" class="pic_4" />
+         <img src="./images/5.jpg" alt="오페라와 뮤지컬 판타지아 포스터" class="pic_5" />
+      </p>
+   </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
