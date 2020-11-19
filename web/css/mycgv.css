@@ -45,6 +45,33 @@ body{color:#444;background-color:#fdfcf0;}
 
 .section>.guide>ul>li>span{display:block;text-indent:10px;}
 
+
+.section>.contact{margin-top:20px;}
+
+.section>.contact>h3{
+	margin-left:30px;
+	font-size:13px;
+}
+
+.section>.contact>div{
+	margin:20px 15px;
+	padding:20px 0 5px 20px;
+	border:1px solid #555;
+}
+
+.section>.contact li{line-height:1.8;}
+.section>.contact>div>p{
+	/* height:40px; */
+	line-height:40px;
+}
+
+.section>.contact>.info{padding:20px;}
+.section>.contact>.info>p{
+	line-height:20px;
+}
+
+.section>.contact>.info>address{margin-top:2px;}
+
 /* 푸터영역 */
 .footer a{
 	display:block;
