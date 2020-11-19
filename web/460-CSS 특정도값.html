@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>460-CSS 특정도값</title>
+	<style>
+		h1{color:red;font-size:50px;} /* 특정도값 : 1점 */
+		h1{color:blue;} /* 태그는 특정도값 : 1점 */
+		
+		#logo{color:green;} /* 아이디는 특정도값 : 100점 */
+		
+		.uiux{color:black;} /* 클래스는 특정도값 : 10점 */
+		
+		
+		h1#logo.uiux+ul>li.notepad+li{font-style:italic;} /* 특정도값 : 124점 */
+		
+		li.notepad+li{font-style:italic !important;}/* 특정도값 : 12점 */
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1 id="logo" class="uiux">CSS 구체성 단위</h1>
+		
+		<ul>
+			<li class="notepad">클래스와 가상선택자는 특정도값 : 10점</li>
+			<li style="font-style:normal;">인라인 방식은 특정도값 : 무조건 1000점</li>
+		</ul>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
