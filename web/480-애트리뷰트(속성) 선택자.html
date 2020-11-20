@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>480-애트리뷰트(속성) 선택자</title>
+	<link rel="stylesheet" href="./css/reset.css" />
+	<style>
+		p{line-height:40px;text-align:center;}
+		
+		p>a{display:block;}
+		
+		/* [target]속성을 갖는 a 요소를 선택 */
+		a[target]{background-color:#ff0;}
+		
+		
+		/* [속성명=값]이 일치하는 a 요소를 선택 */
+		a[href="https://naver.com"]{font-size:30px;}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1 class="text-center">
+			태그의 속성을 이용한 CSS 선택
+		</h1>
+		
+		<p>
+			<a href="#" target="_blank">네이버</a>
+			<a href="https://naver.com/">네이버</a>
+			<a href="https://naver.com">네이버</a>
+			<a href="https://naver.com/" title="naver 바로가기">네이버</a>
+		</p>
+	</div>
+</body>
+</html>
+
+
+
+
+
