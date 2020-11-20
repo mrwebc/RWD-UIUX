@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>470-가상선택자 hover의 활용(수업)</title>
+	<link rel="stylesheet" href="./css/reset.css" />
+	<style>
+		/* 첫번째 li의 글자색을 red, 크기를 50px */
+		ol>li:first-child{color:red;}
+		ol>li:nth-child(1){font-size:50px;}
+		
+		/* 마지막 li의 글자색을 blue, 크기를 30px */ 
+		ol>li:last-child{color:blue;}
+		ol>li:nth-child(10){font-size:30px;}
+		
+		/* 7번째 li의 글자색을 green, 크기를 40px */
+		ol>li:nth-child(7){
+			color:green;
+			font-size:40px;
+		}
+		
+		/* 짝수번째 li에 배경색을 노랑, 이탤릭체로 설정 */
+		ol>li:nth-child(even){background-color:#ff0;}
+		ol>li:nth-child(2n){font-style:italic;}
+		
+		/* 홀수번째 li에 밑줄, 아주굵게 설정 */
+		ol>li:nth-child(odd){text-decoration:underline;}
+		ol>li:nth-child(2n+1){font-weight:800;}
+		
+		
+		#wrap{
+			width:85%;/* 가변사이즈 */
+			margin:0 auto;
+			border:1px solid #f00;/* 삭제예정 */
+		}
+		
+		ul>li{border-top:1px dotted #000; }
+		
+		ul>li:last-child{border-bottom:1px dotted #000;}
+		
+		/* 터치영역 */
+		ul>li>a{
+			display:block;
+			padding:12px 15px;
+			/* background-color:pink; */
+		}
+		
+		ul>li>a:hover{background-color:#ff0;}
+		
+		ul>li>a>h2{margin-bottom:9px;}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1 class="text-center">제목, 설명구조의 listview</h1>
+		
+		<div>
+			<ul>
+				<li>
+					<a href="#">
+						<h2>HTML</h2>
+						<p>웹 페이지를 제작하기 위한 뼈대를 구성하는 언어</p>
+					</a>
+				</li>
+				
+				<li>
+					<a href="#">
+						<h2>CSS</h2>
+						<p>HTML로 구성된 뼈대에 옷을 입히는 언어</p>
+					</a>
+				</li>
+				
+				<li>
+					<a href="#">
+						<h2>JavaScript</h2>
+						<p>동적인 기능을 추가하여 웹페이지에 생명을 불어 넣는 언어</p>
+					</a>
+				</li>
+
+			</ul>
+			
+			
+		</div>
+		
+		<hr style="display:block;margin:100px 0;" />
+		
+		<div>
+			<h2>가상선택자</h2>
+			
+			<ol>
+				<li>:first-child</li>
+				<li>:nth-child(2)</li>
+				<li>:nth-child(3)</li>
+				<li>:nth-child(4)</li>
+				<li>:nth-child(2n) 짝수번째</li>
+				<li>:nth-child(even) 짝수번째</li>
+				<li>:nth-child(2n+1) 홀수번째</li>
+				<li>:nth-child(odd) 홀수번째</li>
+				<li>:nth-child(수열식)</li>
+				<li>:last-child</li>
+			</ol>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

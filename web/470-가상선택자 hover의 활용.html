@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>470-가상선택자 hover의 활용</title>
+   <link rel="stylesheet" href="./css/reset.css" />
+   <style>
+      body{
+         color:#666;
+         font-size:13px;
+      }
+      #wrap{
+         width:1100px;
+         margin:0 auto;
+      }
+      h1.text-center{
+         font-weight:600;
+      }
+      .definition{
+         line-height:1.7;
+         border-top:1px dotted #666;
+      }
+      a{
+         display:block;
+         padding:7px 20px;
+         color:#666;
+         border-bottom:1px dotted #ccc;
+         text-decoration:none;
+      }
+      a:hover{
+         background-color:#FF0;
+      }
+      dt{
+         font-weight:700;
+         font-size:18px;
+      }
+      
+   </style>
+</head>
+<body>
+   <div id="wrap">
+      <h1 class="text-center">제목, 설명구조의 listView</h1>
+      <div class="definition">
+         <a href="#">
+            <dl>
+               <dt>HTML</dt>
+               <dd>웹페이지를 제작하기 위한 뼈대를 구성하는 언어</dd>
+            </dl>
+         </a>            
+         <a href="#">
+            <dl>
+               <dt>CSS</dt>
+               <dd>HTML로 구성된 뼈대에 옷을 입히는 언어</dd>
+            </dl>
+         </a>
+         <a href="#">
+            <dl>
+               <dt>JavaScript</dt>
+               <dd>동적인 기능을 추가하여 웹페이지에 생명을 불어 넣는 언어</dd>
+            </dl>
+         </a>
+      </div>
+   </div>
+</body>
+</html>
