@@ -8,16 +8,24 @@
 		#wrap{
 			width:90%;
 			margin:0 auto;
-			border:1px solid black;
+			/* border:1px solid black; */
 		}
 		
 		section{
 			display:flex;
-			flex-direction:column;
+			display:inline-flex;
+			/* 
+				inline-flex를 지정할 경우 플렉스 컨테이너가 가로로 나열된다.
+				이때 각 컨테이너의 item들에 영향을 주지 않는다.
+			*/
+			
+			flex-flow:row nowrap;
+			/* direction과 wrap 속성을 한번에 기술함 */
+			
+			flex-direction:row;
 			/* row, row-reverse, column, column-reverse */
 			
-			flex-wrap:nowrap;
-			
+			flex-wrap:nowrap;			
 			/*
 				nowrap - 두줄 이상으로 표현하지 않고 한줄로 나열하겠다.(기본값)
 				부모 컨테이너의 wdith가 모자랄 경우 item 박스의 가로폭 비율대로 자동계산되어 적용된다.
@@ -29,7 +37,9 @@
 			*/
 			
 			
-			height:500px;
+			height:350px;
+			margin-bottom:10px;
+			border:1px solid black;
 		}
 		
 		section>p{height:300px;}
@@ -69,6 +79,28 @@
 			<p class="green">green</p>
 			<p class="orange">orange</p>
 		</section>
+		<section>
+			<p class="red">red</p>
+			<p class="blue">blue</p>
+			<p class="yellow">yellow</p>
+			<p class="green">green</p>
+			<p class="orange">orange</p>
+		</section>
+		<section>
+			<p class="red">red</p>
+			<p class="blue">blue</p>
+			<p class="yellow">yellow</p>
+			<p class="green">green</p>
+			<p class="orange">orange</p>
+		</section>
+		<section>
+			<p class="red">red</p>
+			<p class="blue">blue</p>
+			<p class="yellow">yellow</p>
+			<p class="green">green</p>
+			<p class="orange">orange</p>
+		</section>
+		
 	</div>
 </body>
 </html>
