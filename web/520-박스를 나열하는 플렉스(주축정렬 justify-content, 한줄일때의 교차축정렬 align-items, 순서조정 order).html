@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>520-박스를 나열하는 플렉스(주축정렬 justify-content)</title>
+	<link rel="stylesheet" href="./css/reset.css" />
+	<style>
+		#wrap{
+			width:90%;
+			margin:0 auto;
+		}
+		
+		section{
+			display:flex;
+			/*
+				만약 아이템(박스)의 높이가 설정되어 있지 않으면 
+				아이템의 높이값은 부모의 100%가 된다.
+				
+				왜냐하면 교차축정렬을 담당하는 align-items 속성의 값이
+				stretch 된다. 그러면 컨테이너의 교차축을 채우기위해 
+				item을 쭈욱 늘린다.
+			*/
+			
+			/* 주축정렬 */
+			
+			/* flex-start 지점을 기준으로 나열된다. (기본값) */
+			justify-content:flex-start;
+			
+			/* flex-end 지점을 기준으로 나열된다. */
+			justify-content:flex-end;
+			
+			/* 주축의 중앙에 나열 */
+			justify-content:center;
+			
+			/* 모든 플렉스 아이템이 좌우로 같은 마진값을 가지도록 하여 나열한다. */
+			justify-content:space-around;
+			
+			/* 좌우 아이템을 양끝에 붙이고 나머지는 동일 간격으로 나열한다. */
+			justify-content:space-between;
+			
+			
+			/* 1줄일때의 교차축 정렬 : align-items  */
+			align-items:center; /* 아이템을 교차축의 중앙에 정렬 */
+			align-items:flex-start; /* 기본값 */
+			align-items:flex-end; /* 교차축의 끝점에 정렬 */
+			
+			align-items:stretch; 
+			/* 
+				플렉스 컨테이너의 높이값만큼 아이템의 높이를 늘린다. 
+				단, 아이템에 높이값이 지정되어 있을 경우에는 작동하지 않음
+			*/
+			
+	
+			align-items:baseline;/* 아이템을 문자 기준선에 정렬 */
+			
+			
+			height:300px;
+			border:1px solid #000;
+		}
+		
+		section>p{height:100px;}
+		
+		/* order 속성을 item에 부여하여 나열 순서를 조정할 수 있다. */
+		
+		.red{
+			order:300;
+			width:20%;
+			background-color:red;
+		}
+		
+		.blue{
+			order:400;
+			width:200px;
+			background-color:blue;
+		}
+		
+		.yellow{
+			order:100;
+			width:40%;
+			font-size:50px;
+			background-color:yellow;
+		}
+		
+		.green{
+			order:500;
+			width:100px;
+			background-color:green;
+		}
+		
+		.orange{
+			order:200;
+			width:50px;
+			background-color:orange;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<section>
+			<p class="red">1-red</p>
+			<p class="blue">2-blue</p>
+			<p class="yellow">3-yellow</p>
+			<p class="green">4-green</p>
+			<p class="orange">5-orange</p>
+		</section>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

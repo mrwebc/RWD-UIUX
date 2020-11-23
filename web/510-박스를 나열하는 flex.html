@@ -22,10 +22,14 @@
 			flex-flow:row nowrap;
 			/* direction과 wrap 속성을 한번에 기술함 */
 			
-			flex-direction:row;
-			/* row, row-reverse, column, column-reverse */
+			flex-direction:column-reverse;
+			/* 
+				row, row-reverse, column, column-reverse 
+				
+				row-reverse, column-reverse 는 정렬된 줄 안에서 순서가 바뀌는 개념
+			*/
 			
-			flex-wrap:nowrap;			
+			flex-wrap:wrap-reverse;			
 			/*
 				nowrap - 두줄 이상으로 표현하지 않고 한줄로 나열하겠다.(기본값)
 				부모 컨테이너의 wdith가 모자랄 경우 item 박스의 가로폭 비율대로 자동계산되어 적용된다.
@@ -33,11 +37,11 @@
 				
 				wrap - 부모 컨테이너의 width가 부족할 경우 2줄 이상으로 나열 하겠다.
 				
-				wrap-reverse - wrap 방식인데 줄이 역순으로 바뀌어서 나열됨
+				wrap-reverse - wrap 방식인데 정렬된 줄과 줄의 순서가 역순으로 나열된다.
 			*/
 			
 			
-			height:350px;
+			height:1000px;
 			margin-bottom:10px;
 			border:1px solid black;
 		}
@@ -73,34 +77,12 @@
 <body>
 	<div id="wrap">
 		<section>
-			<p class="red">red</p>
-			<p class="blue">blue</p>
-			<p class="yellow">yellow</p>
-			<p class="green">green</p>
-			<p class="orange">orange</p>
+			<p class="red">1-red</p>
+			<p class="blue">2-blue</p>
+			<p class="yellow">3-yellow</p>
+			<p class="green">4-green</p>
+			<p class="orange">5-orange</p>
 		</section>
-		<section>
-			<p class="red">red</p>
-			<p class="blue">blue</p>
-			<p class="yellow">yellow</p>
-			<p class="green">green</p>
-			<p class="orange">orange</p>
-		</section>
-		<section>
-			<p class="red">red</p>
-			<p class="blue">blue</p>
-			<p class="yellow">yellow</p>
-			<p class="green">green</p>
-			<p class="orange">orange</p>
-		</section>
-		<section>
-			<p class="red">red</p>
-			<p class="blue">blue</p>
-			<p class="yellow">yellow</p>
-			<p class="green">green</p>
-			<p class="orange">orange</p>
-		</section>
-		
 	</div>
 </body>
 </html>
