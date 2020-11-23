@@ -13,8 +13,20 @@
 		
 		section{
 			display:flex;
-			flex-direction:row;
+			flex-direction:row-reverse;
+			/* row, row-reverse */
+			
 			flex-wrap:nowrap;
+			
+			/*
+				nowrap - 두줄 이상으로 표현하지 않고 한줄로 나열하겠다.(기본값)
+				부모 컨테이너의 wdith가 모자랄 경우 item 박스의 가로폭 비율대로 자동계산되어 적용된다.
+				(줄이 바뀌지 않음-drop현상 발생하지 않음)
+				
+				wrap - 부모 컨테이너의 width가 부족할 경우 2줄 이상으로 나열 하겠다.
+				
+				wrap-reverse - wrap 방식인데 줄이 역순으로 바뀌어서 나열됨
+			*/
 		}
 		
 		section>p{height:300px;}
