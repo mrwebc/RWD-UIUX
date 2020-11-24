@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>540-flex를 이용한 레이아웃(문제)</title>
+	<link rel="stylesheet" href="./css/reset.css" />
+	<style>
+		#wrap{
+			width:638px;
+			margin:0 auto;
+		}
+		
+		header>h1{
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			height:100px;
+		}
+		
+		section{}
+		
+		section>ul{
+			display:flex;
+			flex-direction:row;
+			flex-wrap:nowrap;
+			flex-flow:row nowrap;
+			
+			/* 
+				justify-content:space-between; 속성을 적용하면
+				아래의 margin-right 구문은 필요없음				
+			*/
+		}
+		
+		section>ul>li{
+			width:150px;
+			margin-right:10px;
+			border:1px solid #000;
+		}
+		
+		section>ul>li:last-child{margin-right:0;}
+		
+		section>ul>li>a{
+			display:block;
+			height:50px;
+			line-height:50px;
+			text-align:center;
+			background-color:#ff0;
+		}
+		
+		section>article{
+			/* width:638px; */
+			height:300px;
+			margin-top:10px;
+			border:1px solid #000;
+			box-sizing:border-box;
+		}
+		
+		footer>address{
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			height:50px;			
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<header>
+			<h1>웹표준 퍼블리싱 강좌</h1>
+		</header>
+		
+		<section>
+			<h2 class="text-hide">수업내용</h2>
+			<!-- ul>li*4>a[href=#] -->
+			<ul>
+				<li><a href="#">보충특강</a></li>
+				<li><a href="#">문제풀이</a></li>
+				<li><a href="#">자료실</a></li>
+				<li><a href="#">작업환경</a></li>
+			</ul>
+			<article>
+				<h3>선택에 따른 내용 출력란(컨텐츠)</h3>
+			</article>
+		</section>
+		
+		<!-- 높이 50, 가세정렬 -->
+		<footer>
+			<address>&copy; Designed by 홍길동</address>
+		</footer>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
