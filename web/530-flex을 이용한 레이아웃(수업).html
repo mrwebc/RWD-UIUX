@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>530-flex을 이용한 레이아웃</title>
+	<link rel="stylesheet" href="./css/reset.css" />
+	<style>
+		.flex-center{
+			display:flex;
+			justify-content:center;
+			align-items:center;
+		}
+	
+		#wrap{width:700px;margin:30px auto 0;}
+		header, .lnb, .cont, footer{border:1px solid #000;}
+		
+		header{
+			height:150px;
+		}
+		
+		section{
+			display:flex;
+			justify-content:space-between;
+			height:400px;
+			margin:10px 0;
+		}
+		
+		section>.lnb{
+			width:250px;
+		}
+		
+		section>.cont{
+			width:436px;
+		}
+		
+		footer{
+			height:100px;
+			line-height:100px;
+			text-align:center;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<header class="flex-center">
+			<h1>flex를 이용한 <br /> 레이아웃 설계</h1>
+		</header>
+		<section>
+			<article class="lnb flex-center">로컬메뉴</article>
+			<article class="cont flex-center">본문내용</article>
+		</section>
+		<footer><address>&copy; Designed by 홍길동</address></footer>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
