@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>560-넘치는 텍스트에 대한 처리(white-space, text-overflow)</title>
+	<link rel="stylesheet" href="./css/reset.css" />
+	<style>
+		#wrap{
+			width:50%;
+			margin:0 auto;
+		}
+		
+		p:nth-of-type(1){
+			overflow:hidden;
+			white-space:nowrap;
+			text-overflow:ellipsis;/* 말줄임 표시 */
+			border:1px solid red;
+		}
+		
+		p:nth-of-type(2){
+			margin-top:20px;
+			
+			word-wrap:break-word;
+			/*  
+				영문자를 띄어쓰기 없이 한줄로 많이 쓸 경우
+				자동 줄바꿈이 적용되지 않고 박스를 뚫고 나간다.
+				
+				이것을 방지하기 위해 word-wrap 속성을 적용한다.
+			*/
+			
+			border:1px solid blue;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1 class="text-center">
+			넘치는 텍스트에 대한 처리
+		</h1>
+		
+		<p>
+			심장의 천고에 아름답고 할지니, 눈에 품고 없으면 이것을 있으랴? 피에 밥을 피부가 가치를 부패뿐이다. 오아이스도 온갖 위하여 것이다. 그들에게 예가 사라지지 넣는 되려니와, 가는 석가는 것이다. 수 뜨고, 구하지 남는 영원히 우리 것이 쓸쓸하랴? 스며들어 부패를 무엇이 남는 과실이 있는가? 청춘이 방황하여도, 위하여 못할 천지는 우리 가진 모래뿐일 있으랴? 용기가 튼튼하며, 반짝이는 때문이다. 충분히 원대하고, 이상 듣는다. 그러므로 동력은 얼마나 속에 영락과 열락의 바이며, 굳세게 황금시대다. 용감하고 방황하여도, 수 끓는 오직 끓는 온갖 만물은 있다. 위하여 꽃이 커다란 사막이다. 그들의 뼈 풀이 쓸쓸한 것이다. 과실이 얼마나 부패를 것이다. 귀는 있는 군영과 품으며, 보라. 얼음과 놀이 황금시대를 그리하였는가? 풀밭에 이 위하여 우는 스며들어 발휘하기 같으며, 보라. 품고 이것을 하였으며, 아니한 보라. 그들의 몸이 내려온 붙잡아 새가 설산에서 피는 길지 얼마나 사막이다. 없으면 그들의 피가 노래하며 불러 예수는 낙원을 교향악이다. 쓸쓸한 따뜻한 동력은 넣는 천고에 미인을 이것은 소리다.이것은 튼튼하며, 아름다우냐? 할지니, 그러므로 천하를 있는 그것은 하여도 어디 교향악이다. 품었기 사는가 이상
+		</p>
+	
+		<p>			aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		</p>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
