@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>640-유형별 레이아웃-3</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        #wrap{
+            display: flex;
+            justify-content: space-between;
+            width: 900px;
+            margin: 30px auto;
+            color:#fff;
+        }
+
+        p{font-size: 18px;font-weight: 800;}
+        section{
+            width: 66%;
+        }
+        section>article{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        section>article>h2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48.5%;
+            height: 300px;
+            margin-bottom: 10px;
+            text-align: center;
+            background-color: #51c8ff;
+        }
+        section>article>div{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+            width: 48.5%;
+            height: 300px;
+      
+        }
+        section>article>div>p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 47%;
+            height: 47%;
+            background-color: rgb(182, 221, 74);
+        }
+
+        section>.double{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        section>.double>h2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            background-color: rgb(255, 140, 136);
+        }
+
+        .snb{
+            width: 32%;
+        }
+        .snb>p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background-color: rgb(255, 115, 0);
+        }
+        </style>
+</head>
+<body>
+    <div id="wrap">
+        <section>
+            <article>
+                <h2>normal<br>(untagged)</h2>
+                <div>
+                    <p>half</p>
+                    <p>half</p>
+                    <p>half</p>
+                    <p>half</p>
+                </div>
+            </article>
+            <div class="double">
+                <h2>double</h2>
+            </div>
+        </section>
+        <div class="snb">
+            <p>tall</p>
+        </div>
+    </div>
+
+    
+</body>
+</html>
