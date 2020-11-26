@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>610-스프라이트 이미지 활용</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        section{
+            width: 647px;
+            margin: 0 auto;
+        }
+
+        section>p{
+            height: 325px;
+            text-indent: -9999px;
+            background-image: url(./images/ad.jpg);
+            border: 1px solid #000;
+        }
+
+        section>.pagination{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+
+            flex-flow: row nowrap;
+            justify-content: space-between;
+
+            width: 110px;
+        }
+
+        section>.pagination>li{
+            width: 18px;
+            /* background-color: #f00; */
+            text-indent: -9999px;
+            background-image: url(./images/bul.png);
+        }
+
+        section>.pagination>li:hover{
+            background-position: 0 -18px;
+        }
+
+        section>.pagination>li>a{
+            display: block;
+            height: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">
+            스프라이트 이미지 버튼
+        </h1>
+        <section>
+            <p>엔비룩 - 트렌디한 여룸 휴가룩 핫신상 (6,900원/무료배송)</p>
+
+            <ul class="pagination">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

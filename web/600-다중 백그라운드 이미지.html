@@ -11,8 +11,8 @@
             background-size: cover;
             background-attachment: fixed;
             background-repeat: no-repeat;
-
         }
+        
         #wrap{
             width: 800px;
             margin:0 auto;
@@ -20,7 +20,22 @@
 
         p.box{
             height: 800px;
+            text-indent: -9999px;
             border:1px solid #f00;
+
+            background-image: url(./images/daum.png),
+                              url(./images/naver.png),
+                              url(./images/google.png),
+                              url(./images/prince.png);
+
+            background-position: left top,
+                                 right top,
+                                 left bottom,
+                                 right bottom;           
+
+            background-size: auto 100px;
+
+            background-repeat: no-repeat;
         }    
     </style>
 </head>
