@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <title>630-유형별 레이아웃-2</title>
+</head>
+<style>
+    #wrap{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        text-indent: -9999px;
+        width: 800px;
+        margin: 80px auto;
+    }
+
+    header,section,footer{
+        display: inline-flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    
+    article{width: 254px;}
+
+    header>article:nth-of-type(1){height: 250px; margin-bottom: 20px;}
+    header>article:nth-of-type(2){height: 200px; margin-bottom: 20px;}
+    header>article:nth-of-type(3){height: 350px;}
+
+    section>article:first-child{height: 660px; margin-bottom: 20px;}
+    section>article:last-child{height: 160px;}
+    section{
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+    }
+
+    footer>article:first-child{height: 150px; margin-bottom: 20px;}
+    footer>article:nth-of-type(2){height: 450px; margin-bottom: 20px;}
+    footer>article:last-child{height: 200px;}
+</style>
+<body>
+    <div id="wrap">
+        <header>
+            <article style="background-color: #daba57;">1</article>
+            <article style="background-color: #cc7e7a;">2</article>
+            <article style="background-color: #aec344;">3</article>
+        </header>
+
+        <section>
+            <article style="background-color: #b298d7;">1</article>
+            <article style="background-color: #cc7e7a;">2</article>
+        </section>
+        
+        <footer>
+            <article style="background-color: #b9b0b1;">1</article>
+            <article style="background-color: #aec344;">2</article>
+            <article style="background-color: #daba57;">3</article>
+        </footer>
+    </div>
+</body>
+</html>
