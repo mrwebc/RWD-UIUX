@@ -3,11 +3,50 @@
 <head>
 	<meta charset="UTF-8">
 	<title>580-IR기법과 시멘틱웹</title>
+	<link rel="stylesheet" href="./css/reset.css">
 	<style>
+		p{
+			width: 800px;
+			height: 450px;
+			margin: 0 auto;
 
+			text-indent: -9999px;
+
+			background-image: url(./images/ad.jpg);
+
+			/* 배경이미지의 중심을 요소의 중심에 맞게 조정 */
+			background-position: center center;
+
+			/* 배경이미지의 크기를 400*225 */	
+			background-size: 400px 225px;
+
+			/* 배경이미지의 크기를 500*auto */
+			background-size: 500px auto;
+			
+			/* 배경이미지의 크기를 auto*350 */
+			background-size: auto 350px;
+
+			/* 배경이미지를 꽉차게 */			
+			background-size: cover;/* bgz:cv */
+
+			background-repeat: no-repeat;		
+
+			border: 1px solid #000;
+		}
 	</style>
 </head>
 <body>
-	
+	<div id="wrap">
+		<h1 class="text-center">
+			Image Replacememt 기법과 시멘틱 웹
+		</h1>
+		<p>
+			엔비룩 - 트렌디한 여름 휴가룩 핫신상 (6,900원/무료배송)
+			<!-- 텍스트이미지의 경우 img태그를 사용하는건 권장하지 않음 -->
+
+			<!-- <img src="./images/ad.jpg" alt="엔비룩 - 트렌디한 여름 휴가룩 핫신상 (6,900원/무료배송)"> -->
+		</p>
+	</div>
+
 </body>
 </html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background 축약형</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        #wrap{
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #ffff00;
+        }
+
+        p.box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            font-size: 20px;
+
+            background-color: #f0f;
+            background-image: url(./images/mono.jpg);
+            background-position: 100px 50px;
+            background-repeat: no-repeat;
+
+            background:#f0f url(./images/mono.jpg) 100px 50px no-repeat;
+
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">
+            background 축약형은 사용하지 맙시다~!
+        </h1>
+
+        <p class="box">background 축약형 적용 박스</p>
+    </div>
+</body>
+</html>
