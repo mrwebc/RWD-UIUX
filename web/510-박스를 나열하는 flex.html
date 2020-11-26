@@ -26,7 +26,7 @@
 			/* 
 				row, row-reverse, column, column-reverse 
 				
-				row-reverse, column-reverse 는 정렬된 줄 안에서 순서가 바뀌는 개념
+				row-reverse, column-reverse 는 주축의 flex-start의 위치가 반대로 바뀌는 개념
 			*/
 			
 			flex-wrap:wrap-reverse;			
@@ -37,8 +37,7 @@
 				
 				wrap - 부모 컨테이너의 width가 부족할 경우 2줄 이상으로 나열 하겠다.
 				
-				wrap-reverse - wrap 방식인데 정렬된 줄과 줄의 순서가 역순으로 나열된다.
-			*/
+				wrap-reverse - 교차축의 flex-start 위치를 반대방향으로 설정하여 결과적으로 줄간 역방향으로 나열됨 		*/
 			
 			
 			height:1000px;
