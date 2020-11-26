@@ -5,13 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>600-다중 백그라운드 이미지</title>
     <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        body{
+            background-image: url(./images/sea.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+
+        }
+        #wrap{
+            width: 800px;
+            margin:0 auto;
+        }
+
+        p.box{
+            height: 800px;
+            border:1px solid #f00;
+        }    
+    </style>
 </head>
+
 <body>
     <div id="wrap">
         <h1 class="text-center">
             하나의 요소에 여러개의 배경이미지 넣기
         </h1>
-
         <p class="box">multi-background-image</p>
     </div>
 </body>
