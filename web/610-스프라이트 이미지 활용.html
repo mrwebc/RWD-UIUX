@@ -7,14 +7,16 @@
     <link rel="stylesheet" href="./css/reset.css">
     <style>
         section{
-            width: 647px;
+            width: 947px;
             margin: 0 auto;
+            border: 1px solid #000;
         }
 
         section>p{
             height: 325px;
             text-indent: -9999px;
             background-image: url(./images/ad.jpg);
+            background-repeat: no-repeat;
             border: 1px solid #000;
         }
 
@@ -32,9 +34,9 @@
 
         section>.pagination>li{
             width: 18px;
-            /* background-color: #f00; */
             text-indent: -9999px;
             background-image: url(./images/bul.png);
+            background-repeat: no-repeat;
         }
 
         section>.pagination>li:hover{
@@ -42,8 +44,14 @@
         }
 
         section>.pagination>li:nth-of-type(5){
+            width: 20px;
+            height: 20px;
             background-image: url(./images/ico_play_pause.png);
-            background-size: cover;
+            background-position: -10px -50px;
+        }
+
+        section>.pagination>li:nth-of-type(5):hover{
+            background-position: -10px -10px;
         }
 
         section>.pagination>li>a{
