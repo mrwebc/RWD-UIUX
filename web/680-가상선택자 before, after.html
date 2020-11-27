@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상선택자 :after, :before</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        h2{text-align: center;}
+
+        /* 
+            :before, :after는 가상의 인라인요소
+         */
+
+        span:before{
+            content: '앞 그림자 ';
+            content: '나이 ';
+        }
+
+        span:after{
+            content: '뒷 그림자';
+            content: '세';
+        }
+
+        p{
+            margin-top: 30px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        p:before{
+            color: #00f;
+            font-size: 16px;
+            content: '노사연씨가 즐겨 마시는 ';
+        }
+
+        p:after{
+            color: #f00;
+            font-size: 16px;
+            content: ' 다이어트 식이섬유';
+        }
+
+        address{text-align: center;}
+        address>span{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-image: url(./images/ico_play_pause.png);
+            background-position: -10px -50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">그림자같은 가상선택자 :after, :before</h1>
+
+        <h2><span>20</span></h2>
+
+        <p>미에로 화이바</p>
+
+        <address><span></span> 가상선택자의 활용예</address>
+    </div>
+</body>
+</html>

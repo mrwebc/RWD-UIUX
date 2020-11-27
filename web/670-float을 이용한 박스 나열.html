@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>670-float을 이용한 박스 나열</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        #wrap{
+            width: 850px;
+            margin: 0 auto;
+            padding-bottom: 100px;
+            border: 1px solid #f00
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">
+            float을 이용한 박스 나열
+        </h1>
+
+<style>
+    .parent{background-color: #ff0;}
+
+    .parent>li{
+        width: 200px;
+        height: 100px;
+        border: 1px solid #000;
+    }
+
+    .parent>li:nth-child(odd){background-color: #f0f;}
+    .parent>li:nth-child(even){background-color: #0f0;}
+
+    .parent>li:nth-child(1){float: left;opacity: 0.3;}
+    .parent>li:nth-child(2){float: left;opacity: 1;}
+    .parent>li:nth-child(3){float: left;opacity: 1;}
+    .parent>li:nth-child(4){float: left;opacity: 1;}
+</style>
+
+        <ul class="parent">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        <!-- float의 영향력을 차단하는 마감재 역할 -->
+        <div style="clear:both;"></div>
+
+        <p>굿모닝~!</p>
+    </div>
+</body>
+</html>
