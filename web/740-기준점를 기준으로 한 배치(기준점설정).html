@@ -32,15 +32,28 @@
         }
 
         .parent{
+            position: relative;
+            /* 
+                "내 안에서 자손요소가 pos:a 할 경우 나를 기준으로 위치지정 한다"는 의미
+             */
             width: 500px;
             height: 500px;
             margin-top: 600px;
             background-color: #0f0;
+            border: 1px solid #000;
         }
 
         .child{
+            display: block;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+
             width: 150px;
             height: 80px;
+            background-color: #ff0;
+            border: 1px solid #000;
         }
     </style>
 </head>
