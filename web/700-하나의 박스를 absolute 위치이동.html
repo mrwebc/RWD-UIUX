@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>700-하나의 박스를 absolute 위치이동</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        .box{
+            /* 
+                1. absolute는 특정 기준점을 기준으로 지정한 좌표값에 배치
+                
+                2. 기준점을 따로 지정하지 않으면 body가 기준
+
+                3. 기준점은 직계부모를 비롯한 해당박스의 조요소에게만 설정 가능 
+
+            */
+            position: absolute;
+            left:100px;
+            top:100px;
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="box"></h1>
+</body>
+</html>
