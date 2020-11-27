@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>730-여러개의 박스중 하나를 fixed 배치</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        p{
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            margin-bottom: 10px;
+            background-color: #ff0;
+        }
+
+        .abs{
+            /* 
+                pos:a 하면 요소가 살짝 뜨게 되고,
+                그 다음 요소가 빈 자리로 밀고 올라와
+                메꾸게(차지하게) 된다.
+             */
+            position: absolute;
+            left: 50px;
+            top:400px;
+            background-color: #f0f;
+        }
+
+        .rel{
+            /*  
+                1. relative의 좌표이동 기준점은 
+                항상 원래 해당 요소가 위치해 있던 지점이
+                기준점이다.
+
+                2. 좌표이동시 원래 있던 자리는 구멍이 뻥 뚫린채 그대로 보존된다.
+
+                3. 그래서 relative를 이용해서 박스를 움직이는 경우는 실무에서 거의 없다.
+
+                4. relative는 기준점 설정에 주로 사용된다.
+            */
+
+            position:relative;
+            left: 200px;
+            top: 50px;
+            color: #fff;
+            background-color: #00f;
+        }
+
+        .fixed{
+            /* 
+                fixed는 무조건 body가 기준점이다.
+             */
+            position: fixed;
+            left: 0;
+            top: 0;
+            color: #fff;
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <p>박스1</p>
+    <p class="abs">앱솔루트 박스2</p>
+    <p>박스3</p>
+    <p class="rel">relative 박스4</p>
+    <p>박스5</p>
+    <p class="fixed">박스6</p>
+    
+    <h1 class="text-center">
+        position의 가장 큰 특징은 html 코딩순서와 상관없이 원하는 위치에 배치할 수 있다는 점이다.
+    </h1>
+</body>
+</html>

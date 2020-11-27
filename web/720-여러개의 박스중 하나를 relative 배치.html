@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>710-여러개의 박스중 하나를 absolute 배치</title>
+    <title>720-여러개의 박스중 하나를 relative 배치</title>
     <link rel="stylesheet" href="./css/reset.css">
     <style>
         p{
@@ -23,8 +23,28 @@
              */
             position: absolute;
             left: 50px;
-            top:600px;
+            top:400px;
             background-color: #f0f;
+        }
+
+        .rel{
+            /*  
+                1. relative의 좌표이동 기준점은 
+                항상 원래 해당 요소가 위치해 있던 지점이
+                기준점이다.
+
+                2. 좌표이동시 원래 있던 자리는 구멍이 뻥 뚫린채 그대로 보존된다.
+
+                3. 그래서 relative를 이용해서 박스를 움직이는 경우는 실무에서 거의 없다.
+
+                4. relative는 기준점 설정에 주로 사용된다.
+            */
+
+            position:relative;
+            left: 200px;
+            top: 50px;
+            color: #fff;
+            background-color: #00f;
         }
     </style>
 </head>
@@ -32,7 +52,7 @@
     <p>박스1</p>
     <p class="abs">앱솔루트 박스2</p>
     <p>박스3</p>
-    <p>박스4</p>
+    <p class="rel">relative 박스4</p>
     <p>박스5</p>
     <p>박스6</p>
     

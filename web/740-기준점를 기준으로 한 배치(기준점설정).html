@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>740-기준점를 기준으로 한 배치(기준점설정)</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        .standard{
+            position: absolute;/* 기준점 설정 가능 */
+            position: fixed;/* 기준점 설정 가능 */
+            position: relative;/* 기준점 설정 가능 */
+            left: 50px;
+            top: 50px;
+
+            width: 400px;
+            height: 400px;
+            /* margin: 120px 0 0 150px; */
+            background-color: #ff0;
+        }
+
+        .abs{
+            display: block;
+
+            position: absolute;
+            left: 0px;
+            top: 0px;
+
+            width: 100px;
+            height: 100px;
+            background-color: #f0f;
+        }
+
+        .parent{
+            width: 500px;
+            height: 500px;
+            margin-top: 600px;
+            background-color: #0f0;
+        }
+
+        .child{
+            width: 150px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="standard">
+        <span class="abs">박스</span>
+    </h1>
+
+    <p class="parent">
+        <strong class="child">실험</strong>
+    </p>
+</body>
+</html>
