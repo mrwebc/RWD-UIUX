@@ -29,24 +29,27 @@
         }
 
         p:before{
+            display: block;
             color: #00f;
             font-size: 16px;
             content: '노사연씨가 즐겨 마시는 ';
         }
 
         p:after{
+            display: block;
             color: #f00;
             font-size: 16px;
             content: ' 다이어트 식이섬유';
         }
 
         address{text-align: center;}
-        address>span{
+        address:before{
             display: inline-block;
             width: 20px;
             height: 20px;
             background-image: url(./images/ico_play_pause.png);
             background-position: -10px -50px;
+            content: '';
         }
     </style>
 </head>
@@ -58,7 +61,7 @@
 
         <p>미에로 화이바</p>
 
-        <address><span></span> 가상선택자의 활용예</address>
+        <address>가상선택자의 활용예</address>
     </div>
 </body>
 </html>

@@ -21,7 +21,17 @@
         </h1>
 
 <style>
-    .parent{background-color: #ff0;}
+    .parent{
+        background-color: #ff0;
+        *zoom:1;/* :after를 인식못하는 브라우저를 위해 */
+    }
+
+    /* 가상선택자를 이용한 마감처리 */
+    .parent:after{
+        display: block;
+        clear: both;
+        content: '';
+    }
 
     .parent>li{
         width: 200px;
@@ -46,7 +56,7 @@
         </ul>
 
         <!-- float의 영향력을 차단하는 마감재 역할 -->
-        <div style="clear:both;"></div>
+        <!-- <div style="clear:both;"></div> -->
 
         <p>굿모닝~!</p>
     </div>
