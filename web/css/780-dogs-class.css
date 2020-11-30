@@ -3,16 +3,87 @@
 #wrap{
     width: 600px;
     margin: 30px auto 100px;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
+    background-color: #333;
 }
 
-header{}
+header{
+    position: relative;
+    height: 100px;
+    background-color: #069;
+}
+
+header>.logo{
+    position: absolute;
+    left: 0;
+    top: 25px;
+    width: 150px;
+    /* border: 1px solid #ff0; */
+}
+
+header>.logo>a{
+    display: block;
+    height: 50px;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    /* background-color: #f0f; */
+}
+
+header>nav{
+    position: absolute;
+    left: 200px;
+    top: 40px;
+    /* border: 1px solid #f0f; */
+}
+
+header>nav>.gnb{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    /* font-family: row nowrap; */
+
+    width: 350px;    
+}
+
+header>nav>.gnb>li{
+    width: 80px;
+    /* outline: 1px solid #fff; */
+}
+
+header>nav>.gnb>li>a{
+    display: block;
+    height: 30px;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+}
+
+header>nav>.gnb>li.on>a,
+header>nav>.gnb>li:hover>a{
+    color:#ff0;
+    font-weight: 800;
+    text-shadow: 1px 1px 2px #fff;
+}
 
 section{
+    width: 570px;
     height: 400px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #fff;
 }
 
-footer{}
+footer>address{
+    height: 80px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 80px;
+    text-align: center;
+}
 
 
 
