@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>760-z-index를 이용한 적재순서 조정</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        .parent{
+            position: relative;
+            width: 500px;
+            height: 400px;
+            margin: 0 auto;
+            border: 1px solid #000;
+        }
+
+        .parent>p{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+        }
+
+        .red{
+            position: absolute;
+            z-index: 200;
+            left: 200px;
+            top: 100px;
+            background-color: #f00;
+        }
+
+        .blue{
+            position: absolute;
+            z-index: 300;
+            left: 230px;
+            top: 130px;
+            background-color: #00f;
+        }
+
+        .yellow{
+            position: absolute;
+            z-index: 250;
+            left: 160px;
+            top: 160px;
+            background-color: #ff0;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">
+            z-index를 이용해서 박스가 쌓이는 순서 조정
+        </h1>
+
+        <div class="parent">
+            <p class="red"></p>
+            <p class="blue"></p>
+            <p class="yellow"></p>
+        </div>
+    </div>
+</body>
+</html>
