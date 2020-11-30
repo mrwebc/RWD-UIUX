@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+#wrap{
+    width: 600px;
+    margin: 30px auto 100px;
+    border: 1px solid #000;
+}
+
+header{}
+
+section{
+    height: 400px;
+}
+
+footer{}
+
+
+
+
+
+
+
+
