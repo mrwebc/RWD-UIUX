@@ -70,10 +70,44 @@ header>nav>.gnb>li:hover>a{
 
 section{
     width: 570px;
-    height: 400px;
+    /* height: 400px; */
     margin: 0 auto;
-    padding: 10px;
+    padding: 30px 10px 10px 10px;
     background-color: #fff;
+}
+
+section>h2{
+    margin-bottom: 25px;
+    font-size: 25px;
+}
+
+section>p{
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: justify;
+    *zoom:1;
+}
+
+section>p:after{
+    display: block;
+    clear: both;
+    content: '';
+}
+
+section>p>.frame{
+    display: block;
+    overflow: hidden;
+    float: right;
+    width: 300px;
+    height: 250px;
+    margin: 5px 0 0 7px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #aaa;
+}
+
+section>p>.frame>img{
+    display: block;
+    width: 100%;
 }
 
 footer>address{
