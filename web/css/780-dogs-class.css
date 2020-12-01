@@ -34,10 +34,12 @@ header>nav{
     position: absolute;
     left: 200px;
     top: 40px;
+    width: 350px;
     /* border: 1px solid #f0f; */
 }
 
 header>nav>.gnb{
+
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -106,7 +108,7 @@ section>p>.frame{
 }
 
 section>p>.frame>img{
-    display: block;
+    display: block;/* 이미지 밑에 약간 뜨는 현상이 발생할 수 있으니까 미리 ...*/
     width: 100%;
 }
 
