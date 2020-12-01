@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+#wrap{
+    width: 830px;
+    margin:0 auto;
+}
+
+/*
+    sp_ico.png에서 플레이버튼 크기 : 26*27
+    background-position: -102px -450px;
+*/
+
+section{
+    width: 830px;
+    height: 280px;
+    border-bottom: 1px solid #ccc;
+}
+section>h2{
+    margin:15px 0 ;
+    font-weight: 800;
+}
+section>ol{ 
+    display: flex;
+    justify-content: space-between;    
+}
+
+section>ol>.movie{ 
+    position: relative;    
+    width: 200px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+   
+section>ol>.unplan{
+    background-image: url(../images/movie_1.jpg);
+}
+section>ol>.bob{
+    background-image: url(../images/movie_2.jpg);
+}
+section>ol>.nighting{
+    background-image: url(../images/movie_3.jpg);
+}
+section>ol>.bigfoot{
+    background-image: url(../images/movie_4.jpg);
+}
+section>ol>.movie>ul>.name{
+    position: absolute;
+    left: 0;
+    top: 160px;       
+}
+section>ol>.movie>ul>.name>a{
+    color: #004cbb;
+    font-weight: 600;
+}
+section>ol>.movie>ul>.first{
+    position: absolute;
+    left: 145px;
+    top: 115px;
+    width: 50px;
+    height: 30px;    
+    color:#fff;
+    font-weight:600;
+    font-size: 13px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #6da5c7;    
+}
+section>ol>.movie>ul>.preview{
+    position: absolute;
+    left: 0;
+    top: 180px;
+}
+section>ol>.movie>ul>.play{
+    width: 26px;
+    height: 27px;
+    margin: 120px 0 0 5px;
+    text-indent: -9999px;
+    background-image: url(../images/sp_ico.png);
+    background-position: -102px -450px;
+}
+footer{
+    width: 830px;  
+    height: 50px;  
+}
+footer>address{
+    display: block;
+    text-align: center;
+    line-height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

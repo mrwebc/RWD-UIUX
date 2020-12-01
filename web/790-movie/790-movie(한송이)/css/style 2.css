@@ -22,26 +22,13 @@ section>h2{
 }
 
 /* 섹션 - 리스트 정렬 */
+
 section>ol{
-    *zoom: 1;
+    display: flex;
+    justify-content: space-between;
 }
 
-section>ol:after{
-    display: block;
-    clear:both;
-    content: '';
-}
-
-section>ol>li{
-    float: left;
-    margin-right: 4px;
-}
-
-section>ol>li:last-child{
-    margin-right: 0;
-}
-
-/* 섹션 - 글자, 크기 조정 */
+/* 섹션 - 글자조정 */
 section>ol>li>.lnb>li:first-child>a{
     display: block;
     color: #069;
@@ -56,32 +43,13 @@ section>ol>li>.lnb>li:last-child>a{
     width: 147px;
     height: 100px;
 }
-
-section>ol>li>.lnb>li:last-child>a>span:after{
-    display: block;
-    position: absolute;
-    top: 2px;
-    left: 98px;
-    width: 42px;
-    height: 23px;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 22px;
-    text-align: center;
-    text-indent: 0;
-    color: #fff;
-    background-color: skyblue;
-    content:'최초';
-}
-
-
-/* 섹션 - 배경 이미지 삽입 및 위치 배치 */
 section>ol>li>.lnb{
     position: relative;
     width: 147px;
     height: 150px;
 }
 
+/* 섹션 - 배경 이미지 삽입 및 위치 배치 */
 section>ol>li>.lnb>li:last-child{
     position: absolute;
     top: 0;
@@ -97,7 +65,7 @@ section>ol>li>.lnb>li:nth-child(2){
     top: 115px;
 }
 
-section>ol>li>.lnb>li:last-child>a>.play{
+section>ol>li>.lnb>li:last-child>a>span{
     display: block;
     position: absolute;
     top: 70px;

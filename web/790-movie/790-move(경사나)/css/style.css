@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+
+/*
+    sp_ico.png에서 플레이버튼 크기 : 26*27
+    background-position: -102px -450px;
+*/
+
+#wrap{
+    width: 815px;
+    margin: 0 auto;
+    font-family: 나눔스퀘어;
+}
+header>h1{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+section{
+    height: 300px;
+    border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+section>h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+section>ol{
+    display: flex;
+    justify-content: space-between;
+}
+
+section>ol>li{
+    position: relative;
+}
+
+section>ol>.movie_1:after,section>ol>.movie_2:after,
+section>ol>.movie_3:after{
+    position: absolute;
+    top: 122px;
+    left: 152px;
+    width: 45px;
+    height: 25px;
+    color:#fff;
+    content:'최초';
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: center;
+    background-color: rgb(123, 185, 221);
+}
+
+section>ol>.movie_1{
+    background-image: url(../images/movie_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 150px;
+}
+
+section>ol>.movie_2{
+    background-image: url(../images/movie_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 150px;
+}
+
+section>ol>.movie_3{
+    background-image: url(../images/movie_3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 150px; 
+}
+
+section>ol>.movie_4{
+    background-image: url(../images/movie_4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 150px;
+}
+
+section>ol>li>ul>.play{
+    position: absolute;
+    width: 26px;
+    height: 27px;
+    top: 120px;
+    left: 5px;
+    text-indent: -9999px;
+    background-image: url(../images/sp_ico.png);
+    background-position: -102px -450px;
+}
+
+section>ol>li>ul>li:nth-child(1)>a{
+    position: absolute;
+    top:160px;
+    color: rgb(35, 110, 223);
+    font-size: 15px;
+    font-weight: 800;
+}
+
+section>ol>li>ul>li:nth-child(2)>a{
+    position: absolute;
+    top:190px;
+    font-size: 13px;
+}
+
+footer>address{
+    margin-top: 20px;
+    font-size: 13px;
+    text-align: center;
+}
+
+
