@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+/*
+    sp_ico.png에서 플레이버튼 크기 : 26*27
+    background-position: -102px -450px;
+*/
+
+#wrap{
+    width: 600px;
+    margin: 0 auto;
+    font-family: 'Noto sans kor';
+}
+
+/* 헤더영역 */
+header,section{
+    margin-bottom: 20px;
+}
+
+/* 섹션 */
+section>h2{
+    margin-bottom: 10px;
+}
+
+/* 섹션 - 리스트 정렬 */
+section>ol{
+    *zoom: 1;
+}
+
+section>ol:after{
+    display: block;
+    clear:both;
+    content: '';
+}
+
+section>ol>li{
+    float: left;
+    margin-right: 4px;
+}
+
+section>ol>li:last-child{
+    margin-right: 0;
+}
+
+/* 섹션 - 글자조정 */
+section>ol>li>.lnb>li:first-child>a{
+    display: block;
+    color: #069;
+    font-weight: 800;
+}
+section>ol>li>.lnb>li:nth-child(2){
+    margin: 10px 0;
+}
+
+section>ol>li>.lnb>li:last-child>a{
+    display: block;
+    width: 147px;
+    height: 100px;
+}
+section>ol>li>.lnb{
+    position: relative;
+    width: 147px;
+    height: 150px;
+}
+
+/* 섹션 - 배경 이미지 삽입 및 위치 배치 */
+section>ol>li>.lnb>li:last-child{
+    position: absolute;
+    top: 0;
+}
+
+section>ol>li>.lnb>li:first-child{
+    position: absolute;
+    top: 105px;
+}
+
+section>ol>li>.lnb>li:nth-child(2){
+    position: absolute;
+    top: 115px;
+}
+
+section>ol>li>.lnb>li:last-child>a>span{
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 4px;
+    width: 26px;
+    height: 27px;
+    background-image: url(../images/sp_ico.png);
+    background-position: -102px -450px;
+}
+
+section>ol>li:first-child>.lnb>li:last-child{
+    text-indent: -9999px;
+    background-image: url(../images/movie_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section>ol>li:nth-child(2)>.lnb>li:last-child{
+    text-indent: -9999px;
+    background-image: url(../images/movie_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section>ol>li:nth-child(3)>.lnb>li:last-child{
+    text-indent: -9999px;
+    background-image: url(../images/movie_3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section>ol>li:last-child>.lnb>li:last-child{
+    text-indent: -9999px;
+    background-image: url(../images/movie_4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* 푸터영역 */
+footer{
+    height: 50px;
+    border-top: 1px solid #909090;
+}
+footer>address{
+    line-height: 50px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+
+/*
+    sp_ico.png에서 플레이버튼 크기 : 26*27
+    background-position: -102px -450px;
+
+*/
+
+#wrap{
+    width: 615px;
+    margin: 30px auto;
+    font-family: "Noto Sans CJK KR";
+}
+
+
+section{height: 230px;}
+
+section>h2{margin-bottom: 10px;}
+
+section>.content{
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+section>.content>.list{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+section>.content>.list>li>.list_sub{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 150px;
+}
+section>.content>.list>li>.list_sub>.video{
+    display: block;
+    width: 150px;
+    height: 120px;
+}
+
+section>.content>.list>li>.list_sub>li:first-child>a{
+    display: block;
+    color: rgb(0, 119, 255);
+    font-weight: 500;
+    font-size: 12px;
+}
+
+section>.content>.list>li>.list_sub>li:nth-child(1){
+    position: absolute;
+    top: 110px;
+}
+
+section>.content>.list>li>.list_sub>li:nth-child(2){
+    position: absolute;
+    top: 130px;
+}
+
+section>.content>.list>li>.list_sub>li:nth-child(2)>a{
+    color: #222;
+    font-weight: 300;
+    font-size: 11px;
+}
+
+section>.content>.list>li>.list_sub>li:last-child{
+    position: absolute;
+    top: -10px;
+    width: 150px;
+}
+
+section>.content>.list>li>.list_sub>.video{
+    position: relative;
+    margin-top: 10px;
+    height: 100px;
+}
+
+section>.content>.list>li>.list_sub>.video>a{
+    display: block;
+    width: 150px;
+    height: 100px;
+    text-indent: -9999px;
+}
+
+section>.content>.list>li:nth-child(1)>.list_sub>.video:before,
+section>.content>.list>li:nth-child(2)>.list_sub>.video:before,
+section>.content>.list>li:nth-child(3)>.list_sub>.video:before{
+    content: '최초';
+    display: block;
+    position: absolute;
+    left: 105px;
+    top: 75px;
+    width: 40px;
+    height: 20px;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+    background-color: rgb(96, 178, 255);
+}
+
+section>.content>.list>li:nth-child(1)>.list_sub>.video:after,
+section>.content>.list>li:nth-child(2)>.list_sub>.video:after,
+section>.content>.list>li:nth-child(3)>.list_sub>.video:after,
+section>.content>.list>li:nth-child(4)>.list_sub>.video:after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 5px;
+    top: 70px;
+    width: 26px;
+    height: 27px; 
+    background-image: url(./../images/sp_ico.png);
+    background-position: -102px -450px;
+}
+
+section>.content>.list>li:nth-of-type(1)>.list_sub>.video{
+    background-image: url(./../images/movie_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section>.content>.list>li:nth-of-type(2)>.list_sub>.video{
+    background-image: url(./../images/movie_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section>.content>.list>li:nth-of-type(3)>.list_sub>.video{
+    background-image: url(./../images/movie_3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section>.content>.list>li:nth-of-type(4)>.list_sub>.video{
+    background-image: url(./../images/movie_4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer>address{
+    font-weight: 400;
+    margin: 10px auto 30px;
+    padding-top: 20px;
+    text-align: center;
+    border-top: 1px solid #aaa;
+}
+
+
+
+
+
+

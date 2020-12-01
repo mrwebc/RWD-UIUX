@@ -1,0 +1,134 @@
+@charset "utf-8";
+/*
+    sp_ico.png에서 플레이버튼 크기 : 26*27
+    background-position: -102px -450px;
+*/
+
+#wrap{
+	width: 800px;
+	height: 800px;
+    margin: 0 auto;
+	}
+	
+header{
+	font-weight: 800;
+}
+section{*zoom: 1;}
+section>ol{
+    display: block;
+    width: 800px;
+}
+section>ol>li>ul{
+    display: block;
+    float: left;
+    position: relative;
+    width: 195px;
+	height: 150px;
+	margin-top: 10px;
+	margin-right: 5px;
+    outline: 1px solid #000;
+}
+section>ol>li>ul>li:last-child{
+	margin-right: 0;
+}
+section>ol>li>ul:after{
+	display: block;
+	clear:both;
+	content:" ";
+}
+
+section>ol>li>ul.unplaned{
+	width: 195px;
+	height: 150px;
+	background-image: url(../images/movie_1.jpg);
+	background-size: 100% 100%; 
+	background-repeat: no-repeat;
+}
+
+section>ol>li>ul.bob{
+	width: 195px;
+	height: 150px;
+	background-image: url(../images/movie_2.jpg);
+	background-size: 100% 100%; 
+	background-repeat: no-repeat;
+}
+
+section>ol>li>ul.gale{
+	width: 195px;
+	height: 150px;
+	background-image: url(../images/movie_3.jpg); 
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+section>ol>li>ul.big{
+	width: 195px;
+	height: 150px;
+	background-image: url(../images/movie_4.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+
+section>ol>li>ul>.play{
+    position: absolute;
+    left: 8px;
+    top: 115px;
+	text-indent: -9999px;
+	width: 26px;
+	height: 27px;
+	background-image: url(../images/sp_ico.png);
+	background-position: -102px -450px;
+	}
+
+section>ol>li>ul>.title{
+    position: absolute;
+    left: 5px;
+    top: 160px;
+    font-weight: 600;
+
+}
+
+/*section>ol>li>ul>.main{
+    position: absolute;
+    left: 5px;
+	top: 180px;
+}*/
+
+section>ol>li>ul>.main_1{
+    position: absolute;
+    left: 5px;
+	top: 180px;}
+
+section>ol>li>ul>.main:after{
+	display: block;
+	position: absolute;
+	width: 40px;
+	height: 17px;
+	left: 145px;
+	top: 125px;
+	content: "최초";
+	text-align: center;
+	line-height: 17px;
+	color: #fff;
+	border: 1px solid rgb(124, 194, 235);
+	background-color:rgb(124, 194, 235);
+}
+section>ol>li>ul>.main:after{
+
+}
+
+footer{
+	width: 100%;
+	height: 300px;
+	margin-top: 250px;
+	border-top: 2px solid #777;
+}
+
+footer>address{
+    height: 300px;
+    font-size: 16px;
+    line-height: 80px;
+    text-align: center;
+	margin-bottom: 0;}
+

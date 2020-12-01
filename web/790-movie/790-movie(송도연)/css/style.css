@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+/*
+    sp_ico.png에서 플레이버튼 크기 : 26*27
+    background-position: -102px -450px;
+*/
+
+#wrap{
+    width: 815px;
+    margin: 30px auto;
+}
+
+/* section 영역 */
+section{
+    height: 300px;
+}
+section>h2{
+    padding: 10px 0;
+}
+section>ol{
+    display: flex;
+    justify-content: space-between;
+}
+section>ol>li{
+    width: 200px;
+}
+
+section>ol .mov{
+    position: relative;
+}
+section>ol .mov>li:first-child>a{
+    position: absolute;
+    top: 150px;
+    color: #00f;
+    font-size: 15px;
+    font-weight: 800;
+}
+section>ol .mov>li:nth-child(2)>a{
+    position: absolute;
+    top: 180px;
+    color: #222;
+    font-size: 13px;
+}
+section>ol .mov>li>a>.img{
+    display: block;
+    width: 200px;
+    height: 160px;
+    text-indent: -9999px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+section>ol .mov>li>a>.img_1{background-image: url(../images/movie_1.jpg);}
+section>ol .mov>li>a>.img_2{background-image: url(../images/movie_2.jpg);}
+section>ol .mov>li>a>.img_3{background-image: url(../images/movie_3.jpg);}
+section>ol .mov>li>a>.img_4{background-image: url(../images/movie_4.jpg);}
+section>ol .mov>li>a>.play{
+    position: absolute;
+    top: 110px;
+    left: 5px;
+    width: 26px;
+    height: 27px;
+    background-image: url(../images/sp_ico.png);
+    background-position: -102px -450px;
+}
+/* section 영역 - 최초 box */
+section>ol .mov>li>a>.sub:after{
+    display: block;
+    content: '최초';
+    position: absolute;
+    top: 110px;
+    left: 145px;
+    width: 50px;
+    height: 27px;
+    color: #fff;
+    font-weight: 800;
+    line-height: 27px;
+    text-align: center;
+    background-color: #6da5c7;
+}
+
+/* footer 영역 */
+footer{
+    height: 50px;
+    border-top: 1px solid #ccc;
+}
+footer>address{
+    line-height: 50px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

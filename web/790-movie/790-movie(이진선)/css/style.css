@@ -1,0 +1,182 @@
+@charset "utf-8";
+
+
+/*
+    sp_ico.png에서 플레이버튼 크기 : 26*27
+    background-position: -102px -450px;
+*/
+
+#wrap{
+    width: 1015px;
+    margin: 0 auto;
+}
+
+header{
+
+}
+
+header>h1{
+
+}
+
+section{
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid #aaa;
+}
+
+section>h2{
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+section>.movie_list{
+    position: relative;
+    width: 1015px;
+    height: 300px;
+}
+
+section>.movie_list>li{
+    position: absolute;
+    width: 250px;
+    height: 300px;
+}
+
+section>.movie_list>li:nth-of-type(1){
+    left: 0;
+    top: 0;
+}
+
+section>.movie_list>li:nth-of-type(2){
+    left: 255px;
+    top: 0;
+}
+
+section>.movie_list>li:nth-of-type(3){
+    left: 510px;
+    top: 0;
+}
+
+section>.movie_list>li:nth-of-type(4){
+    left: 765px;
+    top: 0;
+}
+
+section>.movie_list>li>ul{
+    position: relative;
+}
+
+section>.movie_list>li>ul>li:nth-of-type(1){
+    position: absolute;
+    left: 0;
+    top: 184px;
+}
+
+section>.movie_list>li>ul>li:nth-of-type(1)>a{
+    display: block;
+    width: 250px;
+    height: 20px;
+    color: #06d;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+section>.movie_list>li>ul>li:nth-of-type(2){
+    position: absolute;
+    left: 0;
+    top: 209px;
+}
+
+section>.movie_list>li>ul>li:nth-of-type(2)>a{
+    display: block;
+    width: 250px;
+    height: 15px;
+    line-height: 15px;
+}
+
+section>.movie_list>li>ul>li:nth-of-type(3){
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 174px;
+    text-indent: -9999px;
+}
+
+section>.movie_list>li>ul>li:nth-of-type(3)>a{
+    display: block;
+    width: 250px;
+    height: 174px;
+}
+
+section>.movie_list>li>ul>li>p{
+    position: absolute;
+    left: 10px;
+    top: 139px;
+    z-index: 100;
+    width: 26px;
+    height: 27px;
+    background-image: url(../images/sp_ico.png);
+    background-position: -102px -450px;
+    background-repeat: no-repeat;
+}
+
+section>.movie_list>li>ul>li>p>a{
+    display: block;
+    width: 26px;
+    height: 27px;
+}
+
+section>.movie_list>li>ul>li>span{
+    position: absolute;
+    left: 187px;
+    top: 134px;
+    width: 50px;
+    height: 30px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 30px;
+    text-indent: 0;
+    text-align: center;
+    background-color:#09f;
+}
+
+section>.movie_list>li>ul>li>span>br:after{
+    content: '최초';
+}
+
+section>.movie_list>li.unplanned>ul>li:nth-of-type(3){
+    background-image: url(../images/movie_1.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+section>.movie_list>li.bob2>ul>li:nth-of-type(3){
+    background-image: url(../images/movie_2.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+section>.movie_list>li.nightingale>ul>li:nth-of-type(3){
+    background-image: url(../images/movie_3.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+section>.movie_list>li.bigfootjr2>ul>li:nth-of-type(3){
+    background-image: url(../images/movie_4.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+footer{
+    height: 50px;
+}
+
+footer>address{
+    font-style: normal;
+    line-height: 50px;
+    text-align: center;
+}

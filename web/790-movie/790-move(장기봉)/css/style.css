@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+/*
+    sp_ico.png에서 플레이버튼 크기 : 26*27
+    background-position: -102px -450px;
+*/
+
+#wrap {
+  width: 720px;
+  margin: 0 auto;
+  font-family: "Noto Sans CJK KR", "맑은 고딕";
+}
+
+section > h2 {
+  margin-bottom: 15px;
+}
+
+section > h2 + nav > .list {
+  *zoom: 1;
+  height: 250px;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+}
+
+section > h2 + nav > .list {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+section > h2 + nav > .list > .movie {
+  float: left;
+}
+section > h2 + nav > .list > .movie > ul {
+  display: flex;
+  flex-direction: column;
+}
+section > h2 + nav > .list > .movie > ul > li > a {
+  position: relative;
+}
+section > h2 + nav > .list > .movie > ul > li:first-child > a {
+  color: #2380c7;
+}
+section > h2 + nav > .list > .movie > ul > li:first-child {
+  margin: 3px 0 8px 0;
+  font-weight: 800;
+  font-size: 15px;
+  order: 200;
+}
+section > h2 + nav > .list > .movie > ul > li:nth-child(2) {
+  font-size: 13px;
+  order: 300;
+}
+section > h2 + nav > .list > .movie > ul > li:last-child > a:after {
+  display: block;
+  position: absolute;
+  width: 35px;
+  bottom: 3px;
+  right: 3px;
+  content: "최초";
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 2;
+  text-indent: 0;
+  text-align: center;
+  background-color: #58a1da;
+}
+
+section > h2 + nav > .list > .movie:last-child > ul > li:last-child > a:after {
+  content: "";
+}
+
+section > h2 + nav > .list > .movie > ul > li:last-child > a:before {
+  display: block;
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  content: " ";
+  width: 26px;
+  height: 27px;
+  background-image: url(./../images/sp_ico.png);
+  background-position: -102px -450px;
+}
+section > h2 + nav > .list > .movie > ul > li:last-child > a {
+  display: block;
+  overflow: hidden;
+  width: 176px;
+  height: 115px;
+  margin: 0 4px 5px 0;
+  text-indent: -9999px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  order: 100;
+}
+
+section > h2 + nav > .list > .movie:first-child > ul > li:last-child > a {
+  background-image: url(./../images/movie_1.jpg);
+}
+section > h2 + nav > .list > .movie:nth-child(2) > ul > li:last-child > a {
+  background-image: url(./../images/movie_2.jpg);
+}
+section > h2 + nav > .list > .movie:nth-child(3) > ul > li:last-child > a {
+  background-image: url(./../images/movie_3.jpg);
+}
+section > h2 + nav > .list > .movie:nth-child(4) > ul > li:last-child > a {
+  margin-right: 0;
+  background-image: url(./../images/movie_4.jpg);
+}
+section > h2 + nav > .list > .movie > ul > li > a {
+  display: block;
+  width: 175px;
+  line-height: 1.5;
+}
+
+footer > address {
+  line-height: 5;
+  text-align: center;
+}

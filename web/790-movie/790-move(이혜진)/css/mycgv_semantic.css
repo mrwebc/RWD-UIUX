@@ -1,0 +1,96 @@
+@charest "utf-8";
+
+body{color:#444;background-color:#fdfcf0;}
+
+#wrap{
+      width:1000px;
+			margin:50px auto;
+     }
+
+/* 헤더영역 */
+header>h1{
+	padding-bottom:20px;
+  font-size:16px;
+	font-family:Noto Sans KR;
+}
+
+header>h1+p{
+	font-weight:600;
+	line-height:1.5; /* 150% */
+	
+}
+/* 섹션영역 */
+section{margin:20px 0;}
+
+section>.guide{
+	padding:40px 0;
+	border-top:1px solid #e1ddd3;
+	border-bottom:1px solid #e1ddd3;
+}
+
+section>.guide>p{
+	margin:0 0 20px 30px;
+}
+
+/* 문맥선택자 - 원치 않은 다른 요소에게 영향을 주지 않는다는 확신이 있을 때 사용 */
+section>.guide strong{
+	color:#764d25;
+}
+
+section>.guide>ul{
+	margin-left:30px;
+}
+
+section>.guide>ul>li{
+	line-height:1.6;
+}
+
+section>.guide>ul>li>span{
+	display:block;
+	text-indent:10px;
+}
+
+section>.contact{
+	margin-top:20px;
+}
+
+section>.contact>h3{
+	margin-left:30px;
+	font-size:13px;
+}
+
+section>.contact>div{
+	margin:20px 15px;
+	padding:20px 0 5px 20px;
+	border:1px solid #e1ddd3;
+}
+
+section>.contact li{
+	line-height:1.8;
+}
+
+section>.contact>div>p{
+	height:40px;
+	line-height:40px;
+}
+
+section>.contact>.info{padding:0px;}
+section>.contact>.info>p{
+	line-height:20px;
+}
+section>.contact>.info>address{
+	margin-top:2px;
+}
+
+
+/* 푸터영역 */
+footer>p>a{
+	display:block;
+	width:160px;
+	height:25px;
+	margin:0 auto;
+	line-height:25px;
+	text-align:center;
+	border:2px solid #727272;
+	border-radius:5px;
+}

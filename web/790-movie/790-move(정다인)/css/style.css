@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+
+/*
+    sp_ico.png에서 플레이버튼 크기 : 26*27
+    background-position: -102px -450px;
+*/
+
+#wrap{
+    width: 830px;
+    margin: 0 auto;
+}
+
+/* header */
+header>h1{
+    font-weight: 800;
+}
+/* section */
+section>article{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 10px;
+    padding-bottom: 100px;
+    background-size: 100% 100%;
+    border-bottom: 1px solid #000;
+
+}
+
+section>article>ol>li>ul>li:nth-child(1)>a{
+    color: blue;
+    font-weight: 600;
+}
+section>article>ol>li>ul{
+    position: relative;
+}
+
+section>article>ol>li>ul>li:nth-child(1){
+    position: absolute;
+    top: 160px;
+}
+section>article>ol>li>ul>li:nth-child(2){
+    position: absolute;
+    top: 180px;
+}
+
+section>article>ol>li>ul>li:nth-child(3)>a{
+    display: block;
+    width: 200px;
+    height: 150px;
+    background-size: 100% 100%;
+}
+section>article>ol>li>ul>li:nth-child(3)>a>span.video{visibility: hidden;}
+
+section>article>ol:nth-child(1)>li>ul>li:nth-child(3)>a{
+    background-image: url(../images/movie_1.jpg)
+}
+section>article>ol:nth-child(2)>li>ul>li:nth-child(3)>a{
+    background-image: url(../images/movie_2.jpg);
+}
+section>article>ol:nth-child(3)>li>ul>li:nth-child(3)>a{
+    background-image: url(../images/movie_3.jpg);
+}
+section>article>ol:nth-child(4)>li>ul>li:nth-child(3)>a{
+    background-image: url(../images/movie_4.jpg);
+}
+section>article>ol>li>ul>li:nth-child(3){
+    position: relative;
+}
+section>article>ol>li>ul>li:nth-child(3)>a>span.play{
+    display: block;
+    position: absolute;
+    top:120px;
+    left: 7px;
+    background-image: url(../images/sp_ico.png);
+    background-position: -102px -450px;
+    width: 26px;
+    height: 27px;
+}
+
+section>article>ol:nth-child(1)>li>ul>li:nth-child(3)>a>span.box:before,
+section>article>ol:nth-child(2)>li>ul>li:nth-child(3)>a>span.box:before,
+section>article>ol:nth-child(3)>li>ul>li:nth-child(3)>a>span.box:before{
+    position: absolute;
+    top: 120px;
+    right: 3px;
+    content: "최초";
+    width: 40px;
+    height: 25px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: center;
+    color: #fff;
+    border: 1px solid blue;
+    background-color: blue;
+    
+}
+
+/* footer */
+footer{
+    text-align: center;
+    margin: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

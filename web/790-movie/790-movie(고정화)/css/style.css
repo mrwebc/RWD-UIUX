@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+/*
+    sp_ico.png에서 플레이버튼 크기 : 26*27
+    background-position: -102px -450px;
+*/
+#wrap{
+    width: 820px;
+    margin: 0 auto;
+}
+section{
+    height: 320px;
+    /* border: 1px solid #000; */
+    border-bottom: 2px solid #ccc;
+}
+section>h2{
+    margin: 20px 0;
+}
+section>ol{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+section>ol>li>.preview{
+    position: relative;
+    margin-right: 5px;
+}
+section>ol>li>.preview>li>a>img{    
+    width: 200px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+section>ol>li>.preview>li>a>.언플랜드{
+    width: 200px;
+    height: 150px;
+    margin-bottom: 10px;
+    background-image: url(../images/movie_1.jpg);
+    background-size: 100% 100%;
+}
+section>ol>li>.preview>li>a>.고양이{
+    width: 200px;
+    height: 150px;
+    margin-bottom: 10px;
+    background-image: url(../images/movie_2.jpg);
+    background-size: 100% 100%;
+}
+section>ol>li>.preview>li>a>.나이팅게일{
+    width: 200px;
+    height: 150px;
+    margin-bottom: 10px;
+    background-image: url(../images/movie_3.jpg);
+    background-size: 100% 100%;
+}
+section>ol>li>.preview>li>a>.빅풋{
+    width: 200px;
+    height: 150px;
+    margin-bottom: 10px;
+    background-image: url(../images/movie_4.jpg);
+    background-size: 100% 100%;
+}
+section>ol>li>.preview>li:first-child{
+    position: relative;
+}
+section>ol>li>.preview>li:first-child>a{    
+    color: #004cca;
+    font-weight: 800;
+    font-size: 14px;
+}
+section>ol>li>.preview>li:nth-child(2){
+    margin-top: 15px;
+}
+section>ol>li>.preview>li:nth-child(2)>a{
+    color: #333;
+    font-size: 13px;
+}
+section>ol>li>.preview>li:last-child>a>.box{
+    position: absolute;
+    bottom:62px;
+    left: 5px;
+    width: 26px;
+    height: 27px;
+    /* background-color: #000; */
+    text-indent:-9999px;
+    background-image: url(../images/sp_ico.png);
+    background-position: -102px -450px;
+}
+section>ol>li>.preview>li>span{
+    position: absolute;    
+    right: 5px;
+    bottom: 35px;
+    width: 45px;
+    height: 25px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 13px;
+    line-height: 25px;
+    text-align: center;
+    background-color: #6da5c7;
+}
+footer{
+    margin: 25px auto;
+    color: #333;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
