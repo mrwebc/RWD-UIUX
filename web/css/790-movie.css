@@ -3,7 +3,6 @@
 #wrap{
     width: calc(170px * 4 + 15px);/* 계산API */
     margin: 0 auto;
-    border: 1px solid #000;
 }
 
 section>h2{
@@ -23,7 +22,7 @@ section>ol{
 section>ol>.pack{
     width: 170px;
     height: 175px;
-    outline: 1px solid blue;/*임시*/
+   
 }
 
 section>ol>.pack>a{}
@@ -51,17 +50,46 @@ section>ol>.pack:nth-child(4) .pht{
     background-image: url(../790-movie/images/movie_4.jpg);
 }
 
-section>ol>.pack .mov{}
+section>ol>.pack .mov{
+    display: block;
+    position: absolute;
+    left: 5px;
+    bottom: 3px;
+    width: 26px;
+    height: 27px;
+    text-indent: -9999px;
+    background-image: url(../790-movie/images/sp_ico.png);
+    background-position: -102px -450px;
+}
 
-section>ol>.pack .frst{}
+/* section>ol>.pack .frst{ */
+section>ol>.pack .pht:after{
+    display: block;
+    position: absolute;
+    right: 3px;
+    bottom: 3px;
+    width: 45px;
+    height: 25px;
+    color: #fff;
+    font-weight: 800;
+    line-height: 25px;
+    text-align: center;
+    background-color: #6DA5C7;
+    content: '최초';
+}
+
+section>ol>.pack:nth-child(4) .pht:after{display: none;}
 
 section>ol>.pack .tit{
     height: 30px;
+    font-weight: 800;
+    font-size: 14px;
     line-height: 30px;
 }
 
 section>ol>.pack>a>ul>li.tip{
     height: 25px;
+    color: #666;
     line-height: 25px;
 }
 
