@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 #wrap{
-    width: calc(170px * 4 + 15px );
+    width: calc(170px * 4 + 15px);/* 계산API */
     margin: 0 auto;
     border: 1px solid #000;
 }
@@ -12,16 +12,59 @@ section>h2{
 }
 
 section>ol{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-flow: row nowrap;
 
+    justify-content: space-between;
 }
 
 section>ol>.pack{
     width: 170px;
-    height: 200px;/*임시*/
+    height: 175px;
     outline: 1px solid blue;/*임시*/
 }
 
 section>ol>.pack>a{}
+
+section>ol>.pack>a>ul{}
+section>ol>.pack>a>ul>li.pht{
+    position: relative;
+    height: 120px;
+    background-size: cover;
+}
+
+section>ol>.pack:nth-child(1) .pht{
+    background-image: url(../790-movie/images/movie_1.jpg);
+}
+
+section>ol>.pack:nth-child(2) .pht{
+    background-image: url(../790-movie/images/movie_2.jpg);
+}
+
+section>ol>.pack:nth-child(3) .pht{
+    background-image: url(../790-movie/images/movie_3.jpg);
+}
+
+section>ol>.pack:nth-child(4) .pht{
+    background-image: url(../790-movie/images/movie_4.jpg);
+}
+
+section>ol>.pack .mov{}
+
+section>ol>.pack .frst{}
+
+section>ol>.pack .tit{
+    height: 30px;
+    line-height: 30px;
+}
+
+section>ol>.pack>a>ul>li.tip{
+    height: 25px;
+    line-height: 25px;
+}
+
 
 footer>address{
     height: 50px;
