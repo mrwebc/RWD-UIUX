@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+#wrap{
+    width: calc(170px * 4 + 15px );
+    margin: 0 auto;
+    border: 1px solid #000;
+}
+
+section>h2{
+    height: 50px;
+    line-height: 50px;
+}
+
+section>ol{
+
+}
+
+section>ol>.pack{
+    width: 170px;
+    height: 200px;/*임시*/
+    outline: 1px solid blue;/*임시*/
+}
+
+section>ol>.pack>a{}
+
+footer>address{
+    height: 50px;
+    margin-top: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
