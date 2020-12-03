@@ -3,6 +3,7 @@ setup/
 photoshop/
 01-UI디자인/
 개인상담/
+web/grid
 
 .gitignore
 *.zip
