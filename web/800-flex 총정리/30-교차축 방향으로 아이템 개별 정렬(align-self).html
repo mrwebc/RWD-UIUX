@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교차축 방향으로 아이템 개별 정렬(align-self)</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        #wrap{
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .container{
+            display: flex;
+            flex-flow: row nowrap;
+
+            justify-content: center;
+            align-items: center;
+
+            height: 500px;
+            background-color: #ccc;
+        }
+
+        .item{height: 100px;}
+
+        /* 
+            align-self 속성은 기본적으로 
+            컨테이너의 align-items 속성을 상속받음
+
+            하지만 개별적으로 지정하여 교차축 방향으로
+            아이템을 개별 정렬할 수 있음
+         */
+
+        .item:nth-of-type(1){align-self:flex-start;}
+        .item:nth-of-type(4){align-self:flex-end;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">
+            교차축 방향으로 아이템 개별 정렬(align-self)
+        </h1>
+        <section class="container">
+            <p class="item" style="width:100px;background-color:red;">1</p>
+            <p class="item" style="width:80px;background-color:orange;">2</p>
+            <p class="item" style="width:200px;background-color:yellow;">3</p>
+            <p class="item" style="width:300px;background-color:green;">4</p>
+            <p class="item" style="width:120px;background-color:blue;">5</p>
+          </section>        
+    </div>
+</body>
+</html>

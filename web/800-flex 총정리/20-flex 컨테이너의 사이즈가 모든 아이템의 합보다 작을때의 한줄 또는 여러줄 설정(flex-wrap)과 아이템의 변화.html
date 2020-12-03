@@ -64,7 +64,9 @@
         /* 
             flex 테스트 
 
-            1. flex-wrap:no-wrap - 플렉스 컨테이너가 모든 아이템의 합보다 작으면 아이템의 크기 비율을 자동으로 계산하여 모자란 크기 만큼을 비율대로 축소시켜서 최종 한줄로 나열함
+            1. flex-wrap:nowrap - 플렉스 컨테이너가 모든 아이템의 합보다 작으면 아이템의 크기 비율을 자동으로 계산하여 모자란 크기 만큼을 비율대로 축소시켜서 최종 한줄로 나열함
+
+            2. flex-wrap:wrap - 플렉스 컨테이너가 모든 아이템의 합보다 작으면 drop되어 아이템이 여러줄로 나열됨
         */
 
     </style>
@@ -102,11 +104,26 @@
 
         <hr />
 
-        <h2>2. flex-direction:row-reverse</h2>
-        <section class="container row-reverse">
+        <style>
+            .row.wrap-reverse{
+                display: flex;
+                flex-direction: row; 
+                flex-wrap: wrap;/* 여러줄 설정*/
+                flex-wrap: wrap-reverse;
+                /*
+                    교차축의 flex-start 위치가 반대방향으로 설정되어 결과적으로 줄간 역방향으로 나열됨
+                */
+
+                width: 500px;
+                height: 500px;
+            }
+        </style>
+
+        <h2>2. flex-direction:row / flex-wrap:wrap-reverse</h2>
+        <section class="container row wrap-reverse">
             <p class="item">1</p>
             <p class="item">2</p>
-            <p class="item" style="align-self:center;">3</p>
+            <p class="item">3</p>
             <p class="item">4</p>
             <p class="item">5</p>
             <p class="item">6</p>
@@ -115,8 +132,19 @@
 
         <hr />
 
-        <h2>3. flex-direction:column</h2>
-        <section class="container column">
+        <style>
+            .column.wrap{
+                display: flex;
+                flex-direction: column;/*주축설정*/
+                height: 300px; /* 딱맞는 크기는 530 - 300 = 모자란크기 230 */
+
+                flex-wrap: nowrap;
+                flex-wrap: wrap;/* 여러줄 설정 */
+            }
+        </style>
+
+        <h2>3. flex-direction:column / flex-wrap:wrap</h2>
+        <section class="container column wrap">
             <p class="item">1</p>
             <p class="item">2</p>
             <p class="item">3</p>
@@ -128,8 +156,24 @@
 
         <hr />
 
-        <h2>4. flex-direction:column-reverse</h2>
-        <section class="container column-reverse">
+        <style>
+            .column.wrap-reverse{
+                display: flex;
+                flex-direction: column;
+                height: 300px;
+
+                flex-wrap: nowrap;
+                flex-wrap: wrap;
+                
+                flex-wrap: wrap-reverse;
+                /*
+                    교차축의 flex-start 위치가 반대방향으로 설정되어 결과적으로 줄간 역방향으로 나열됨
+                */                
+            }
+        </style>
+
+        <h2>4. flex-direction:column / flex-wrap:wrap-reverse</h2>
+        <section class="container column wrap-reverse">
             <p class="item">1</p>
             <p class="item">2</p>
             <p class="item">3</p>

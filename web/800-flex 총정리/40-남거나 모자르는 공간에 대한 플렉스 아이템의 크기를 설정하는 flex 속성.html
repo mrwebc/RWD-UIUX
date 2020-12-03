@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>남거나 모자르는 공간에 대한 플렉스 아이템의 크기를 설정하는 flex 속성</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+    #wrap{
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    h2{
+      height: 50px;
+      margin-top: 50px;
+      line-height: 50px;
+      text-align: center;
+    }
+
+    .container{
+      display: flex;
+      flex-flow: row nowrap;
+
+      height: 150px;
+      background-color:gray;
+    }
+
+    p{height:100px;line-height:100px;text-align:center;}
+
+    .item1{flex:1 0 auto;}
+    .item2{flex:3 0 auto;}
+    
+    .item3,.item5,.item7{flex:0 0 auto;}
+    .item4{flex:0 3 auto;}
+    .item6{flex:0 2 auto;}
+
+    /* p{flex:0 1 20px !important;} */
+
+    .item1{flex:2 1 0;}
+    .item2{flex:1 1 0;}
+    .item3{flex:2 1 0;}
+    .item4{flex:1 1 0;}
+    .item5{flex:2 1 0;}
+    .item6{flex:1 1 0;}
+    .item7{flex:2 1 0;}
+    
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">
+            flex:[flex-grow] [flex-shrink] [flex-basis];
+        </h1>
+
+        <h2>flex:0 1 auto (기본값)</h2>
+        <section class="container case1">
+            <p class="item1" style="width:100px;background-color:red;">1</p>
+            <p class="item2" style="width:80px;background-color:orange;">2</p>
+            <p class="item3" style="width:200px;background-color:yellow;">3</p>
+            <p class="item4" style="width:300px;background-color:green;">4</p>
+            <p class="item5" style="width:120px;background-color:blue;">5</p>
+            <p class="item6" style="width:250px;background-color:Indigo;">6</p>
+            <p class="item7" style="width:150px;background-color:purple;">7</p>
+          </section>
+    </div>
+</body>
+</html>
