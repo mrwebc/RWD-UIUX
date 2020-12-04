@@ -38,3 +38,12 @@ line_company_btn_next_20201204.png
 페이징      paging
 페이지네이션 pagination
 지시자      indicator
+
+베스트      best
+신규        new <-> old
+
+읽기        read
+쓰기        wrt
+
+열기        opn
+닫기        clse
