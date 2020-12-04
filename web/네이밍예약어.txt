@@ -1,0 +1,40 @@
+파일명 명명규칙 : 
+
+ex) line 프로젝트 : 프로젝트명_카테고리_특징_의미_날짜_기타.png
+line_company_btn_next_20201204.png
+
+
+의미              키워드
+
+메인메뉴        gnb (global navigation bar), mainmnu
+서브메뉴        lnb (local navigation bar), submnu
+
+네비게이션      nav
+메뉴            mnu
+탭메뉴          tab
+제목            tit, h
+텍스트          tx, txt
+인덱스          idx
+
+업데이트(갱신)   updt
+업로드          upld
+다운로드        dnld
+
+켜짐        on
+꺼짐        off
+
+등록        reg
+답변        repl
+
+수정        edt
+삭제        del
+
+검색        srch
+찾기        fnd
+
+더보기      more
+목록        lst
+
+페이징      paging
+페이지네이션 pagination
+지시자      indicator
