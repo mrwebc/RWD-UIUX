@@ -47,3 +47,32 @@ line_company_btn_next_20201204.png
 
 열기        opn
 닫기        clse
+
+숨김        hide, blind
+잠그기      lc
+허용        pmit
+화살표      arr
+
+이전        prev
+다음        next
+
+처음        frst
+마지막      last
+
+위          up
+아래        dn
+
+오버        ovr
+상단        top
+하단        btm
+
+전송        smit
+버튼        btn
+
+가기            go
+라디오버튼      input_rdo
+체크박스        input_chk
+텍스트필드      input_txt, input_tx
+
+
+
