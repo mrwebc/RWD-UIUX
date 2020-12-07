@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>860-요소의 변형 transform</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        #wrap{
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        article{
+            width: 200px;
+            height: 200px;
+            margin-left: 200px;
+            border: 5px solid orange;
+        }
+
+        article>p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 200px;
+            background-color: #0f0;
+            opacity: 0.5;
+        }
+
+        p.first{
+            transform:scale(1.2) rotate(45deg);
+            transform:scale(1) rotate(0deg) skew(10deg, 10deg);
+        }
+
+        p.second{
+            /* 요소가 본래 위치해 있던 자리가 기준 */
+            transform: translate(100px,200px);
+        }
+
+        p.third{
+            transform-origin: right top;
+            transform: scale(1.5) rotate(250deg);
+        }
+
+      /* 
+         transform - 과거 자바스크립트에서만 구현 가능했던 변환기능을 CSS3에서도 구현 가능 
+
+         translate(x,y)   이동
+         translateX      x이동
+         translateY      Y이동
+         
+         scale(x,y)      크기
+         scaleX         X축 크기
+         scaleY         Y축 크기
+         
+         skew(x,y)      기울기
+         skewX         X축 기울기
+         skewY         Y축 기울기
+         
+         rotate(n)      회전(deg)
+      */         
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">요소의 변형 transform</h1>
+
+        <section>
+            <article>
+                <p class="first">변형1</p>
+            </article>
+
+            <article style="margin-top: 100px;">
+                <p class="second">변형2</p>
+            </article>
+
+            <article style="margin-top: 100px;">
+                <p class="third"">변형3</p>
+            </article>
+        </section>
+    </div>
+</body>
+</html>
