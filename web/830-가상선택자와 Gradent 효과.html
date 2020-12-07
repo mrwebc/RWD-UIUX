@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>830-가상선택자와 Gradent 효과</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        .frame{
+            overflow: hidden;
+            position: relative;/* 기준점 */
+            width: 350px;
+            height: 280px;
+            margin: 0 auto;
+        }
+
+        /* 처음부터 보이는 그레디언트 필터 */
+        /* .frame>.shadow1{ */
+        .frame:before{
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 350px;
+            height: 280px;
+            background: linear-gradient(to bottom, transparent 0%, #363636 50%);
+            opacity: 1;/* 불투명도 */
+            content: '';
+        }
+
+
+        /* :hover 했을때 보이는 그레디언트 필터 */
+        /* .frame>.shadow2{ */
+            .frame:after{
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 350px;
+            height: 280px;
+            background: linear-gradient(to bottom, transparent 0%, #4779db 50%);
+            opacity: 1;/* 불투명도 */
+            content: '';
+        }
+
+        /* .frame:hover>.shadow2{display: block;} */
+        .frame:hover:after{display: block;}
+
+        .frame>img{
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">
+            가상선택자와 그레디언트
+        </h1>
+
+        <p class="frame">
+            <!-- <span class="shadow1"></span> -->
+            <img src="./images/1275.jpg" alt="가족사진">
+            <!-- <span class="shadow2"></span> -->
+        </p>
+    </div>
+</body>
+</html>
