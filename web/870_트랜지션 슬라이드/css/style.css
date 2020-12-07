@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+.slides{
+    display: flex;    
+    width: 980px;
+    margin: 0 auto;
+}
+
+.slides>li{
+    overflow: hidden;
+    width: 140px;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+/* .slides:hover>li{width: 50px;} */
+
+.slides>li:hover{
+    width: 680px;
+}
+
+.slides>li>a{}
+
+.slides>li>a>img{
+    display: block;
+    width: 680px;
+}
