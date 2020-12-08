@@ -74,5 +74,27 @@ line_company_btn_next_20201204.png
 체크박스        input_chk
 텍스트필드      input_txt, input_tx
 
+확인        cfm (confirm)
+완료        ok
+취소        cncl
 
+확대        zin
+축소        zout
 
+수직        vt
+수평        hr
+
+중앙(수직)  mid
+중앙(수평)  cen
+
+감싸다      wrap, wrapper, container
+문단        p
+내용        cont
+설명        desc, dsc
+
+우플롯      fr
+좌플롯      fl
+해제        clear, clearfix
+
+오른쪽      rgt
+왼쪽        lft
