@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+body{
+    background-color: #394753;
+}
+#wrap{
+    width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #394753;
+}
+header>h1{
+    height: 100px;
+    margin-left: 20px;
+    font-size: 28px;
+    line-height: 100px;
+}
+header>h1>a{
+    display: block;
+    height: 80px;
+}
+header>nav>ul.gnb{
+    display: flex;
+    justify-content: flex-end;
+    height: 30px;
+    font-size: 14px;
+    background-color: #394753;
+}
+header>nav>ul.gnb>li{
+    width: 60px;
+    text-align: center;
+    border-left: 1px solid #000;
+}
+header>nav>ul.gnb>li:last-child{
+    border-right: 1px solid #000;
+}
+header>nav>ul.gnb>li>a{
+    display: block;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+}
+header>nav>ul.gnb>li>a:hover{
+    color:#394753;
+    font-weight: 800;
+    text-decoration: underline;
+    background-color: #fff;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    box-sizing: border-box;
+}
+header>nav>ul.gnb>li.on>a{
+    color:#394753;
+    font-weight: 800;
+    text-decoration: underline;
+    background-color: #fff;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    box-sizing: border-box;
+}
+header>p.pagination{
+    height: 300px;
+    text-indent: -9999px;
+    background-image: url(../images/header.jpg);
+    background-size: 100%;
+}
+header>p.pagination>a{
+    display: block;
+    height: 300px;
+}
+section>ol.container{
+    display: flex;
+}
+section>ol.container>li{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 20px 10px;
+    border: 2px solid #bbb;
+}
+section>ol.container>li{
+   padding: 10px;
+}
+section>ol.container>li>ul.content>li:first-child{
+    font-weight: 800;
+}
+section>ol.container>li>ul.content>li{
+    margin-bottom: 10px;
+}
+section>ol.container>li:first-child>ul.content>li:nth-child(4){
+    margin-bottom: 0;
+    font-weight: 800;
+}
+section>ol.container>li:nth-child(2)>ul.content>li:nth-child(2){
+    margin-bottom: 30px;
+}
+section>ol.container>li>ul.content>li>span{
+    font-weight: 800;
+}
+section>ol.container>li>img{
+    position: absolute;
+    right: -10px;
+    top: -10px; 
+    width: 80px;
+    height: 80px;
+    border: 2px solid #bbb;
+}
+
+footer>address{
+    height: 30px;
+    margin: o auto;
+    color: #fff;
+    font-style: italic;
+    line-height: 30px;
+    text-align: center;
+    background-color: #394753;
+}
