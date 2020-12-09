@@ -98,3 +98,26 @@ line_company_btn_next_20201204.png
 
 오른쪽      rgt
 왼쪽        lft
+
+오른쪽위        rt
+왼쪽위          lt
+
+오른쪽하단      rb
+왼쪽하단        lb
+
+사진        pht
+액자        frame
+썸네일      thmb, thumb
+이미지      img   
+
+경로        path
+광고        ad
+아이콘      ico
+동영상      mov
+재생        play
+정지        stp, stop
+
+불릿        bu
+별          star
+배너        banr
+
