@@ -38,6 +38,11 @@ body{
 
 .text-hide{display:none;}
 
+/* 스크린리더가 읽을 수 있어 접근성이 향상됨 */
+.sr-only{
+	position: absolute;
+	left: -9999px
+}
 
 
 
