@@ -10,7 +10,6 @@ body{
     background-color: #fff;
 }
 
-/* header{background-color: #ff0;} */
 
 header>.logo>a{
     display: block;
@@ -26,9 +25,6 @@ header>nav{background-color: #394753;}
 header>nav>.gnb{
     display: flex;
     justify-content: flex-end;
-    /* flex-direction: row;
-    flex-wrap: nowrap; */
-    /* background-color: #0f0; */
 }
 
 header>nav>.gnb>li{
@@ -73,22 +69,59 @@ section.visual>a{
 /* 콘텐츠영역 */
 section.cont{
     display: flex;
-    /* flex-direction: row;
-    flex-wrap: nowrap;
-    flex-flow: row nowrap; */
     justify-content: space-around;
 }
 
 section.cont>article{
     width: 210px;
-    height: 250px;
+    /* height: 250px; */
+    margin: 15px 0 0 0;
+    background-color: #f9f9f9;
     border: 1px solid #aaa;
 }
 
-section.cont>article>h3{}
+section.cont>article>h3{
+    margin: 5px 0 2px 5px;
+}
+
+section.cont>article>p{
+    padding: 5px;
+    line-height: 1.4;
+    *zoom:1;
+}
+
+section.cont>article>p:after{
+    display: block;
+    clear: both;
+    content: '';
+}
+
+section.cont>article>p>.frame{
+    display: block;
+    float: right;
+    width: 75px;
+    height: 75px;
+    margin: -35px -10px 0 2px;
+    border: 1px solid #bbb;
+}
+
+section.cont>article>p>.frame>img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+section.cont>article>dl{
+    margin: 15px 0 0 10px;
+}
+
+section.cont>article>dl>dt{
+    margin-top: 10px;
+}
 
 
 footer{
+    margin-top: 10px;
     background-color: #394753;
 }
 
