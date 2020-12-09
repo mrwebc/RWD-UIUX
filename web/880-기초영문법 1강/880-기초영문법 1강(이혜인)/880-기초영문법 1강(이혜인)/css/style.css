@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+body{background-color: #394753;}
+
+#wrap{
+    width: 900px;
+    margin: 0 auto;
+    color: #222;
+    font-family: "Noto Sans CJK KR", "맑은 고딕";
+}
+
+header>.tit>a{
+    display: block;
+    height: 100px;
+    color: #394753;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 100px;
+    text-indent: 20px;
+    background-color: #fff;
+}
+
+header>.tit>a>span{font-weight: 300;}
+
+header>nav>.gnb{
+    display: flex;
+    justify-content: flex-end;
+}
+
+header>nav>.gnb>li{
+    width: 70px;
+    text-align: center;
+    border: 1px solid #000;
+}
+
+header>nav>.gnb>li>a{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    font-size: 15px;
+}
+
+header>nav>.gnb>li:hover>a,
+header>nav>.gnb>.on>a{
+    color: #000;
+    font-weight: 500;
+    text-decoration: underline;
+    background-color: #fff;
+}
+
+header>.slides{
+    overflow: hidden;
+    height: 325px;
+    border-top: 1px solid #fff;
+}
+
+header>.slides>a>img{
+    display: block;
+    width: 100%;
+}
+
+section{
+    padding: 20px;
+    background-color: #fff;
+}
+
+section>h2{display: none;}
+
+section>ol{
+    display: flex;
+    justify-content: space-around;
+}
+
+section>ol>li{
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+section>ol>li>ul{
+    padding-top: 15px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+section>ol>li>ul>li{
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+section>ol>li,
+section>ol>li .pic{
+    outline: 2px solid #bbb;
+}
+
+section>ol>li .pic{
+    display: block;
+    float: right;
+    position: relative;
+    left: 15px;
+    bottom: 15px;
+    width: 100px;
+    height: 100px;
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+}
+
+section>ol>.first .pic{background-image: url(./../images/pic1.jpg);}
+section>ol>.second .pic{background-image: url(./../images/pic2.jpg);}
+section>ol>.third .pic{background-image: url(./../images/pic3.jpg);}
+
+section>ol>.first>ul>li>span{color: rgb(79, 133, 212);}
+
+section .second>ul>li:last-child{
+    margin-top: 40px;
+    line-height: 1.5;
+}
+
+footer>address{
+    margin-top: 10px;
+    color: #fff;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 13px;
+    text-align: center;
+}
