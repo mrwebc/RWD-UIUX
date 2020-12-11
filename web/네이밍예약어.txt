@@ -121,3 +121,23 @@ line_company_btn_next_20201204.png
 별          star
 배너        banr
 
+숫자        num
+레이어      ly
+마스크      mask
+배경        bg
+
+슬래시      sl
+백슬래시    bsl
+
+새로고침        rfsh
+스프라이트      sp
+임시            tmp, temp
+
+접기            fd
+펼치기          unfd
+
+한국어          kr, ko
+영어            en, eng
+중국어          cn
+일어            jp
+
