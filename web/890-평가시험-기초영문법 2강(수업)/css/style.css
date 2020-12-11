@@ -55,13 +55,31 @@ section{
 /* 네비게이션 영역 */
 section>.lft{
     width: 150px;
-    background-color: pink;
+    /* background-color: pink; */
 }
 
 section>.lft>nav{}
 section>.lft>nav>.gnb{}
-section>.lft>nav>.gnb>li{}
-section>.lft>nav>.gnb>li>a{}
+
+section>.lft>nav>.gnb>li{
+    margin-bottom: 5px;
+    border-left: 4px solid #1C6280;
+}
+
+section>.lft>nav>.gnb>li>a{
+    display: block;
+    height: 26px;
+    font-weight: 800;
+    line-height: 26px;
+    text-indent: 10px;
+    background-color: #BECFD6;
+}
+
+section>.lft>nav>.gnb>li:hover>a,
+section>.lft>nav>.gnb>li.on>a{
+    color: #00364D;
+    background-color: #eaeaea;
+}
 
 
 section>.cont{
