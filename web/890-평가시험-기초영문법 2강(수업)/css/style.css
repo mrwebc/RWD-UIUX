@@ -55,11 +55,7 @@ section{
 /* 네비게이션 영역 */
 section>.lft{
     width: 150px;
-    /* background-color: pink; */
 }
-
-section>.lft>nav{}
-section>.lft>nav>.gnb{}
 
 section>.lft>nav>.gnb>li{
     margin-bottom: 5px;
