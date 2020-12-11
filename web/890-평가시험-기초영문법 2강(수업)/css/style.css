@@ -45,6 +45,37 @@ header>.mainbanr{
     background-image: url(../images/front.jpg);
 }
 
+section{
+    display: flex;
+    flex-flow: row nowrap;/* 기본값 */
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+/* 네비게이션 영역 */
+section>.lft{
+    width: 150px;
+    background-color: pink;
+}
+
+section>.lft>nav{}
+section>.lft>nav>.gnb{}
+section>.lft>nav>.gnb>li{}
+section>.lft>nav>.gnb>li>a{}
+
+
+section>.cont{
+    width: 470px;
+    background-color: #0f0;
+}
+
+section>.tip{
+    width: 100px;
+    background-color: pink;
+}
+
+
+
 footer>address{
     height: 50px;
     line-height: 50px;
