@@ -83,7 +83,7 @@ section>.lft>.verb{
     background-color: #BECFD6;
 }
 
-section>.lft>.verb>h3{
+section>.lft>.verb>h4{
     margin: 5px 0 15px;
     font-size: 14px;
 }
@@ -99,11 +99,35 @@ section>.lft>.verb>p>a{
     text-align: right;
 }
 
-
+/* 본문내용 */
 section>.cont{
     width: 470px;
-    background-color: #0f0;
+    padding: 0 10px;
+    border-left: 1px solid #BECFD6;
+    border-right: 1px solid #BECFD6;
 }
+
+section>.cont>h3{
+    margin: 10px 0;
+    color: #222;
+    font-size: 16px;
+}
+
+section>.cont>p>strong{color:rgb(226, 2, 2)}
+
+section>.cont>ul{
+    margin: 10px 0 20px 20px;
+}
+
+section>.cont>ul>li{
+    line-height: 20px;
+}
+
+section>.cont>ul>li:before{content: '▣ ';}
+
+
+
+
 
 section>.tip{
     width: 100px;
