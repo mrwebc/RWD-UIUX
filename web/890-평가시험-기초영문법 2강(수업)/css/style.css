@@ -84,11 +84,19 @@ section>.lft>.verb{
 }
 
 section>.lft>.verb>h3{
+    margin: 5px 0 15px;
     font-size: 14px;
 }
 
 section>.lft>.verb>p{
+    margin-bottom: 15px;
     font-size: 11px;
+}
+
+section>.lft>.verb>p>a{
+    display: block;
+    margin-top: 20px;
+    text-align: right;
 }
 
 
