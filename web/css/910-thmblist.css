@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+#wrap{width: 100%;}
+
+h1{margin: 50px 0 15px 20px;}
+h1+p{margin-left: 20px;}
+
+ul{
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 15px;
+}
+
+ul>li{
+    width: 25%;
+    width: 120px;
+}
+
+ul>li>a{
+    display: block;
+    padding: 15px;
+}
+
+ul>li>a>.frame{
+    display: block;
+    overflow: hidden;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 10px;
+    border: 5px solid #ccc;
+    border-radius: 15px;
+}
+
+ul>li>a>.frame>img{
+    display: block;
+    width: 100%;
+}
+
+ul>li>a>.tit{
+    display: block;
+    overflow: hidden;
+    margin-bottom: 20px;
+    text-align: center;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
