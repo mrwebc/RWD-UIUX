@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>920-테이블 만들기</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        table{
+            margin: 0;
+            padding: 0;
+            border-collapse:collapse;
+        }
+
+        tr{}/* tr에 CSS를 적용하는 경우는 거의 없다. */
+
+        td{
+            width: 150px;
+            height: 50px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+
+        /* 셀의 제목을 나타냄 - 컬럼열에 사용된 자료를 구분하기 위해 사용됨 */
+        th{
+            width: 150px;
+            height: 50px;
+            border: 1px solid #000;
+
+            /* 셀 안에서의 세로 정렬 */
+            vertical-align: top;
+            vertical-align: bottom;
+            vertical-align:middle;/*기본값*/
+        }
+
+        table:last-child th{background-color: orange;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">
+            테이블 태그는 표로된 정보를 나타낼 때만 사용(시간표, 출석표, 회원가입양식, 게시판)
+        </h1>
+
+        <h2>1행 3열 테이블</h2>
+        <table>
+            <tr>
+                <td>1행 1열</td>
+                <td>1행 2열</td>
+                <td>1행 3열</td>
+            </tr>
+        </table>
+
+        <h2>2행 3열 테이블</h2>
+        <table>
+            <tr>
+                <td>1행 1열</td>
+                <td>1행 2열</td>
+                <td>1행 3열</td>
+            </tr>
+            <tr>
+                <td>2행 1열</td>
+                <td>2행 2열</td>
+                <td>2행 3열</td>
+            </tr>
+        </table>
+
+        <h2>3행 4열 테이블(출석부)</h2>
+        <table>
+            <tr>
+                <th scope="col">이름</th>  <!-- 유효범위 -->
+                <th scope="col">연락처</th>
+                <th scope="col">지역</th>
+                <th scope="col">참석</th>
+            </tr>
+            <tr>
+                <td>홍길동</td>
+                <td>010-1245-5678</td>
+                <td>한양</td>
+                <td>○</td>
+            </tr>
+            <tr>
+                <td>박상현</td>
+                <td>010-4567-2456</td>
+                <td>서울</td>
+                <td>○</td>
+            </tr>
+        </table>
+
+        <h2>4행 4열 테이블</h2>
+        <table>
+            <tr>
+                <th scope="col">Sr.NO</th>
+                <th scope="col">Roll No</th>
+                <th scope="col">Name</th>
+                <th scope="col">Team</th>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>1001</td>
+                <td>Jhon</td>
+                <td>Red</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>1002</td>
+                <td>Peter</td>
+                <td>Blue</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>1003</td>
+                <td>Henry</td>
+                <td>Green</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
