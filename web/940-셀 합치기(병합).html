@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>940-셀 합치기(병합)</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <style>
+        hr{margin: 50px 0;}
+        table{
+            margin: 0;
+            padding: 0;
+            border-collapse:collapse;
+        }
+
+        tr{}/* tr에 CSS를 적용하는 경우는 거의 없다. */
+
+        td{
+            width: 150px;
+            height: 50px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+
+        /* 셀의 제목을 나타냄 - 컬럼열에 사용된 자료를 구분하기 위해 사용됨 */
+        th{
+            width: 150px;
+            height: 50px;
+            border: 1px solid #000;
+
+            /* 셀 안에서의 세로 정렬 */
+            vertical-align: top;
+            vertical-align: bottom;
+            vertical-align:middle;/*기본값*/
+        }
+
+        table:last-child th{background-color: orange;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>
+            테이블 태그는 표로된 정보를 나타낼 때만 사용(시간표, 출석표, 회원가입양식, 게시판)
+        </h1>
+
+        <h2>2행 3열 테이블(열병합-colspan)</h2>
+        <table>
+            <tr>
+                <td colspan="2">1행 1열</td>
+                <!-- <td>1행 2열</td> -->
+                <td rowspan="2">1행 3열</td>
+            </tr>
+            <tr>
+                <td>2행 1열</td>
+                <td>2행 2열</td>
+                <!-- <td>2행 3열</td> -->
+            </tr>
+        </table> 
+
+        <hr />
+
+        <h2>2행 3열 테이블(행병합-rowspan)</h2>
+        <table>
+            <tr>
+                <td rowspan="2">1행 1열</td>
+                <td>1행 2열</td>
+                <td>1행 3열</td>
+            </tr>
+            <tr>
+                <!-- <td>2행 1열</td> -->
+                <td colspan="2">2행 2열</td>
+                <!-- <td>2행 3열</td> -->
+            </tr>
+        </table>
+
+        <hr />
+
+      
+        <h2>4행 4열 테이블</h2>
+        <table>
+            <tr>
+                <th scope="col">Sr.NO</th>
+                <th scope="col">Roll No</th>
+                <th scope="col">Name</th>
+                <th scope="col">Team</th>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td rowspan="3" colspan="3">1001</td>
+                <!-- <td>Jhon</td>
+                <td>Red</td> -->
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <!-- <td>1002</td>
+                <td>Peter</td>
+                <td>Blue</td> -->
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <!-- <td>1003</td>
+                <td>Henry</td>
+                <td>Green</td> -->
+            </tr>
+        </table>
+
+        <hr />
+
+
+        <h2>연습1</h2>
+        <table>
+            <tr>
+                <td rowspan="3" >span 3 rows</td>
+                <td colspan="3">span 3 columns</td>
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+            </tr>
+            <tr>
+                <!-- <td></td> -->
+                <td>H</td>
+                <td>T</td>
+                <td rowspan="2">span 2 rows</td>
+            </tr>
+            <tr>
+                <!-- <td></td> -->
+                <td>M</td>
+                <td>L</td>
+                <!-- <td></td> -->
+            </tr>
+            <tr>
+                <td colspan="4">span 4 columns</td>
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+            </tr>
+        </table>
+
+        <hr />
+
+        <h2>연습2</h2>
+        <table>
+            <tr>
+                <td colspan="2" rowspan="2">span2 rows<br />and 2 columns</td>
+                <!-- <td></td> -->
+                <td>T</td>
+            </tr>
+            <tr>
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+                <td>B</td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td>L</td>
+                <td>A</td>
+            </tr>
+        </table>
+
+        
+
+    </div>
+</body>
+</html>
