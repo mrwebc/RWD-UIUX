@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쥬라기공원 요금표</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+    <style>
+        #wrap{
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        h1{text-align: center;}
+
+        table{
+            width: 100%;
+            height: 300px;
+        }
+
+        caption{display:none;}
+
+        th,td{border: 1px solid #000;}
+        td{text-align: center;}
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>쥬라기 공원</h1>
+
+        <table>
+            <caption>쥬라기공원 요금표</caption>  
+
+            <colgroup>
+                <col style="width: 20%; background-color: #f0f;"/>
+                <col style="width: 30%; background-color: #ff0;"/>
+                <col style="width: 50%; background-color: #ff0;"/>
+            </colgroup>
+
+            <thead>
+                <tr>
+                    <td colspan="3" scope="col">요금안내</td>
+                </tr>
+                <tr>
+                    <th scope="col">구분</th>
+                    <th scope="col">프리미엄</th>
+                    <th scope="col">스페셜</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">성인</th>
+                    <td>10,000원</td>
+                    <td>30,000원</td>
+                </tr>
+                <tr>
+                    <th scope="row">청소년</th>
+                    <td>5,000원</td>
+                    <td>15,000원</td>
+                </tr>
+                <tr>
+                    <th scope="row">소인</th>
+                    <td colspan="2">초등학생 이하 무조건 3,000원</td>
+                </tr>
+
+                <tr>
+                    <th rowspan="2" scope="col">공연시간</th>
+                    <td>오전</td>
+                    <td>10시 ~ 11시</td>
+                </tr>
+                <tr>
+                    <td>오후</td>
+                    <td>14시 ~ 15시</td>
+                </tr>
+            </tbody>
+            
+            <tfoot></tfoot>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>960-시멘틱 테이블 완전체</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        table{
+            width: 500px;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        table th,
+        table td{
+            height: 40px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+
+        table th:nth-child(1){
+            /* width: 20%; */
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">
+            최근 2년간 모바일시장 점유율
+        </h1>
+
+        <table>
+            <caption>삼성 vs 애플 시장점유율</caption>
+            <colgroup>
+                <col style="width: 20%; background-color: yellow;" />
+                <col style="width: 40%; background-color: pink;" />
+                <col style="width: 40%; background-color: aqua;" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">구분</th>
+                    <th scope="col">Samsung</th>
+                    <th scope="col">Apple</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th scope="row">2019</th>
+                    <td>45%</td>
+                    <td>60%</td>
+                </tr>
+                <tr>
+                    <th scope="row">2020</th>
+                    <td>35%</td>
+                    <td>65%</td>
+                </tr>
+            </tbody>
+
+            
+            <tfoot>
+                <tr>
+                    <th scope="row">총계</th>
+                    <td>40%</td>
+                    <td>60%</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>
