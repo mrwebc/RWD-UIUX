@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+#wrap{
+    width: 655px;
+    margin: 0 auto;
+}
+
+header{}
+
+header>h1{
+    background-image: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+}
+
+header>h1>a{
+    display: block;
+    height: 308px;
+    text-indent: -9999px;
+}
+
+/* 메뉴영역 */
+header>nav{
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */
+}
+
+header>nav>.gnb{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+header>nav>.gnb>li{
+    width: 25%;
+}
+
+header>nav>.gnb>li>a{
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    background-image: url(../images/bg_mnu.png);
+    background-position: 20px 0px;
+    background-repeat: no-repeat;
+}
+
+header>nav>.gnb>li.on>a,
+header>nav>.gnb>li:hover>a{
+    color: orange;
+    font-weight: 800;
+    background-position: 20px -45px;
+}
+
+/* 테이블영역 */
+section>table>thead th,
+section>table>tbody th,
+section>table>tbody td{
+    height: 40px;
+    line-height: 1.7;
+    border: 1px solid #dedede;
+}
+
+section>table>thead th{
+    background-color: #eff;
+    border-top: 2px solid #bde;
+}
+
+section>table>tbody td{text-align: center;}
+section>table>tbody td:last-child{
+    padding: 5px;
+    text-align: initial;
+}
+
+footer{
+    height: 130px;
+    background-image: url(../images/bg_bottom.jpg);
+    background-position: -342px 0;
+}
+
+footer>address{
+    color: #fff;
+    line-height: 200px;
+    text-align: center;
+    letter-spacing: 1px;
+}

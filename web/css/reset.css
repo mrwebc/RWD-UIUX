@@ -6,11 +6,13 @@ html, body{width:100%; height:100%;}
 html,body,div,span,h1,h2,h3,h4,h5,h6,
 p,a,code,blockquote,abbr,sub,sup,time,
 em,strong,img,q,dl,dt,dd,address,cite,
-ul,ol,li,header,section,footer,article,nav,aside
+ul,ol,li,header,section,footer,article,nav,aside,
+table,caption,thead,tbody,tfoot,tr,td,th
 {margin:0;padding:0;}
 
 ul,ol,li{list-style:none;}
 q{quotes:none;}
+table{border-collapse:collapse;border-spacing:0;}
 
 a:link{color:#222;text-decoration:none;}
 a:visited{color:#222;}
@@ -19,7 +21,7 @@ a:active{color:#222;}
 
 em,address{font-style:normal;}
 
-hr{display:none;}
+hr,caption{display:none;}
 img{border:none;}
 
 body{
