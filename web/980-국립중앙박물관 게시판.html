@@ -2,139 +2,160 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>980-국립중앙박물관 게시판</title>
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <title>980-국립중앙박물관 게시판</title>    
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/reset.css">
-<style>
-    #wrap{
-        width: 950px;
-        margin: 0 auto;
-    }
+    <style>
+        table{
+            width: 950px;
+            margin: 0 auto;
+            font-size: 14px;
+            border-collapse: collapse;
+        }
 
-    table{
-        width: 950px;
-        border-collapse: collapse;
-    }
+        table th,
+        table td{
+            border-bottom: 1px solid #dedede;
+        }
 
-    table tbody th,
-    table td{
-        height: 80px;
-        font-size: 14px;
-        text-align: center;
-        border-bottom: 1px solid #dedede;
-    }
-    table thead th{
-        height: 50px;
-        font-size: 16px;
-        border-top: 2px solid #666;
-        border-bottom: 1px solid #666;
-    }
-    
-    table tbody td:nth-child(3){
-        text-indent: -9999px;
-        background-position: center center;
-        background-size: 37px 54px;
-        background-repeat: no-repeat;
-    }
+        table th{
+            height: 50px;
+            border-top:2px solid #666;
+            border-bottom-color: #666;
+        }
 
-    table tbody tr:nth-child(1) td:nth-child(3){
-        background-image: url(./images/1.gif);
-    }
-    table tbody tr:nth-child(2) td:nth-child(3){
-        background-image: url(./images/2.gif);
-    }
-    table tbody tr:nth-child(3) td:nth-child(3){
-        background-image: url(./images/3.gif);
-    }
-    table tbody tr:nth-child(4) td:nth-child(3){
-        background-image: url(./images/4.jpg);
-    }
-    table tbody tr:nth-child(5) td:nth-child(3){
-        background-image: url(./images/5.jpg);
-    }
+        table td{
+            height: 80px;
+            text-align: center;
+        }
 
-    table tbody td:nth-child(4)>a:hover{
-        display: block;
-        width: 100%;
-        height: 80px;
-        line-height: 80px;
-        font-weight: 800;
-        background-color:rgba(0,0,0,0.1);
-    }
-</style>
+        table td:nth-child(1){width: 50px;}
+        table td:nth-child(2){width: 50px;}
+        table td:nth-child(3){width: 50px;}
+        table td:nth-child(4){width: 350px;}
+        table td:nth-child(5){width: 150px;}
+        table td:nth-child(6){width: 200px;}
+        table td:nth-child(7){width: 100px;}
+
+
+        .frame{
+            display: block;
+            width: 37px;
+            height: 54px;
+        }
+
+        .frame>img{
+            display: block;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <div id="wrap">
+        <h1 class="text-center">
+            ▣ 국립중앙박물관 일정안내표 ▣
+        </h1>
+
         <table>
             <caption>국립중앙박물관 전시일정</caption>
-            <colgroup>
-                <col style="width:50px;">
-                <col style="width:50px;">
-                <col style="width:50px;">
-                <col style="width:350px;">
-                <col style="width:150px;">
-                <col style="width:200px;">
-                <col style="width:100px;">
-            </colgroup>
+            <!-- <colgroup>
+                <col style="width:50px;" />
+                <col style="width:50px;" />
+                <col style="width:50px;" />
+                <col style="width:350px;" />
+                <col style="width:150px;" />
+                <col style="width:200px;" />
+                <col style="width:100px;" />
+            </colgroup> -->
+            
             <thead>
                 <tr>
                     <th scope="col">번호</th>
+
                     <th scope="col" colspan="2">구분</th>
+                    <!-- <th scope="col">구분</th> -->
+                    
                     <th scope="col">제목</th>
                     <th scope="col">장소</th>
                     <th scope="col">진행기간</th>
                     <th scope="col">접수방법</th>
                 </tr>
             </thead>
+
             <tbody>
                 <tr>
-                    <th scope="row">1</th>
-                    <th scope="row">전시</th>
-                    <td>루벤스와 세기의 거장들</td>
-                    <td><a href="./370-이미지밑에 약간 뜨는 현상 해결.html" target="_blank">리히덴슈타인박물관 명품전</a></td>
-                    <td>기획전시실</td>
-                    <td>2015-12-11 ~ 2016-04-10</td>
+                    <td>1</td>
+                    <td>전시</td>
+                    <td>
+                        <a href="./380-museum/exhibit_1.html" class="frame" target="_blank">
+                            <img src="./images/1.gif" alt="">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="./380-museum/exhibit_1.html" target="_blank">리히덴슈타인박물관 명품전</a>
+                    </td>
+                    <td>전시기획실</td>
+                    <td>2020-01-10 ~ 2020-02-10</td>
                     <td>해당없음</td>
                 </tr>
-                
                 <tr>
-                    <th scope="row">2</th>
-                    <th scope="row">전시</th>
-                    <td>강진 사당리 고려청자</td>
-                    <td><a href="./390-목록을 의미하는 ul, ol.html" target="_blank">강진 사당리 고려청자</a></td>
-                    <td>상설전시관 1층 테마전시실</td>
-                    <td>2015-12-11 ~ 2016-04-10</td>
+                    <td>2</td>
+                    <td>전시</td>
+                    <td>
+                        <a href="./380-museum/exhibit_2.html" class="frame" target="_blank">
+                            <img src="./images/2.gif" alt="">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="./380-museum/exhibit_2.html" target="_blank">리히덴슈타인박물관 명품전</a>
+                    </td>
+                    <td>전시기획실</td>
+                    <td>2020-01-10 ~ 2020-02-10</td>
                     <td>해당없음</td>
                 </tr>
-
                 <tr>
-                    <th scope="row">3</th>
-                    <th scope="row">전시</th>
-                    <td>신석기인, 새로운 환경에 적응하다</td>
-                    <td><a href="./400-이중 구조의 목록 구현.html" target="_blank">신석기인, 새로운 환경에 적응하다</a></td>
-                    <td>특별전시실</td>
-                    <td>2015-12-11 ~ 2016-04-10</td>
+                    <td>3</td>
+                    <td>전시</td>
+                    <td>
+                        <a href="./380-museum/exhibit_3.html" class="frame" target="_blank">
+                            <img src="./images/3.gif" alt="">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="./380-museum/exhibit_3.html" target="_blank">리히덴슈타인박물관 명품전</a>
+                    </td>
+                    <td>전시기획실</td>
+                    <td>2020-01-10 ~ 2020-02-10</td>
                     <td>해당없음</td>
                 </tr>
-
                 <tr>
-                    <th scope="row">4</th>
-                    <th scope="row">전시</th>
-                    <td>2015년 12월 큐레이터와의 대화</td>
-                    <td><a href="./410-한국의 라면.html" target="_blank">2015년 12월 큐레이터와의 대화</a></td>
-                    <td>상설전시실</td>
-                    <td>2015-12-11 ~ 2016-04-10</td>
+                    <td>4</td>
+                    <td>전시</td>
+                    <td>
+                        <a href="./380-museum/exhibit_4.html" class="frame" target="_blank">
+                            <img src="./images/4.jpg" alt="">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="./380-museum/exhibit_4.html" target="_blank">리히덴슈타인박물관 명품전</a>
+                    </td>
+                    <td>전시기획실</td>
+                    <td>2020-01-10 ~ 2020-02-10</td>
                     <td>해당없음</td>
                 </tr>
-
                 <tr>
-                    <th scope="row">5</th>
-                    <th scope="row">전시</th>
-                    <td>오페레타 뮤지컬 판타지아</td>
-                    <td><a href="./420-앵커태그-페이지 이동.html" target="_blank">오페레타 뮤지컬 &lt;오페레타&gt;</a></td>
-                    <td>극장홀</td>
-                    <td>2015-12-11 ~ 2016-04-10</td>
+                    <td>5</td>
+                    <td>전시</td>
+                    <td>
+                        <a href="./380-museum/exhibit_5.html" class="frame" target="_blank">
+                            <img src="./images/5.jpg" alt="">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="./380-museum/exhibit_5.html" target="_blank">리히덴슈타인박물관 명품전</a>
+                    </td>
+                    <td>전시기획실</td>
+                    <td>2020-01-10 ~ 2020-02-10</td>
                     <td>해당없음</td>
                 </tr>
             </tbody>
