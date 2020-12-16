@@ -54,6 +54,12 @@ header>nav>.gnb>li:hover>a{
 }
 
 /* 테이블영역 */
+/* 
+    !table에서 border 설정 시 box-sizing: border-box;가 자동 적용되는 건가요?? yes~!
+    
+    section>table{width: 655px;border: 10px solid #f00;} 
+*/
+
 section>table>thead th,
 section>table>tbody th,
 section>table>tbody td{
