@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1040-select 드롭다운 목록</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">사용자 선택 폼요소 select</h1>
+
+        <form action="./1000-login-ok.html">
+            <fieldset>
+                <legend>기본정보</legend>
+
+                <label for="area">거주지역</label>
+                <select id="area" name="area">
+                    <option value="">선택해주세요</option>
+                    <option selected value="seoul">서울특별시</option>
+                    <option value="busan">부산광역시</option>
+                    <option value="incheon">인천광역시</option>
+                    <option value="newyork">뉴욕시티</option>
+                    <option value="london">런던</option>
+                </select>
+            </fieldset>
+            <!-- 전송버튼은 반드시 form 태그 안쪽에 작성해야 한다. -->
+            <p>
+                <button type="submit">전송</button>
+                <button type="reset">리셋</button>
+            </p>
+        </form>
+    </div>
+</body>
+</html>

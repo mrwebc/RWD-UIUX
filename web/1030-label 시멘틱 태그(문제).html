@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1030-label 시멘틱 태그(문제)</title>
+    <link rel="shortcut icon" href="./images/icon/favicon_h1.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        #wrap{
+            width: 500px;
+            margin: 30px 20px;
+        }
+
+        h1{margin-bottom: 15px;}
+    
+        form>fieldset{
+            width: 300px;
+        }
+       
+        form>fieldset>ul>li>label{
+            display: inline-block;
+            width: 80px;
+            text-align: right;
+            margin-top: 10px;
+        }
+
+        form>fieldset>ul>li>input{width: 150px;}
+
+        p{
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>주문정보</h1>
+        <form action="./1000-login-ok.html" method="post">
+            <fieldset>
+                <legend>상품주문정보</legend>
+                <ul>
+                    <li>
+                        <label for="user_name">이름 : </label>
+                        <input type="text" id="user_name" name="user_name" autocomplete="off" />
+                    </li>
+                    <li>
+                        <label for="user_pnum">연락처 : </label>
+                        <input type="text" id="user_pnum" name="user_pnum" autocomplete="off" />
+                    </li>
+                    <li>
+                        <label for="user_address">주소 : </label>
+                        <input type="text" id="user_address" name="user_address" autocomplete="off" />
+                    </li>
+                </ul>
+                <p>
+                    <button type="submit">전송</button>
+                    <button type="reset">재입력</button>
+                </p>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

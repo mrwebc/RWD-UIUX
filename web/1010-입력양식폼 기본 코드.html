@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1010-입력양식폼 기본 코드</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        #wrap{
+            width: 280px;
+            margin: 0 auto;
+        }
+
+        ul>li{margin: 10px 0;}
+
+        ul>li>label{
+            display: inline-block;
+            width: 50px;
+            margin-right: 10px;
+            text-align: right;
+        }
+
+        ul>li>input{width: 175px;}
+
+        ul>li:last-child{margin-top: 20px;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">
+            입력양식폼
+        </h1>
+
+        <!-- table>caption+(colgroup>col)+(thead>tr>th+td)+tbody+tfoot -->
+
+        <!-- form>fieldset>legend -->
+
+        <form action="./1000-login-ok.html" method="get">
+            <fieldset>
+                <legend>로그인 정보</legend>
+                <ul>
+                    <li>                         
+                        <label for="user_id">아이디</label>
+                        <input type="text" id="user_id" name="user_id" autocomplete="off" />
+                    </li>
+                    <li>   
+                        <label for="user_pwd">패스워드</label>
+                        <input type="password" id="user_pwd" name="user_pwd">
+                    </li>
+                    <li>
+                        <input type="submit" value="로그인(전송)" />
+                        <button type="submit">로그인(전송)</button>
+
+                        <button type="reset">재입력(리셋)</button>
+
+                        <!-- 
+                            공버튼 : 이 버튼을 눌렀을 때 어떤일이 일어날 것인가에 대한 것은 자바스크립트 코드를 직접 작성해서 내가 정하겠다.... 라는 의미
+                         -->
+                        <button type="button">공버튼</button>
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
