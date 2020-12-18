@@ -49,7 +49,6 @@ form>fieldset>ul>li>.info{
     font-size: 12px;
 }
 
-
 form>fieldset>ul>li>.tit{
     display: block;
     float: left;
@@ -93,16 +92,23 @@ form>fieldset>ul>li>.radio>label:before{
 
 /* 라디오 사각스위치 스타일 */
 form>fieldset>ul>li>.radio-switch{
-    display: inline-block;
+    display: block;
+    float: left;
     position: relative;
     width: 70px;
     height: 25px;
-    border: 1px solid #f00;
+    /* border: 1px solid #f00; */
 }
 
 form>fieldset>ul>li>.radio-switch>input{
     position: absolute;
     left: -9999px;
+}
+
+form>fieldset>ul>li>.radio-switch>input:checked+label{
+    color: #fff;
+    background-color: #0275d8;
+    border-color: #0275d8;
 }
 
 form>fieldset>ul>li>.radio-switch>label{
