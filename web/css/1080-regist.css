@@ -11,6 +11,7 @@ body{
 }
 
 form>fieldset{
+    margin-bottom: 10px;
     background-color: #fff;
     border: 1px solid #dedede;
 }
@@ -23,12 +24,54 @@ form>fieldset>ul>li{
 
 form>fieldset>ul>li:last-child{border: none;}
 
-form input[type=text]:focus{
+form input[type=text],
+form input[type=password]{
+    width: 468px;
+    height: 15px;
+    padding: 5px 6px;
+    border: none;
+    outline: none;
+}
+
+form input[type=text]:focus,
+form input[type=password]:focus{
     background-color: lightgoldenrodyellow;
+}
+
+form input[type=text]:focus+.info,
+form input[type=password]:focus+.info{
+    display: block;
 }
 
 form>fieldset>ul>li>.info{
     display: none;
     color: #f00;
     font-size: 12px;
+}
+
+
+/* 버튼디자인 */
+form>p{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    justify-content: space-between;
+}
+
+form>p>button{
+    /* 버튼디자인시 무조건 3요소를 먼저 작성 */
+    background: none;
+    border: none;
+    outline: none;
+
+    width: 246px;
+    height: 60px;
+    color: #fff;
+    font-size: 20px;
+    background-color: #999;
+}
+
+form>p>button[type="submit"]{
+    background-color: #1EB702;
 }
