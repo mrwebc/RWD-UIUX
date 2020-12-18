@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1050-list, datalist 준비된 항목선택</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">미리 만들어 놓은 항목 노출</h1>
+
+        <form name="frmSubject" action="./1000-login-ok.html" method="post">
+            <fieldset>
+                <legend>과목선택</legend>
+
+                <label for="subject">학습과목 : </label>
+                <input type="text" id="subject" name="subject" autocomplete="off" list="subject_list" />
+
+                <datalist id="subject_list">
+                    <option value="웹표준">웹표준</option>
+                    <option value="자바스크립트">자바스크립트</option>
+                    <option value="포토샵">포토샵</option>
+                    <option value="UX디자인">UX디자인</option>
+                </datalist>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

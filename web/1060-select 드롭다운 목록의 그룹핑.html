@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1060-select 드롭다운 목록의 그룹핑</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>select - 그룹핑 옵션</h1>
+        
+        <form action="./1000-login-ok.html" method="post">
+            <fieldset>
+                <legend>2022년 월드컵 개최지</legend>
+
+                <label for="city">후보지역</label>
+                <select id="city" name="city">
+                    <option value="">선택하세요</option>
+                    <optgroup label="아시아">
+                        <option value="kr">대한민국</option>
+                        <option value="jp">일본</option>
+                        <option value="cn">중국</option>
+                        <option value="bn">베트남</option>
+                        <option value="hj">호주</option>
+                    </optgroup>
+                    <optgroup label="유럽">
+                        <option value="eng">영국</option>
+                        <option value="fn">프랑스</option>
+                        <option value="gm">독일</option>
+                    </optgroup>
+                </select>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
