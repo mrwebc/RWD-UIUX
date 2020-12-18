@@ -7,12 +7,14 @@ html,body,div,span,h1,h2,h3,h4,h5,h6,
 p,a,code,blockquote,abbr,sub,sup,time,
 em,strong,img,q,dl,dt,dd,address,cite,
 ul,ol,li,header,section,footer,article,nav,aside,
-table,caption,thead,tbody,tfoot,tr,td,th
+table,caption,thead,tbody,tfoot,tr,td,th,
+form,fieldset,legend,label
 {margin:0;padding:0;}
 
 ul,ol,li{list-style:none;}
 q{quotes:none;}
 table{border-collapse:collapse;border-spacing:0;}
+textarea{resize: none;}
 
 a:link{color:#222;text-decoration:none;}
 a:visited{color:#222;}
@@ -20,9 +22,9 @@ a:hover{color:#222;}
 a:active{color:#222;}
 
 em,address{font-style:normal;}
-
-hr,caption{display:none;}
-img{border:none;}
+hr,caption,legend{display:none;}
+img,fieldset{border:none;}
+label, button{cursor:pointer;}
 
 body{
 	color:#222;

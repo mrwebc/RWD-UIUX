@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제목</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+    <style>
+        textarea{resize:none;}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <!-- <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script> -->
+    <script src="https://cdn.ckeditor.com/4.6.2/basic/ckeditor.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>메모처럼 여러줄 입력폼 - textarea</h1>
+
+        <form action="./1000-login-ok.html" method="post">
+            <fieldset>
+                <legend>textarea 태그</legend>
+
+                <label for="memo">메모</label>
+                <textarea class="ckeditor" name="memo" id="memo" cols="40" rows="10"></textarea>
+            </fieldset>
+            <p>
+                <button type="submit">전송</button>
+                <button type="reset">리셋</button>
+            </p>
+        </form>
+    </div>
+</body>
+</html>
