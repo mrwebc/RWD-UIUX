@@ -49,14 +49,17 @@ form>fieldset>ul>li>.info{
     font-size: 12px;
 }
 
+
 form>fieldset>ul>li>.tit{
-    display: inline-block;
+    display: block;
+    float: left;
     width: 80px;
     padding-left: 6px;
 }
 
 form>fieldset>ul>li>.radio{
-    display: inline-block;
+    display: block;
+    float: left;
     margin-right: 20px;
 }
 
@@ -86,6 +89,29 @@ form>fieldset>ul>li>.radio>label:before{
     background-image: url(../images/icon_radiobutton.png);
     background-position: 0 -23px;
     content: '';
+}
+
+/* 라디오 사각스위치 스타일 */
+form>fieldset>ul>li>.radio-switch{
+    display: inline-block;
+    position: relative;
+    width: 70px;
+    height: 25px;
+    border: 1px solid #f00;
+}
+
+form>fieldset>ul>li>.radio-switch>input{
+    position: absolute;
+    left: -9999px;
+}
+
+form>fieldset>ul>li>.radio-switch>label{
+    display: block;
+    width: 68px;
+    height: 23px;
+    line-height: 23px;
+    text-align: center;
+    border: 1px solid #dedede;
 }
 
 

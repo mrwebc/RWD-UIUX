@@ -48,7 +48,13 @@ body{
 	left: -9999px
 }
 
+.clearfix{*zoom:1;}
 
+.clearfix:after{
+    display: block;
+    clear: both;
+    content: '';
+}
 
 
 
