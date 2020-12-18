@@ -14,6 +14,8 @@
         <h1 class="text-center">회원가입 입력폼 만들기</h1>
 
         <form action="./1000-login-ok.html" method="post">
+            
+            <!-- 기본정보 -->
             <fieldset>
                 <legend>기본정보</legend>
 
@@ -40,6 +42,48 @@
                         <input type="password" id="cfmPass" name="cfmPass" required maxlength="10" placeholder="비밀번호를 확인해주세요" disabled />
 
                         <p class="info">필수 입력 항목입니다.</p>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <!-- 추가정보 -->
+            <fieldset>
+                <legend>추가정보</legend>
+                <ul>
+                    <li>
+                        <label for="userName" class="sr-only">이름</label>
+                        <input type="text" id="userName" name="userName" placeholder="이름을 입력해 주세요" />
+                        <p class="info">필수 입력 항목입니다.</p>
+                    </li>
+
+                    <li>
+                        <span class="tit">성별</span>
+
+                        <!-- radio 버튼은 name값을 일치시켜야 한다. -->
+                        <span class="radio">
+                            <input checked type="radio" id="userFemale" name="userGender" value="0" />
+                            <label for="userFemale">여자</label>
+                        </span>
+
+                        <span class="radio">
+                            <input type="radio" id="userMale" name="userGender" value="1" />
+                            <label for="userMale">남자</label>
+                        </span>
+
+                    </li>
+
+                    <li>
+                        <span class="tit">국적</span>
+
+                        <span class="radio-switch">
+                            <input type="radio" id="local" name="nationality" value="native" checked />
+                            <label for="local">내국인</label>
+                        </span>
+
+                        <span class="radio-switch">
+                            <input type="radio" id="foreign" name="nationality" value="foreigner" checked />
+                            <label for="foreign">외국인</label>
+                        </span>
                     </li>
                 </ul>
             </fieldset>
