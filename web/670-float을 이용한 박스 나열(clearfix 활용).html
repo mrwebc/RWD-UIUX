@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>670-float을 이용한 박스 나열(clearfix 활용)</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        #wrap{
+            width: 850px;
+            margin: 0 auto;
+            padding-bottom: 100px;
+            border: 1px solid #f00
+        }
+
+        hr{
+            display: block;
+            margin: 50px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">
+            float을 이용한 박스 나열
+        </h1>
+
+<style>
+    /* 
+        1. 부모에게 *zoom:1 을 적용한다.
+        2. 부모:after{clear 3종세트} 를 적용한다.
+    */
+
+    .clearfix{*zoom: 1;}
+    .clearfix:after{
+        display: block;
+        clear: both;
+        content: '';
+    }
+
+    .parent{
+        background-color: #ff0;
+    }
+
+
+    .parent>li{
+        float: left;
+        width: 200px;
+        height: 100px;
+        border: 1px solid #000;
+    }
+
+    .parent>li:nth-child(odd){background-color: #f0f;}
+    .parent>li:nth-child(even){background-color: #0f0;}
+
+</style>
+
+        <ul class="parent clearfix">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        <!-- float의 영향력을 차단하는 마감재 역할 -->
+        <!-- <div style="clear:both;"></div> -->
+
+        <p>굿모닝~!</p>
+
+        <hr />
+        <!--
+            아래의 li를 180*90, 파란테두리를 안쪽으로 생성해서 가로로 나열해 보세요. (가세정렬)
+            짝수번째 박스의 배경색을 핑크, 홀수는 파랑으로 합니다.
+        -->
+        <style>
+
+            .subject>li{
+                float: left;
+                width: 180px;
+                height: 90px;
+                line-height: 90px;
+                text-align: center;
+                border: 1px solid #00f;
+            }
+
+        </style>
+
+        <ol class="subject clearfix">
+            <li>포토샵</li>
+            <li>웹표준</li>
+            <li>자바스크립트</li>
+            <li>백엔드</li>
+        </ol>
+
+        <p>추천과목</p>
+
+        <hr />
+
+        <style>
+
+            .test>span{
+                display: block;
+                float: left;
+                width: 120px;
+                height: 100px;
+            }
+        </style>
+
+        <!-- 박스사이즈 120*100 만들어서 플롯하세요. -->
+        <div class="test clearfix">
+            <span style="background-color:red;">red</span>
+            <span style="background-color:blue;">blue</span>
+            <span style="background-color:green;">green</span>
+            <span style="background-color:yellow;">yellow</span>
+            <span style="background-color:pink;">pink</span>
+        </div>
+        
+        <span>플롯연습</span>
+    </div>
+</body>
+</html>
