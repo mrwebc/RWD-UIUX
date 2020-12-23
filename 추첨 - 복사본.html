@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>발표순서 추첨</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>   
+	<style type="text/css">
+		.result{color:#00f;font-size:30px;letter-spacing:1px;}
+	</style>
+	<script type="text/javascript">
+	//<![CDATA[
+		$(document).ready(function(){
+
+			var student = ["강누리","경사나","고정화","권민지","김다혜","김선호","김수현","남민희","백재호","송도연","유은지","윤정우","이진선","이혜인","이혜진","장기봉","전찬양","정다인","조은혜","최은지","한송이","한재근"];
+
+			var log = new Object();
+			
+			var report = function(num){
+				console.log("당첨번호 : ", num);	
+				$(".result").text("▶ "+student[num]+"~!");		
+			};
+			
+			var choice = function(){
+				var num = Math.random();
+				num = Math.floor(num*22);
+				
+				if(Object.keys(log).length<22){
+					if(!log[num]){
+						log[num] = true;
+						report(num);
+					}else{
+						choice();
+					}
+				}else{
+					$(".result").text("모두 한번씩 추첨 되었습니다.^^");	
+				}
+				//console.log("현재 log 개수는 ",);
+			};			
+
+			$("button").on("click", function(){
+				choice();
+			});		
+		});
+
+	//]]>
+	</script>
+</head>
+<body>
+	<div class="container">
+		<header class="page-header">
+			<h1 class="jumbotron text-center">김선호씨 집 방문 돈까스 순번추첨</h1> 
+			<!-- <h1 class="jumbotron text-center">초편성 추첨</h1> -->
+		</header>
+		<section>
+			<div class="panel panel-primary text-center">
+				<div class="panel-heading">
+					<button class="btn btn-danger">반응형웹 UI/UX반</button>
+				</div>
+				<div class="panel-body">
+					<p class="result">...................</p>
+				</div>
+				<div class="panel-footer">축하합니다~!</div>
+			</div>
+		</section>
+		<footer><address>부릉부릉안쌤</address></footer>
+		
+	</div>
+</body>
+</html>
