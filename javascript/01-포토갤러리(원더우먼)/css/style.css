@@ -60,3 +60,17 @@
     display: block;
     width: 100%;
 }
+
+
+.gallery>.screen{
+    margin-top: 10px;
+}
+
+.gallery>.screen>p{
+    height: 440px;
+    text-indent: -9999px;
+    background-image: url(../images/wonder_gallery_pht_01.jpg);
+    background-size: cover;
+    border: 1px solid #dedede;
+    box-sizing: border-box;
+}
