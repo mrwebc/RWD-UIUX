@@ -74,3 +74,27 @@
     border: 1px solid #dedede;
     box-sizing: border-box;
 }
+
+.gallery>.screen>a{
+    display: block;
+    width: 80px;
+    height: 100px;
+    text-indent: -9999px;
+    background-image: url(../images/sp_btn_next_prev.png);
+}
+
+.gallery>.screen>a.prev{    
+    background-position: -10px -250px;
+}
+
+.gallery>.screen>a.prev:hover{    
+    background-position: -10px -370px;
+}
+
+.gallery>.screen>a.next{
+    background-position: -10px -10px;    
+}
+
+.gallery>.screen>a.next:hover{
+    background-position: -10px -130px;   
+}
