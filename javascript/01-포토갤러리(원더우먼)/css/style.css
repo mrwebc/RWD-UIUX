@@ -63,6 +63,7 @@
 
 
 .gallery>.screen{
+    position: relative;
     margin-top: 10px;
 }
 
@@ -77,13 +78,18 @@
 
 .gallery>.screen>a{
     display: block;
+    position: absolute;
+    /* top: 170px; */
+    top: 50%;
     width: 80px;
     height: 100px;
+    margin-top: -50px;/* 해당요소의 높이값/2 */
     text-indent: -9999px;
     background-image: url(../images/sp_btn_next_prev.png);
 }
 
-.gallery>.screen>a.prev{    
+.gallery>.screen>a.prev{   
+    left: 0; 
     background-position: -10px -250px;
 }
 
@@ -92,6 +98,7 @@
 }
 
 .gallery>.screen>a.next{
+    right: 0;
     background-position: -10px -10px;    
 }
 
