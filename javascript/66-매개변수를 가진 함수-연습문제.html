@@ -7,7 +7,23 @@
 <body>
     <h1>66-매개변수를 가진 함수-연습문제</h1>
     <script>
-        
+		/*
+			주문할 치킨의 개수를 전달받아 주문개수와 주문총액을 출력하는 함수를 선언하세요.
+			함수명 : chickenTotCalFn,  매개변수명: ea
+			주문총액을 저장할 변수 totPrice
+			치킨단가를 나타내는 chicken_price의 값은 마음대로 정하세요.
+			"주문하신 치킨 개수는 3개"
+			"주문총액은 30000원"
+		*/
     </script>
+    <script>
+        let chicken_price = 10000;
+        const chickenTotCalFn = function(ea){
+          totPrice = chicken_price*ea;
+          console.log("주문하신 치킨 개수는 %d개", ea);
+          console.log("주문총액은 %d원", totPrice);
+        };
+        chickenTotCalFn(3);
+      </script>    
 </body>
 </html>
