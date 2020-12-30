@@ -14,7 +14,33 @@
             1.선언방법) let 함수변수 = function(매개변수1, 매개변수2, 매개변수3, ....){};  
 
             2.호출방법) 함수변수명(인자1, 인자2, 인자3, .....);
+
+
+            실습예제) 현재 나의 통장잔액은 30,000원이다.
+            입금액을 전달받아 통장잔액에 합산해서 총액을 알려주는 함수를 작성하여 호출하고 싶다.
+            
+            콘솔창에 출력 => "현재 통장잔액은 32000원 입니다."
+
+            => 코딩시 필요한 변수는 ? 
+                함수변수 : saveFn
+                잔액(총액) : totMoney
+                입금액 : money
         */
+
+        let totMoney = 30000;
+
+        //하나의 매개변수를 가진 saveFn 함수
+        //매개변수는 함수안에서만 사용 가능
+        const saveFn = function(money){
+            // console.log("매개변수 money를 통해 전달받은 값은 %d",money);
+
+            // totMoney = totMoney + money;//누적의 개념
+            totMoney += money;
+
+            console.log("현재 통장의 잔액은 %d원", totMoney);
+        };        
+
+        saveFn(2000);
     </script>
 </body>
 </html>
