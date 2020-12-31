@@ -8,10 +8,37 @@
     <h1>return 값이 있는 함수</h1>
 
     <ol>
-        <li></li>
-        <li></li>
+        <li>return : 함수의 종료를 의미</li>
+        <li>return : 함수를 호출했던 곳으로 돌아간다.</li>
+        <li>return 어떤값 : 호출한 곳에 어떤값을 돌려준다.</li>
     </ol>
 
+    <script>
+        /*
+            두개의 값을 전달받아 곱을 리턴하는 함수를 선언하세요.
+            함수명 : mulFn
+            매개변수 : a, b            
+        */
+        const mulFn = function(a, b){
+            let result = a*b;
+            return result;
+        };
 
+        let mul = mulFn(7,111);
+
+        alert("mul = "+mul);
+
+
+        //문제2) 두 개의 수를 one, two에 전달받아 그 합을 return 하는 add 함수를 선언하세요.
+
+        //리턴받은 값을 변수 sum에 저장후 콘솔창에 출력하시오.
+        const add = function(one, two){
+            let sum = one+two;
+            return sum;
+        };
+
+        let result = add(15,16);
+        console.log("15+16 = ", result);
+    </script>
 </body>
 </html>
