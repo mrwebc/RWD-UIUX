@@ -7,23 +7,40 @@
 <body>
     <h1>66-매개변수를 가진 함수-연습문제</h1>
     <script>
-		/*
-			주문할 치킨의 개수를 전달받아 주문개수와 주문총액을 출력하는 함수를 선언하세요.
-			함수명 : chickenTotCalFn,  매개변수명: ea
-			주문총액을 저장할 변수 totPrice
-			치킨단가를 나타내는 chicken_price의 값은 마음대로 정하세요.
-			"주문하신 치킨 개수는 3개"
-			"주문총액은 30000원"
-		*/
-    </script>
-    <script>
+      /*
+        주문할 치킨의 개수를 전달받아 주문개수와 주문총액을 출력하는 함수를 선언하세요.
+        함수명 : chickenTotCalFn,  매개변수명: ea
+        주문총액을 저장할 변수 totPrice
+        치킨단가를 나타내는 chicken_price의 값은 마음대로 정하세요.
+        "주문하신 치킨 개수는 3개"
+        "주문총액은 30000원"
+      */
         let chicken_price = 10000;
+
         const chickenTotCalFn = function(ea){
-          totPrice = chicken_price*ea;
+          let totPrice = chicken_price*ea;
           console.log("주문하신 치킨 개수는 %d개", ea);
           console.log("주문총액은 %d원", totPrice);
         };
+
         chickenTotCalFn(3);
-      </script>    
+    </script>    
+
+    <script>
+      /*
+        두개의 매개변수 one, two를 통해 두 수 100, 200를 전달받아 
+        그 합을 hab 변수에 저장후 콘솔창에 출력하는 sumFn 함수를 선언하고 호출하세요.
+      
+        콘솔창 출력형식 : "hab = 300";
+      */
+
+      const sumFn = function(one, two){
+        let hab = one + two;
+        console.log("hab = %d", hab);
+      };
+
+      sumFn(100,200);
+
+    </script>
 </body>
 </html>
