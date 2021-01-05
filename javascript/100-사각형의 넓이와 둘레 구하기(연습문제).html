@@ -2,39 +2,49 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>100-사각형의 넓이와 둘레 구하기(연습문제)</title>
+    <title>Document</title>
     <script>
         //여기는 사전지식 수업내용
 
         //사용자로부터 값을 입력받는 함수
         //기본형식 : prompt(안내문, 기본값)
-        //사용예 : prompt("나이를 입력하세요",10);
+        //사용에 : prompt ("나이를 입력하세요",10);
 
-        let age = prompt("나이를 입력하세요",10);//'10'
+        // let age = prompt("나이를 입력하세요",10);//'10'
 
-        //Number() 함수로 입력받은 값을 연산가능한 진짜 숫자로 변환
-        age = Number(age);//10
+        // //Number() 함수로 입력받은 값을 연산가능한 진짜 숫자로 변환
+        // age = Number(age);//10
 
-        age += 10;
+        // age += 10;
 
-        console.log("age = %d", age);//20
+        // console.log("age = %d", age);//20
 
-        /*
+        /* 
             아마도 prompt라는 함수는 이렇게 정의되어 있을거라고 유추가능...
 
             const prompt = function(statement, value){
                 ......
-                ......
-                ......
+                ....
+                ...
                 return value;
-            }
+            };
         */
     </script>
 </head>
 <body>
     <h1>사각형의 넓이와 둘레 구하기</h1>
     <script>
-        // 여기에 문제풀이
+        let width = prompt("가로길이",20);
+        let height = prompt("세로길이",20);
+
+        width = Number(width);
+        height = parseInt(height);
+
+        let area = width * height;
+        let circumference = 2*(width + height);
+
+        console.log("넓이 %d", area);
+        console.log("둘레 %d", circumference);
     </script>
 </body>
 </html>

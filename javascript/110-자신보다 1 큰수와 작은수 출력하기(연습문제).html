@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>자신보다 1 큰수와 1 작은수 출력하기(연습문제)</title>
+</head>
+<body>
+    <h1>자신보다 1 큰수와 1 작은수</h1>
+
+    <script>
+        /*
+            문제풀이 조건
+
+            1. 사용자로부터 숫자를 입력받는다.
+            2. 문자숫자를 연산가능한 숫자로 변환해주는 parseInt() 이용
+
+            3. 입력받은 숫자를 저장할 변수명 num
+        */
+        let num = prompt("Insert number");
+        num = parseInt(num);
+
+        let more = num + 1;
+        console.log("more 1= ", more);
+
+        let less = num - 1;
+        console.log("less 1= ", less);
+    </script>
+</body>
+</html>
