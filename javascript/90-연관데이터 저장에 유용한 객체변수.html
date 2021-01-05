@@ -21,7 +21,41 @@
         const iyou = ['아이유', 29, 'IY', '부산'];
 
 
-        
+        //객체변수는 데이터 저장구조가 효율적이면서 동시에 데이터 각각의 직관적 의미 파악이 가능하다.
+        //한 사람과 관련된 데이터를 저장
+        const iu = {
+            name : '아이유',
+            age : 29,
+            id : 'IU',
+            address : '대한민국 서울',
+            bestFriend : '유인나',
+            'phone-number' : '010-1234-5678'
+        };
+
+
+        //함수명이 printIU인 단순함수를 선언하시오
+        const printIU = function(){
+            document.write(iu.name);
+            document.write("<br />");
+            
+            document.write(iu.age);
+            document.write("<br />");
+            
+            document.write(iu.id);
+            document.write("<br />");
+            
+            document.write(iu.address);
+            document.write("<br />");
+            
+            document.write(iu.bestFriend);
+            document.write("<br />");
+            
+            document.write(iu['phone-number']);
+        };
+
+
+        printIU();
+
     </script>
 </body>
 </html>
