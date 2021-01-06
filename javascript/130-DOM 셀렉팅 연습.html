@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>130-DOM 셀렉팅 연습</title>
+</head>
+<body>
+    <div id="wrap">
+        <h1 id="tit">세계 여러나라의 인사말</h1>
+
+        <dl>
+            <dt><strong>토속방언</strong> 버전</dt>
+
+            <dd class="nation greeting">한국 - 식사하셨습니까? 하모~</dd>
+            <dd class="nation greeting">중국 - 닌 츠팔러마? 츠판러</dd>
+            <dd class="nation greeting">
+                <strong>부시족</strong> 리얼싸운드 -
+                <strong>일렌트로캉칵따따라바우리도? 따따라!</strong>
+            </dd>
+        </dl>
+
+        <hr />
+
+        <h2 id="publisher">웹퍼블리셔로 가는길</h2>
+        <ul id="list">
+            <li class="item">HTML5 &amp; CSS</li>
+            <li class="item">자바스크립트</li>
+            <li class="item"><em>jQuery</em></li>
+            <li class="item">포토샵/일러스트</li>
+            <li class="item"><em>웹디자인기능사</em></li>
+        </ul>
+    </div>
+
+    <script>
+        //같은의미 다른표현 6개 : 요소 == 태그 == 엘리먼트 == 선택자 == DOM == Node
+
+        //자바스크립트 문법으로 태그를 선택한다. ==> DOM 셀렉팅
+
+        //1. id를 이용해서 DOM 선택
+        //지금까지의 여러변수와 구별하기 위해 셀렉팅 변수의 이름을 $로 시작(관례/좋은코딩습관)
+        const $tit = document.getElementById('tit');
+        console.log('$tit = ',$tit);
+
+        //아래의 2,3번 선택방식은 현재 거의 사용되지 않음.
+
+        //2. class를 이용해서 DOM 선택
+        //nation 클래스가 1개밖에 없을경우에도 getelement에 s붙이나요? yes
+        const $nation = document.getElementsByClassName('nation');
+        console.log('$nation = ', $nation);
+
+
+        //3. TagName을 이용해서 DOM 선택
+        const $li = document.getElementsByTagName('li');
+        console.log('$li = ', $li);
+
+        console.log('-----------------------------------------')
+
+        //CSS방식으로 DOM을 선택하는 2가지 방법을 제공 
+
+        //1. 하나의 요소만 선택(반환)하는 메소드 .querySelector()
+        const $publisher = document.querySelector('div>#publisher');
+        console.log('$publisher = ', $publisher);
+
+        const $greeting = document.querySelector('.greeting');
+        console.log('$greeting = ', $greeting);
+
+        const $strong = document.querySelector('strong');
+        console.log('$strong = ', $strong);
+
+
+
+        //2. 여러 요소를 선택(반환)하는 메서드 .querySelectorAll()
+        const $list = document.querySelectorAll('div>#list');
+        console.log('$list = ', $list);
+
+        console.log('$ul = ', $list[0].querySelectorAll('li:nth-child(1)')[0]);
+        console.log('$ul = ', $list[0].querySelector('li'));
+
+
+        const $item = document.querySelectorAll('#list>.item');
+        console.log('$item = ', $item);
+    </script>
+</body>
+</html>
