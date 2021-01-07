@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>20-변수에 데이터를 저장하고 출력하기</title>
+
 </head>
 <body>
     <h1>변수에 대하여</h1>
+
+    <button id="conf_1">출력1</button>
 
     <h2>변수를 왜 사용할까요?</h2>
     <p>한번이 아니라 여러번 재사용하기 위해서...</p>
@@ -27,11 +30,18 @@
         <li>숫자로 시작하지 못한다.</li>
     </ol>
 
+    <button id="conf_2">출력2</button>
+
     <script>
-        //플러스(+) 연산자의 특성
-        console.log(33+33);//산술연산자
-        console.log('33'+66);//연결연산자
-        console.log('삼삼'+'오오');//연결연산자
+        
+        const $conf_2 = document.getElementById('conf_2');
+        
+        $conf_2.addEventListener('click', function(){            
+            //플러스(+) 연산자의 특성
+            console.log(33+33);//산술연산자
+            console.log('33'+66);//연결연산자
+            console.log('삼삼'+'오오');//연결연산자
+        });
 
 
         //할당의 법칙
@@ -57,5 +67,12 @@
 
         
     </script>
+
+    <script>
+        //이벤트 구문작성 : DOM셀렉팅.addEventListener('이벤트명',function(){});
+        document.getElementById("conf_1").addEventListener('click', function(){
+            alert("버튼을 클릭했습니다.");
+        });
+    </script>    
 </body>
 </html>

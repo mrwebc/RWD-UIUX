@@ -7,6 +7,8 @@
 <body>
     <h1>배열 - 하나의 변수에 여러개의 값을 저장</h1>
 
+    <button class="print">출력-1</button>
+
     <script>
         //일반변수를 이용하여 데이터 저장
         let jan = "1월";
@@ -21,6 +23,7 @@
         let oct = "10월";
         let nov = "11월";
         let dec = "12월";
+
 
         //배열변수를 이용한 데이터 저장
         let monthArr = ["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월"];//1차원 배열
@@ -50,7 +53,10 @@
             console.log(monthArr[12]);
         };
 
-        printMon();
+        //버튼을 클릭했을 때 printMon 함수가 호출되는 코드를 작성하세요.
+        const $print = document.querySelector('.print');
+        $print.addEventListener('click', printMon);
+
     </script>
 </body>
 </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>140-DOM을 이용한 이벤트 구문</title>
+</head>
+<body style="text-align: center;">
+    <div id="wrap">
+        <h1>
+            브라우저는 HTML 코드를 해석해서 <br />
+            계층화된 Tree 형태의 구조화된 Node들을 가진 DOM 생성한다.
+        </h1>
+
+        <h2>
+            DOM의 역할 - HTML 소스에 접근하여 내용을 가져오거나 <br />
+            변경하기 위한 <mark>통로(인터페이스) 역할</mark>
+        </h2>
+
+        <p><img src="./images/dom_tree.jpg" alt="#"></p>
+
+        <button id="confirm" style="width:200px;height:50px;">확인</button>
+
+        <script>
+
+            //표현식함수
+            const msgFn = function(){
+                alert('클릭이벤트 발생~!');
+            };
+
+
+            //선언식함수
+            function myFn(){
+                alert('myFn 이벤트 핸들러 실행~!');
+            }
+
+
+
+            //버튼을 클릭했을 때 이벤트 핸들러인 msgFn 함수가 실행되는 코드를 작성하시오
+            
+            /*
+                이벤트등록 구문작성법
+
+                DOM셀렉팅.addEventListener('이벤트명',이벤트핸들러);
+            */
+
+            document.getElementById('confirm').addEventListener('click',myFn);
+
+            
+        </script>
+    </div>
+</body>
+</html>
