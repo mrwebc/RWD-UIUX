@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>160-if 조건문을 이용한 비교-1</title>
+  <style>
+    button{
+      margin-right: 10px;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="wrap">
+    <h1>현재값 = <span>0</span></h1>
+
+    <button id="plus">만약 현재값이 5보다 작으면 1증가</button>
+    <button class="minus">만약 현재값이 0보다 크다면 1감소</button>
+  </div>
+  
+  <script src="./js/myquery.js"></script>
+
+  <script>
+    //const $span = document.querySelector('span');
+    //const $plus = document.getElementById('plus');
+    //const $minus = document.querySelectorAll('.minus')[0]
+
+    //함수명('인자') => $('인자')
+
+    const $span = $("span");
+    const $plus = $("#plus");
+    const $minus = $(".minus");
+
+    let nowIdx = 0;
+
+    //1. 증가버튼에 대한 클릭이벤트 구문
+    $plus.addEventListener('click', function(){
+      //console.log('증가');
+
+      //1) 현재값을 가져와서 변수 nowIdx에 저장
+      nowIdx = Number($span.textContent);
+  
+      //2) 만약 가져온 값이 5보다 작으면 1 증가
+      if(nowIdx<5){
+        //nowIdx = nowIdx + 1;
+        //nowIdx += 1;
+        nowIdx++;
+
+        //증가시킨 값을 span에 텍스로 삽입
+        $span.textContent = nowIdx;
+      }
+    });
+
+
+    //2. 감소버튼에 대한 클릭이벤트 구문
+    $minus.addEventListener('click', function () {
+      //console.log("감소");
+
+      //1) 현재값을 가져와서 변수 nowIdx에 저장
+      nowIdx = parseInt($span.textContent);
+
+      //2) 만약 가져온 값이 0보다 크면 1 감소
+      if (nowIdx > 0) {
+        //nowIdx = nowIdx - 1;
+        //nowIdx -= 1;
+        nowIdx--;
+
+        //감소시킨 값을 span에 텍스트로 삽입
+        $span.textContent = nowIdx;
+      }
+    });
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+  <script>
+//조건식 : 결과가 true, false가 나오게 하는 식
+//직접적으로 true, false를 작성해도 됨
+//if문은 조건식의 결과가 true인 경우만 실행됨
+let num=99;
+
+if(num>100){
+  alert("myQuery");  
+}
+
+// let favoriteNum = Number(prompt("당신이 좋아하는 숫자는?"));
+let favoriteNum = 100;
+
+let rest = favoriteNum % 2;
+
+if(rest==0){
+  document.write("<h1>당신이 좋아하는 숫자는 짝수입니다.</h1>");
+}
+
+if(rest!=0){
+  document.write("<h1>당신이 좋아하는 숫자는 홀수입니다.</h1>");
+}
+
+//-------------
+
+if(rest==0){
+  document.write("<h1>당신이 좋아하는 숫자는 짝수입니다.</h1>");
+}else{
+  document.write("<h1>당신이 좋아하는 숫자는 홀수입니다.</h1>");  
+}
+
+
+  </script>
+</body>
+</html>
