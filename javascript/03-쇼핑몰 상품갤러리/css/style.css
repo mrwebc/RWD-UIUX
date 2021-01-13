@@ -6,7 +6,7 @@
 }
 
 .slides{
-    outline: 1px solid red;
+    outline: 1px solid #dedede;
 }
 
 .slides>.slides-pagination{
@@ -38,7 +38,7 @@
 }
 
 .slides>.slides-container>img{
-    display: none;
+    display: block;
     width: 100%;
 }
 
