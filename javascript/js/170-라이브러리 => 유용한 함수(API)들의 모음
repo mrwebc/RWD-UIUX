@@ -1,0 +1,13 @@
+라이브러리 => 유용한 함수(API)들의 모음
+
+1) 개발자가 직접 작성한 라이브러리
+2) 어떤 개인/단체 또는 제3의 개발자 등이 작성해서 배포한 라이브러리(jQuery)
+
+document.getElementById('btn').addEventListener('click', function(){
+    alert('have a nice day~!');
+});
+
+
+$('#btn').on('click', function(){});
+
+제이쿼리 문서객체 선택자 => $('?')

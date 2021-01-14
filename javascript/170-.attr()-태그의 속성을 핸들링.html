@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>170-.attr()-태그의 속성을 핸들링</title>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            const $btnFrst = $("button:nth-child(3)");
+            //const $btnFrst = $("button:nth-of-type(1)");
+
+            //첫번째 버튼에 대한 클릭이벤트 구문 작성
+            $btnFrst.on('click', function(){
+                //img 요소의 src, alt 속성값을 변경
+                // $('img').attr('속성명','속성값');
+                $('img').attr('src','./images/game.jpg');
+                $('img').attr('alt', '게임장');
+
+                //img 요소에 검정색 테두리를 만드시오.
+            });
+
+        });
+
+    </script>
+</head>
+<body style="text-align: center;">
+    <div id="wrap">
+        <h1>태그의 속성값을 가져오거나 넣어줄 수 있는 .attr() API 사용법</h1>
+
+        <p><img style="border: 1px solid red;" src="./images/happy.jpg" alt="#"></p>
+
+        <button type="button">속성변경</button>
+        <button type="button">속성삭제</button>
+    </div>
+</body>
+</html>
