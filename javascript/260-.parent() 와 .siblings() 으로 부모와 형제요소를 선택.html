@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>.parent() 와 .siblings() 으로 부모와 형제요소를 선택</title>
+    <style>
+        p{
+            width: 350px;
+            height: 200px;
+            line-height: 100px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('button').on('click', function(){
+                $(this).parent().css({
+                    backgroundImage : 'url('+'images/flower1.jpg'+')'
+                    //backgroundImage : 'url(images/flower1.jpg)'
+                });
+            });
+
+            $('.vitamin').on('click', function(){
+                $(this).siblings().css({
+                    color:'blue',
+                    lineHeight:3
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>.parent()는 직계부모를 선택</h1>
+
+        <p>
+            .parent() 테스트 <br />
+            <button>확인</button>
+        </p>
+
+        <hr />
+
+        <h2>.siblings()는 자기자신의 좌우 친형제관계의 요소를 선택</h2>
+
+        <ul>
+            <li>오늘 할 일을 내일로 미루지 말자</li>
+            <li>힘들어도 꿋꿋하게</li>
+            <li class="vitamin">종합비타민을 잘 챙겨먹자!</li>
+            <li>올해는 전자담배 까지 끊자</li>
+            <li>지나간 일들은 잊고 앞으로 나아가자!!~</li>
+        </ul>
+    </div>
+</body>
+</html>

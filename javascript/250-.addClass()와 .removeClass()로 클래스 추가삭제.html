@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>250-.addClass()와 .removeClass()로 클래스 추가삭제</title>
+    <style>
+		.bgc_0{background-color:yellow}
+		.bgc_1{background-color:orange}
+		.bgc_2{background-color:blue}
+		.bgc_3{background-color:green}
+		.bgc_4{background-color:red}
+		.bgc_5{background-color:pink}
+    </style>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            //두번째 dd에 mouseover 하면 노란배경색 적용
+            $("dl>dd:nth-child(3)").on('mouseover', function(){
+                $(this).css({
+                    backgroundColor:'yellow'
+                });
+            });
+
+            const $dd = $("dl>dd");
+
+            $dd.eq(0).on('click', function(){
+                $(this).addClass("bgc_0");
+            });
+
+            $dd.eq(0).on('mouseout', function(){
+                $(this).removeClass('bgc_0');
+            });
+
+
+            $dd.eq(1).on('click', function(){
+                $(this).addClass("bgc_1");
+            });
+
+            $dd.eq(1).on('mouseout', function(){
+                $(this).removeClass('bgc_1');
+            });            
+
+            $dd.eq(2).on('click', function(){
+                $(this).addClass("bgc_2");
+            });
+
+            $dd.eq(2).on('mouseout', function(){
+                $(this).removeClass('bgc_2');
+            });  
+
+            $dd.eq(3).on('click', function(){
+                $(this).addClass("bgc_3");
+            });
+
+            $dd.eq(3).on('mouseout', function(){
+                $(this).removeClass('bgc_3');
+            });  
+
+            $dd.eq(4).on('click', function(){
+                $(this).addClass("bgc_4");
+            });
+
+            $dd.eq(4).on('mouseout', function(){
+                $(this).removeClass('bgc_4');
+            });  
+
+            $dd.eq(5).on('click', function(){
+                $(this).addClass("bgc_5");
+            });
+
+            $dd.eq(5).on('mouseout', function(){
+                $(this).removeClass('bgc_5');
+            });  
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">.addClass()와 .removeClass()</h1>
+
+        <dl>
+            <dt>이상의 거울</dt>
+
+            <dd>거울 속에는 소리가 없오</dd>
+            <dd>저렇게까지 조용한 세상은 참 없을 것이오</dd>
+            <dd>거울 속에도 내게 귀가 있오</dd>
+            <dd>내 말을 알아듣는 딱한 귀가 두개나 있오</dd>
+            <dd>거울속의 나는 왼손잡이오</dd>
+            <dd>내 악수를 받을 줄 모르는 - 악수를 모르는 왼손 잽이오.</dd>
+        </dl>
+    </div>
+</body>
+</html>

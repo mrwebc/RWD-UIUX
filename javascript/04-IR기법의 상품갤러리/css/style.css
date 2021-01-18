@@ -9,7 +9,9 @@
 
 #slides>p{
     width: 647px;
+    
     background-image: url(../images/big1.jpg);
+
     background-position: 50% 50%;
 }
 
