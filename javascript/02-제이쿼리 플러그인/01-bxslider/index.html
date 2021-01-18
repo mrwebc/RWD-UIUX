@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bxslider 슬라이더</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        section{width:600px;margin: 0 auto;}
+        img{width: 100%;}
+    </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  
+    <script>
+      $(document).ready(function(){
+        $('.bxslider').bxSlider({
+            mode: 'horizontal',//fade, horizontal
+            captions: true,
+            slideWidth: 600
+        });
+      });
+    </script>
+  
+</head>
+<body>
+    <h1 class="text-center">나의 미래 삶</h1>
+    
+    <section>
+        <div class="bxslider">
+            <div><img src="./images/01-house.png" title="집장만"></div>
+            <div><img src="./images/02-car.png" title="슈퍼카"></div>
+            <div><img src="./images/03-bed.png" title="70억 침대"></div>
+            <div><img src="./images/04-money.png" title="현금부자"></div>
+            <div><img src="./images/05-smile.png" title="절대미소"></div>
+        </div>
+    </section>
+
+</body>
+</html>

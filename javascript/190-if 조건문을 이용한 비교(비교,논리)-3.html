@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>190-if 조건문을 이용한 비교(비교,논리)-3</title>
+    <style>body{text-align: center;}</style>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('button').on('click', function(){
+
+                let step = parseInt(prompt('오늘 얼마나 걸으셨어요?'));
+                
+                if(step>=20000){
+                    $(".result").text(step);
+                    alert("오늘은 2만보 이상 걸으셨네요");
+                }
+                
+                if(step>=10000 && step<20000){
+                    $(".result").text(step);
+                    alert("오늘은 1만보 이상 걸으셨네요");
+                }
+                /*
+                    문제) 사용자로부터 걸음수를 입력받아 걸음수가 20000보 이상이면 
+                        "오늘은 2만보 이상 걸으셨네요" 라고 출력되고,
+
+                        걸음수가 10000보 이상, 20000보 미만이면 
+                            "오늘은 1만보 이상 걸으셨네요" 라고 출력되도록 
+
+                        코드를 작성하시오
+                */
+
+                /*
+                        문제) score 변수에 점수를 입력받고,
+                        만약 100점이면 콘솔창에 "1등급"을 출력하고, 
+                        100점이 아니면 "1등급 아님"을 출력        
+                */                
+                let score = Number(prompt("점수를 입력하세요"));
+
+                if(score==100){
+                    console.log("1등급");
+                }
+                
+                if(score!==100){
+                    console.log("1등급 아님");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>오늘 걸음 횟수 : <span class="result">?</span>보</h1>
+    <button type="button">확인</button>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>홍길동_01_기본문법 활용하기</title>
+    <style>
+        #wrap{text-align: center;}
+        button{width: 200px;height: 50px;font-size: 20px;}
+    </style>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        //내용을 출력하는 .text() API를 이용하시오
+        //사용예) $(".result").text(출력할 내용)
+        $(document).ready(function(){
+            const x = 100;
+        })//정식 준비 핸들러
+
+        //준비핸들러끼리는 뭔가를 공유할 수 없다. 서로 완전 별개
+
+        //약식 준비핸들러(실무에서 많이 쓰임)
+        $(function(){
+            //console.log("x = %d", x);
+            $("button").on('click', function(){
+
+            let width = Number(prompt('width값을 입력하세요', 100));
+            let height = Number(prompt('height값을 입력하세요', 2));
+
+            $(".w").text(width);
+            $('.h').text(height);
+
+            const area = width * height;
+            const circumference = 2*(width+height);
+
+            $(".area").text(area);
+            $('.circumference').text(circumference);
+
+            
+
+            });
+        });
+
+    </script>    
+</head>
+<body>
+    <div id="wrap">
+        <h1>평가문항1</h1>
+        <h2>사용자가 입력한 값에 대한 </h2>
+        <h2>넓이 : <span class="area">?</span></h2>
+        <h2>둘레 : <span class="circumference">?</span></h2>
+        <button type="button">가로/세로 입력</button>
+    </div>
+</body>
+</html>

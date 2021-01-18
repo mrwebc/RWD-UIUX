@@ -1,0 +1,20 @@
+이벤트 구문을 작성하려면
+
+  우선 DOM을 선택해야 한다. => 5가지 방법 => 3가지
+
+  1. 전통적으로 id를 이용한 방법
+     document.getElementById('wrap');
+
+  2. CSS방식
+
+    하나만 선택
+      document.querySelector('header>nav>.gnb');
+      document.querySelector('header>nav>.gnb>li');
+
+
+    여러개 선택(배열처럼 인덱스가 생성)
+      document.querySelectorAll('header>nav>.gnb');
+      document.querySelectorAll('header>nav>.gnb>li');
+
+
+    미국인 웹디자이너 수잔도 헷갈리고 어렵긴 마찬가지~!

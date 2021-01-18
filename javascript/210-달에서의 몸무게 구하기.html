@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+    <title>달에서의 몸무게 구하기</title>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            //소수점 출력연습
+            let avg = 85.56987;            
+            console.log(avg.toFixed(1));
+
+
+            const myWeight = parseInt(prompt('당신의 몸무게를 입력해 주세요'));
+
+            /*
+                달의 중력은 지구의 17%입니다.
+                지구에서 몸무게가 100kg인 사람은 달에 가면 17kg 입니다.
+                당신의 몸무게는 달에서 얼마입니까?
+
+                moonGravity : 달에서의 중력
+                moonWeight : 달에서의 몸무게
+            */         
+
+
+        });
+    </script>
+</head>
+<body>
+	<h1>달에서의 몸무게 구하기</h1>
+	
+	<p>지구 몸무게 : <button>출력하기</button></p>
+	<p>달에서 몸무게 : <button>출력하기</button></p>	
+	<p>달에서의 몸무게(소수점 두자리까지) : <button>출력하기</button></p>
+
+</body>
+</html>

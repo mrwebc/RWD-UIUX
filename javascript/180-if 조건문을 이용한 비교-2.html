@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>180-if 조건문을 이용한 비교-2</title>
+    <style>
+        h1{
+            width: 300px;
+            height: 50px;
+            margin: 0 auto;
+            font-size: 20px;
+            /* line-height: 50px;
+            text-align: center; */
+
+            /* flex를 이용한 가세정렬 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: #eee;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("h1").on('click', function(){
+                //"당신이 좋아하는 숫자는?"
+                let num = Number(prompt("당신이 좋아하는 숫자는?"));
+                let rest = num % 2;
+
+                //만약 홀수이면 => "홀수입니다."
+                if(rest==1){
+                    $(".result").text("홀수입니다.");
+                }
+
+                //만약 홀수가 아니면 => "짝수입니다."
+                if(rest!=1){
+                    $(".result").text("짝수입니다.");
+                }
+
+                //위에 2개의 if문을 하나의 if~else문으로 바꾸시오
+                if(rest==1){
+                    $(".result").text("홀수입니다.");
+                }else{
+                    $(".result").text("짝수입니다.");
+                }
+
+
+                //true, 아래 값을 제외한 모든 값은 true
+                //false, 0, '', "", undefined
+                if(undefined){
+                    alert("ㄲㅏㅁㅉㅏㄱㅇㅣㅇㅑ");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>내가 좋아하는 숫자는 ? <span class="result">?</span></h1>
+</body>
+</html>
