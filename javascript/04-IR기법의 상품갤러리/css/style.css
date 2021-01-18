@@ -38,6 +38,11 @@
     border-right-width: 0;
 }
 
+#slides>.thmbs>li.on,
+#slides>.thmbs>li:hover{
+    background-position: 0 -95px;
+}
+
 #slides>.thmbs>li:nth-child(1){background-image: url(../images/th1.png);}
 #slides>.thmbs>li:nth-child(2){background-image: url(../images/th2.png);}
 #slides>.thmbs>li:nth-child(3){background-image: url(../images/th3.png);}
@@ -54,8 +59,11 @@
     text-indent: -9999px;
 }
 
-
-
+address{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
 
 
 
