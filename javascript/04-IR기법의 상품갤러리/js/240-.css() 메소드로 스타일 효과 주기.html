@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>240-.css() 메소드로 스타일 효과 주기</title>
+    <style type="text/css">
+        ul,li{list-style: none;}
+		#wrap{width:500px;margin:0 auto;}
+		h1{height:100;line-height:100px;text-align:center;}
+		section>ul>li{height:48px;line-height:48px;text-align:center;}
+	</style>
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script>
+        $(function(){
+
+            //.css() 핵심은 인라인 방식으로 적용된다는 것이다.
+
+            $(".cat").on('click', function(){
+                //파란글자, 굵게, 노란배경
+                $(this).css({
+                    color:'blue',
+                    fontWeight:'800',
+                    backgroundColor:'#ff0'
+                });
+            });
+
+
+            //문제) 강아지를 클릭하면 빨간글자, 이탤릭, 파란배경색
+            //li요소 선택후 .eq() 를 이용할 것
+            $("li").eq(3).on('click', function(){
+                $(this).css({
+                    'color':'red',
+                    'font-style':'italic',
+                    'background-color':'blue'
+                });
+            });
+        });
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<header>
+			<h1>반려동물을 찾아 스타일 입히기</h1>
+		</header>
+		<section>
+			<ul>
+				<li>여우</li>
+				<li class="cat">고양이</li>
+				<li>금붕어</li>
+				<li class="dog">강아지</li>
+				<li>달팽이</li>
+			</ul>
+		</section>
+	</div>
+</body>
+</html>
