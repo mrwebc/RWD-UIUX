@@ -12,7 +12,20 @@
             console.log(avg.toFixed(1));
 
 
-            const myWeight = parseInt(prompt('당신의 몸무게를 입력해 주세요'));
+            const myWeight = parseInt(prompt('당신의 몸무게를 입력해주세요'));
+            
+           const moonGravity = 0.17;
+           $('button').eq(0).on('click',function(){
+               $(this).text(myWeight);
+           });
+
+           $('button').eq(1).on('click',function(){
+               $(this).text(myWeight * moonGravity);
+           });
+
+           $('button').eq(2).on('click',function(){
+               $(this).text((myWeight * moonGravity).toFixed(2));
+           });
 
             /*
                 달의 중력은 지구의 17%입니다.
