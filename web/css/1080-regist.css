@@ -31,6 +31,7 @@ form>fieldset>ul>li:after{
 form>fieldset>ul>li:last-child{border: none;}
 
 form input[type=text],
+form input[type=email],
 form input[type=password]{
     width: 468px;
     height: 15px;
@@ -40,6 +41,7 @@ form input[type=password]{
 }
 
 form input[type=text]:focus,
+form input[type=email]:focus,
 form input[type=password]:focus{
     background-color: lightgoldenrodyellow;
 }
@@ -155,6 +157,59 @@ form>fieldset>ul>li>.chkbox>label:before{
     content: '';
 }
 
+
+/* select 요소 디자인 */
+form>fieldset>ul>li>select{
+    width: 100px;
+    height: 25px;
+    margin-right: 3px;
+    padding: 0 10px;
+    background-image: url(../images/select_arrow.png);
+    background-position: 80px center;
+    background-repeat: no-repeat;
+
+    border: 1px solid #dedede;
+    border-radius: 3px;
+    outline: none;
+    
+    appearance: none;/*form 컨트롤의 기본스타일을 없앰*/
+}
+
+
+form>fieldset>ul>li>input[type=date]{
+    height: 25px;
+    padding: 0 6px;
+    border: 1px solid #dedede;
+    border-radius: 3px;
+    outline: none;
+}
+
+/* 이메일 수신동의 */
+form>fieldset>ul>li>.tit-email{
+    display: block;
+    float: left;
+    width: 120px;
+    padding-left: 6px;
+}
+
+form>fieldset>ul>li>.switch{
+    float: left;
+    position: relative;
+    width: 48px;
+    height: 25px;
+    border: 1px solid red;
+}
+
+form>fieldset>ul>li>.switch>label{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 28px;
+    font-size: 1px;
+    background-color: #ddd;
+}
 
 
 /* 버튼디자인 */
