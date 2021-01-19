@@ -22,6 +22,12 @@ form>fieldset>ul>li{
     border-bottom: 1px solid #dedede;
 }
 
+form>fieldset>ul>li:after{
+    display: block;
+    clear: both;
+    content: '';
+}
+
 form>fieldset>ul>li:last-child{border: none;}
 
 form input[type=text],
@@ -118,6 +124,35 @@ form>fieldset>ul>li>.radio-switch>label{
     line-height: 23px;
     text-align: center;
     border: 1px solid #dedede;
+}
+
+/* 체크박스 디자인 */
+form>fieldset>ul>li>.chkbox{
+    float: left;
+    margin-right: 20px;
+}
+
+form>fieldset>ul>li>.chkbox>input{display: none;}
+
+form>fieldset>ul>li>.chkbox>label{
+    position: relative;
+    padding-left: 25px;
+}
+
+form>fieldset>ul>li>.chkbox>input:checked+label:before{
+    background-position: 0 0;
+}
+
+form>fieldset>ul>li>.chkbox>label:before{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -3px;
+    width: 19px;
+    height: 19px;
+    background-image: url(../images/icon_checkbox.png);
+    background-position: 0 -19px;
+    content: '';
 }
 
 
