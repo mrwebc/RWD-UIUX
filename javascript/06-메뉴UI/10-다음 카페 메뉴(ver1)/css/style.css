@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+#wrap{}
+
+
+
+section{
+    height: 300px;
+    line-height: 300px;
+    text-align: center;
+    background-color: rgb(151, 255, 183);
+}
+
+footer>address{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgb(255, 171, 237);
+}
