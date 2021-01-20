@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>270-form 입력양식에 대한 유효성검사</title>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            const $userName = $('#userName');
+
+            $('button').first().on('click', function(){
+                
+            /*    
+                let blankStr = "         hong      ";
+                console.log('blankStr = ', blankStr); 
+
+                //변수의 양끝 공백을 제거하는 $.trim()
+                blankStr = $.trim(blankStr);
+                console.log('blankStr = ', blankStr);
+            */    
+                
+                //이름 입력확인
+                let userName = $.trim($userName.val());
+
+                if(userName == ''){
+                    alert('이름을 입력해 주세요');
+                    $userName.focus();
+                    return false;//함수 강제종료
+                }
+
+
+
+                //입력받은 사용자 정보 출력부
+                console.log('이름 : %s', userName);
+
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>주문정보</h1>
+        <form action="ok.html" method="post">
+            <fieldset>
+                <legend>주문 입력양식</legend>
+                <ul>
+                    <li>
+                        <label for="userName">이름 : </label>
+                        <input type="text" id="userName" name="userName" autocomplete="off" />
+                    </li>
+
+                    <p>
+                        <button type="button">확인</button>
+                        <button type="reset">리셋</button>
+                    </p>
+                </ul>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
