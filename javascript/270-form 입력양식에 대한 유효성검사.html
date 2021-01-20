@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>270-form 입력양식에 대한 유효성검사</title>
+    <style>
+        ul,li{list-style: none;}
+        .tit{
+            display: inline-block;
+            width: 120px;
+            text-align: right;
+        }
+    </style>
     <script src="./js/jquery.min.js"></script>
     <script>
         $(function(){
             const $userName = $('#userName');
+            const $userPwd = $('#userPwd');
 
             $('button').first().on('click', function(){
                 
@@ -29,10 +38,31 @@
                 }
 
 
+                //비밀번호 입력확인
+                let userPwd = $.trim($userPwd.val());
+                if(userPwd==''){
+                    alert('비밀번호를 입력해 주세요');
+                    $userPwd.focus();
+                    return false;
+                }
+
+
+                //메일링 수신여부 확인
+                const mailingVal = $.trim($('input[name="mailing"]:checked').val());
+
+                if(mailingVal==''){
+                    alert('이메일 수신 동의항목을 선택하지 않았습니다.');
+                    $("#yes").prop('checked',true).focus();
+                    return false;
+                }
+
 
                 //입력받은 사용자 정보 출력부
                 console.log('이름 : %s', userName);
+                console.log('비밀번호 : %s', userPwd);
+                console.log('이메일 수신 : %s', mailingVal);
 
+                //document.forms['frmInfo'].submit();//전송명령문
 
             });
         });
@@ -41,13 +71,28 @@
 <body>
     <div id="wrap">
         <h1>주문정보</h1>
-        <form action="ok.html" method="post">
+        <form name="frmInfo" action="ok.html" method="post">
             <fieldset>
                 <legend>주문 입력양식</legend>
                 <ul>
                     <li>
-                        <label for="userName">이름 : </label>
+                        <label for="userName" class="tit">이름 : </label>
                         <input type="text" id="userName" name="userName" autocomplete="off" />
+                    </li>
+
+                    <li>
+                        <label for="userPwd" class="tit">비밀번호 : </label>
+                        <input type="password" id="userPwd" name="userPwd" autocomplete="off">
+                    </li>
+
+                    <li>
+                        <span class="tit">메일링 수신 : </span>
+
+                        <input type="radio" id="yes" name="mailing" value="yes">
+                        <label for="yes">예</label>
+
+                        <input type="radio" id="no" name="mailing" value="no">
+                        <label for="no">아니오</label>
                     </li>
 
                     <p>
