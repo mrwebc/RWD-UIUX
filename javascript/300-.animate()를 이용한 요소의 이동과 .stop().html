@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>.animate()와 .stop()</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap{
+            width:800px;
+            margin:0 auto;
+        }
+        
+        p{
+            position:relative;
+            width:100%;
+            height:100px;
+            border:1px solid red;
+        }
+        
+        p>.box{
+            display:block;
+            position:absolute;
+            left:0;
+            top:0;
+            width:100px;
+            height:100px;
+            line-height:100px;
+            text-align:center;
+            background-color:yellow;
+            border:3px solid black;
+            box-sizing: border-box;
+        }
+        
+        button{display:inline-block;width:100px;height:50px;margin:50px auto;}
+    </style>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.easing.min.js"></script>
+    <script>
+        $(function(){
+            const $start = $("button").first();
+            const $stop = $("button").last();
+
+            const $box = $(".box");
+
+            $start.on('click', function(){
+                $box.animate({left:700},2000,'easeInBounce',function(){
+                    //alert('박스 이동 완료');
+                })
+                .animate({left:0},5000,"easeOutElastic", function(){
+                    //alert('처음위치로 복귀');
+                });
+            });
+        
+        
+            $stop.on('click', function(){
+
+                //.stop() 은 현재 진행중인 애니메이트를 정지시킴
+                //큐에 대기중인 애니메이션은 계속 실행
+                $box.stop(false, false);//기본값
+
+                //바로 정지되면서 큐에서 대기중인 애니메이트를 모두 제거
+                $box.stop(true, false);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap" style="text-align:center;">
+        <h1>박스 애니메이트</h1>
+
+        <p>
+            <span class="box">박스</span>
+        </p>
+
+        <button type="button">실행</button>
+        <button type="button">정지</button>
+    </div>
+</body>
+</html>
