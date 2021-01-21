@@ -34,9 +34,31 @@
 .slides>.slides-hair>li:nth-child(4){background-image: url(../images/hair4.png);}
 .slides>.slides-hair>li:nth-child(5){background-image: url(../images/hair5.png);}
 
-.slides>.slides-pagination{}
-.slides>.slides-pagination>li{}
-.slides>.slides-pagination>li>a{}
+.slides>.slides-pagination{
+    display: flex;
+    justify-content: space-between;
+    width: 85px;
+    margin: 10px auto;
+}
+
+.slides>.slides-pagination>li{
+    width: 13px;
+    background-image: url(../images/pagination.png);
+}
+
+.slides>.slides-pagination>li:hover{
+    background-position: 0 -13px;
+}
+
+.slides>.slides-pagination>li.on{
+    background-position: 0 -26px;
+}
+
+.slides>.slides-pagination>li>a{
+    display: block;
+    height: 13px;
+    text-indent: -9999px;
+}
 
 
 address{
