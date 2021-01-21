@@ -14,6 +14,8 @@ $(function(){
             left : -250*nowIdx
         });
 
+        $(this).parent().addClass('on').siblings().removeClass('on');
+
         //앵커태그의 기본기능 작동 방지
         evt.preventDefault();
     })
