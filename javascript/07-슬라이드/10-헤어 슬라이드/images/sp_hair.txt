@@ -1,0 +1,35 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-hair1 {
+    width: 250px;
+    height: 100px;
+    background-position: -10px -10px;
+}
+
+.sprite-hair2 {
+    width: 250px;
+    height: 100px;
+    background-position: -10px -130px;
+}
+
+.sprite-hair3 {
+    width: 250px;
+    height: 100px;
+    background-position: -10px -250px;
+}
+
+.sprite-hair4 {
+    width: 250px;
+    height: 100px;
+    background-position: -10px -370px;
+}
+
+.sprite-hair5 {
+    width: 250px;
+    height: 100px;
+    background-position: -10px -490px;
+}

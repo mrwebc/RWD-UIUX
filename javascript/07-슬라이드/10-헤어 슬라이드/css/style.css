@@ -1,1 +1,45 @@
-@
+@charset "utf-8";
+
+.slides{
+    position: relative;
+    width: 250px;
+    margin: 0 auto;
+    border: 1px solid #000;
+}
+
+.slides>h2{
+    height: 400px;
+    text-indent: -9999px;
+    background-image: url(../images/face.jpg);
+}
+
+.slides>.slides-hair{
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1250px;
+    outline: 1px solid blue;
+}
+
+.slides>.slides-hair>li{
+    width: 250px;
+    height: 100px;
+    text-indent: -9999px;
+}
+
+.slides>.slides-hair>li:nth-child(1){background-image: url(../images/hair1.png);}
+.slides>.slides-hair>li:nth-child(2){background-image: url(../images/hair2.png);}
+.slides>.slides-hair>li:nth-child(3){background-image: url(../images/hair3.png);}
+.slides>.slides-hair>li:nth-child(4){background-image: url(../images/hair4.png);}
+.slides>.slides-hair>li:nth-child(5){background-image: url(../images/hair5.png);}
+
+.slides>.slides-pagination{}
+.slides>.slides-pagination>li{}
+.slides>.slides-pagination>li>a{}
+
+
+address{
+    line-height: 50px;
+    text-align: center;
+}
