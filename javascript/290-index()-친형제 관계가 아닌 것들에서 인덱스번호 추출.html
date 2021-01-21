@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>290-index()-친형제 관계가 아닌 것들에서 인덱스번호 추출</title>
+    <style>
+        #wrap{
+            width:800px;
+            margin:0 auto;
+        }
+
+        h1{text-align: center;}
+
+        ol>li{
+            list-style:none;
+            height:50px;
+            margin-bottom:20px;
+            font-size:20px;
+            line-height:50px;         
+            text-align:center;   
+            border:1px solid #ccc;
+        }
+
+        ol>li:nth-child(odd){background-color:pink;}
+        ol>li:nth-child(even){background-color:#dedede;}
+
+        p{text-align:center;}
+        p>span{color:#f00;font-size:30px;}
+
+    </style>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            const $a = $(".jquery>li>a");
+
+            $a.on('click', function(){
+
+                //여러개의 a중에 이번에 click한 바로 그 a의 index 번호를 추출
+                //이 방법은 친형제 관계 뿐만 아니라, 어떤 촌수 관계에서도 무조건 100% 잘 작동함(만능방식)
+                const nowIdx = $a.index(this);
+                
+                $("span").text(nowIdx);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>제이쿼리 API의 분류</h1>
+
+        <ol class="jquery">
+            <li><a href="#">셀렉팅 API - .parent() .siblings() .next() .prev()</a></li>
+            <li><a href="#">이벤트 API - .on() .click() .mouseover()</a></li>
+            <li><a href="#">내용조작 API - .text() .html() .attr() .css()</a></li>
+            <li><a href="#">이펙스(효과) API - .animate() .fade() slideUp()</a></li>
+        </ol>
+
+        <p>현재 선택된 li>a의 index = <span>?</span></p>
+    </div>
+</body>
+</html>
