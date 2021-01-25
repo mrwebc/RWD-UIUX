@@ -178,10 +178,25 @@ footer>.container>address{
 
 footer>.container>.validator{
     display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
     width: 80px;
     height: 15px;
+    margin:10px 0 0 120px;
     text-indent: -9999px;
     background-image: url(../images/line_footer_img_validator.png);
 }
 
-footer>.container>.wa{}
+footer>.container>.wa{
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 35px;
+    height: 35px;
+    margin-left: 220px;
+    text-indent: -9999px;
+    background-image: url(../images/line_footer_img_wa.png);
+    background-size: cover;
+}
