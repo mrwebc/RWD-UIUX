@@ -2,9 +2,13 @@
 @import url('./reset.css');
 
 header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
     min-width: 960px;/*최소폭 설정*/
+    background-color: #fff;/* 아래에 스크롤되는 section 영역이 안보이게 하기 위함 */
     border-bottom: 3px solid #3b3b3b;
-    
 }
 
 header>.container{
@@ -129,4 +133,11 @@ header>.container>form>fieldset>.langlist>li>a{
 header>.container>form>fieldset>.langlist>li:hover>a,
 header>.container>form>fieldset>.langlist>li.on>a{
     color: #01B901;
+}
+
+
+section{
+    height: 440px;
+    margin-top: 69px;/* header가 pos:f 되어서 위로 끌어당겨지지기 때문에 header의 높이만큼 마진 설정 */
+    background-color: purple;
 }
