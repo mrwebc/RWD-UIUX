@@ -1,14 +1,17 @@
 @charset "utf-8";
 @import url('./reset.css');
 
-header{}
+header{
+    border-bottom: 3px solid #3b3b3b;
+    
+}
 
 header>.container{
     position: relative;
     width: 960px;
     height: 66px;
     margin: 0 auto;
-    background-color: #ff0;
+    /* background-color: #ff0; */
 }
 
 header>.container>.ci{
@@ -56,4 +59,44 @@ header>.container>nav>.gnb>li>a{
 header>.container>nav>.gnb>li:hover>a,
 header>.container>nav>.gnb>li.on>a{
     color: #01B901;
+}
+
+header>.container>form{
+    position: absolute;
+    right: 90px;
+    top: 22px;
+    width: 140px;
+    border: 1px solid #dfdfdf;
+}
+
+header>.container>form:hover{
+    background-color: #eee;
+}
+
+header>.container>form>fieldset{}
+
+header>.container>form>fieldset>label{
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 8px;
+    width: 0;
+    height: 0;
+    text-indent: -9999px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: #aaa transparent transparent transparent;
+}
+
+header>.container>form>fieldset>input{
+   /* 폼컨트롤 요소를 스타일링 할때는 아래 3요소를 리셋한다. */
+    background: none;
+    border: none;
+    outline: none;
+    
+    width: 100%;
+    height: 22px;
+    font-size: 11px;
+    text-indent: 10px;
+    cursor: pointer;
 }

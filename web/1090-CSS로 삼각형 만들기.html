@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1090-CSS로 삼각형 만들기</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        .shape1{
+            display: block;
+            width: 0;
+            height: 0;
+            border-width: 50px;
+            border-style: solid;
+            border-color: red transparent transparent transparent;
+        }
+
+        .shape1:hover{
+            border-top-color: rgb(118, 156, 245);
+        }
+
+        .shape2{
+            display: block;
+            width: 0;
+            height: 0;
+            border-width: 50px;
+            border-style: solid;
+            border-color: transparent blue transparent transparent;
+        }  
+
+        .shape3{
+            display: block;
+            width: 0;
+            height: 0;
+            border-width: 50px;
+            border-style: solid;
+            border-color: transparent transparent green transparent;
+        }        
+
+        .shape4{
+            display: block;
+            width: 0;
+            height: 0;
+            border-width: 50px;
+            border-style: solid;
+            border-color: transparent transparent transparent purple;
+        }        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">삼각형 만들기</h1>
+
+        <span class="shape1"></span>
+        <span class="shape2"></span>
+        <span class="shape3"></span>
+        <span class="shape4"></span>
+    </div>
+</body>
+</html>
