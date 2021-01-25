@@ -136,10 +136,38 @@ header>.container>form>fieldset>.langlist>li.on>a{
 
 
 section{
-    height: 440px;
     margin-top: 69px;/* header가 pos:f 되어서 위로 끌어당겨지지기 때문에 header의 높이만큼 마진 설정 */
-    background-color: purple;
 }
+
+section>.line-visual{
+    position: relative;
+    height: 440px;
+}
+
+section>.line-visual>.line-visual-container{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 400%;
+    height: 100%;
+}
+
+section>.line-visual>.line-visual-container>li{
+    float: left;
+    width: 25%;
+    height: 100%;
+    background-color: #ff0;
+}
+
+section>.line-visual>.line-visual-container>li:nth-child(odd){background-color: pink;}
+
+section>.line-visual>.line-visual-container>li:nth-child(1){}
+section>.line-visual>.line-visual-container>li:nth-child(2){}
+section>.line-visual>.line-visual-container>li:nth-child(3){}
+section>.line-visual>.line-visual-container>li:nth-child(4){}
+section>.line-visual>.line-visual-container>li>p{}
+
+section>.line-visual>.line-visual-pagination{}
 
 
 footer{
