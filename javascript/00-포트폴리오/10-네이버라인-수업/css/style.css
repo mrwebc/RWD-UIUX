@@ -73,8 +73,6 @@ header>.container>form:hover{
     background-color: #eee;
 }
 
-header>.container>form>fieldset{}
-
 header>.container>form>fieldset>label{
     display: block;
     position: absolute;
@@ -99,4 +97,25 @@ header>.container>form>fieldset>input{
     font-size: 11px;
     text-indent: 10px;
     cursor: pointer;
+}
+
+
+header>.container>form>fieldset>.langlist{
+    position: absolute;
+    left: -1px;
+    top: 24px;
+    width: 140px;
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
+}
+
+header>.container>form>fieldset>.langlist>li{}
+
+header>.container>form>fieldset>.langlist>li>a{
+    font-size: 11px;
+}
+
+header>.container>form>fieldset>.langlist>li:hover>a,
+header>.container>form>fieldset>.langlist>li.on>a{
+    color: #01B901;
 }
