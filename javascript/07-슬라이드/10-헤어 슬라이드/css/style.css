@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 .slides{
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
     width: 250px;
     margin: 0 auto;
@@ -17,14 +17,17 @@
 .slides>.slides-hair{
     display: flex;
     position: absolute;
+    
     left: 0;         /* 인덱스0 hair = -250 * 0 */
     left: -250px;    /* 인덱스1 hair = -250 * 1 */
     left: -500px;    /* 인덱스2 hair = -250 * 2 */
     left: -750px;    /* 인덱스3 hair = -250 * 3 */
     left: -1000px;   /* 인덱스4 hair = -250 * 4 */
+
+    left: 0;
     top: 0;
     width: 1250px;
-    /* outline: 1px solid blue; */
+    outline: 1px solid blue;
 }
 
 .slides>.slides-hair>li{

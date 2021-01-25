@@ -1,0 +1,31 @@
+@charset "utf-8";
+@import url('./reset.css');
+
+header{}
+
+header>.container{
+    position: relative;
+    width: 960px;
+    height: 66px;
+    margin: 0 auto;
+    background-color: #ff0;
+}
+
+header>.container>.ci{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -10px;
+    width: 60px;
+    background-image: url(../images/line_header_img_ci.png);
+    background-size: cover;
+}
+
+
+header>.container>.ci>a{
+    display: block;
+    height: 21px;
+    text-indent: -9999px;
+}
+
+header>.container>nav{}

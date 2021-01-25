@@ -10,9 +10,9 @@ $(function(){
         const nowIdx = $indicator.index(this);//0~4값
 
         //헤어컨테이너의 left 좌표값 변경
-        $(".slides>.slides-hair").animate({
+        $(".slides>.slides-hair").stop().animate({
             left : -250*nowIdx
-        });
+        },5000);
 
         $(this).parent().addClass('on').siblings().removeClass('on');
 
