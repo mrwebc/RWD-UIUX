@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>310-보이고 숨기는 .show() .hide()</title>
+    <style>
+        p{
+            width: 300px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            $(".show").on('click', function(){
+                $('p').show();
+            });
+
+            $(".hide").on('click', function(){
+                $("p").hide();
+                //$("p").css({display:'none'});
+                //$("p").attr({style:'display:none'});
+            });
+
+            $('.toggle').on('click', function(){
+                $('p').toggle();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>.show() .hide()</h1>
+
+        <p>쉽고 재미있는 제이쿼리 API 사용법</p>
+
+        <div>
+            <button class="show">show</button>
+            <button class="hide">hide</button>
+            <button class="toggle">toggle</button>
+        </div>
+    </div>
+</body>
+</html>
