@@ -28,4 +28,32 @@ header>.container>.ci>a{
     text-indent: -9999px;
 }
 
-header>.container>nav{}
+header>.container>nav{
+    position: absolute;
+    left: 70px;
+    top: 50%;
+    margin-top: -6px;
+}
+
+header>.container>nav>.gnb{}
+
+header>.container>nav>.gnb>li{
+    float: left;
+    border-right: 1px solid #ccc;
+}
+
+header>.container>nav>.gnb>li:last-child{border-right-width: 0;}
+
+header>.container>nav>.gnb>li>a{
+    display: block;
+    height: 14px;
+    color: #444;
+    line-height: 14px;
+    padding: 0 10px;
+
+}
+
+header>.container>nav>.gnb>li:hover>a,
+header>.container>nav>.gnb>li.on>a{
+    color: #01B901;
+}
