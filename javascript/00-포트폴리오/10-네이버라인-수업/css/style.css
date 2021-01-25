@@ -141,3 +141,43 @@ section{
     margin-top: 69px;/* header가 pos:f 되어서 위로 끌어당겨지지기 때문에 header의 높이만큼 마진 설정 */
     background-color: purple;
 }
+
+
+footer{
+    background-color: #333;
+}
+
+footer>.container{
+    width: 960px;
+    margin: 0 auto;
+    padding: 30px 0 20px;
+    color: #acacac;
+}
+
+footer>.container>nav{}
+footer>.container>nav>.fnb{
+    font-size: 11px;
+    text-align: center;
+}
+
+footer>.container>nav>.fnb>a{
+    color: #acacac;
+}
+
+footer>.container>nav>.fnb>.bar{margin: 0 8PX;}
+
+footer>.container>address{
+    height: 40px;
+    margin-top: 15px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: center;
+}
+
+footer>.container>.validator{
+    display: block;
+    width: 80px;
+    height: 15px;
+}
+
+footer>.container>.wa{}
