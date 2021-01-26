@@ -308,6 +308,52 @@ section>article.line-sticker>.frame{
 section>article.line-sticker>.explain{margin-top: 70px;}
 
 
+/* .line-friends */
+section>article.line-friends{padding-bottom: 100px;}
+
+section>article.line-friends>ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+section>article.line-friends>ul>li{
+    width: 300px;
+    margin:0 30px 50px 0;
+    color: #666;
+}
+
+section>article.line-friends>ul>li:nth-child(3){margin-right: 0;}
+
+section>article.line-friends>ul>li>.pht{
+    display: block;
+    width: 160px;
+    height: 284px;
+}
+
+section>article.line-friends>ul>li>.pht>img{
+    display: block;
+    width: 100%;
+}
+
+section>article.line-friends>ul>li>h4{
+    margin: 10px 0 7px;
+}
+
+section>article.line-friends>ul>li>h4>a{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-left: 5px;
+    text-indent: -9999px;
+    background-image: url(../images/line_visual_sp_sns.png);
+    background-position: -881px 0;
+}
+
+section>article.line-friends>ul>li>p{
+    line-height: 20px;
+}
+
 
 footer{
     min-width: 960px;
