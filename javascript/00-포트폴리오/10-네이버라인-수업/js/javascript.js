@@ -26,4 +26,28 @@ $(function(){
     });
 
 
-})
+});
+
+
+//슬라이드 코드구현
+$(function(){
+
+    const $indicators = $('section>.line-visual>.line-visual-pagination>li>a');
+    const $container = $('section>.line-visual>.line-visual-container');
+
+    $indicators.on('click', function(evt){
+        evt.preventDefault();
+
+        const nowIdx = $indicators.index(this);
+
+        $container.stop().animate({
+            left : -(100 * nowIdx) + '%'
+        });
+
+        //인디케이터 활성화
+        $(this).parent().addClass('on').siblings().removeClass('on');
+        $indicators.eq(nowIdx).parent().addClass('on').siblings().removeClass('on');
+    });
+
+   
+});

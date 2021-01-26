@@ -140,6 +140,7 @@ section{
 }
 
 section>.line-visual{
+    overflow: hidden;
     position: relative;
     height: 440px;
 }
