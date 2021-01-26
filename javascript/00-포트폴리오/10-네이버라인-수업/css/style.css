@@ -9,6 +9,7 @@ header{
     min-width: 960px;/*최소폭 설정*/
     background-color: #fff;/* 아래에 스크롤되는 section 영역이 안보이게 하기 위함 */
     border-bottom: 3px solid #3b3b3b;
+    z-index: 1000;
 }
 
 header>.container{
@@ -246,6 +247,46 @@ section>.line-visual>.line-visual-pagination>li>a{
     display: block;
     height: 12px;
     text-indent: -9999px;
+}
+
+
+/* 컨텐츠 영역 */
+section>article.srv{
+    display: flex;
+    justify-content: space-between;
+    width: 960px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+section>article.srv>.frame{
+    overflow: hidden;
+    width: 450px;
+    height: 556px;
+}
+
+section>article.srv>.frame>img{
+    display: block;
+    width: 100%;
+}
+
+section>article.srv>.explain{
+    width: 450px;
+}
+
+section>article.srv>.explain>h3{
+    margin-top: 50px;
+    color: #444;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 62px;
+}
+
+section>article.srv>.explain>p{
+    margin-top: 20px;
+    padding-left: 5px;
+    font-size: 14px;
+    line-height: 25px;
 }
 
 
