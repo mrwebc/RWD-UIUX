@@ -10,7 +10,12 @@
 
 .moa-slides>.moa-slides-container{
     position: absolute;
-    left: 0;
+    left: 0%;        
+
+    /* left: -100%;
+    left: -200%; */
+
+
     top: 0;
     /* width: 2700px; */
     width: 300%;
