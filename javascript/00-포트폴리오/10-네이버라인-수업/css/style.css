@@ -257,6 +257,11 @@ section>article.srv{
     width: 960px;
     margin: 0 auto;
     padding-top: 100px;
+    border-bottom: 1px solid #f00;
+}
+
+section>article.srv.even{
+    flex-direction: row-reverse;
 }
 
 section>article.srv>.frame{
@@ -288,6 +293,20 @@ section>article.srv>.explain>p{
     font-size: 14px;
     line-height: 25px;
 }
+
+section>article.srv>.explain>p>span{
+    display: block;
+    margin-top: 20px;
+}
+
+section>article.line-sticker>.frame{
+    width: 598px;
+    height: 730px;
+    margin-left: -150px;
+}
+
+section>article.line-sticker>.explain{margin-top: 70px;}
+
 
 
 footer{
