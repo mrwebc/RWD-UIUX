@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>웹디이론</title>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('.open').click(function(){
+                open('http://www.naver.com');
+            });
+
+            //confirm()
+            $('.answer').on('click', function(){
+                const result = confirm('당신은 인간입니까?');
+                if(result==true){
+                    $(this).text("네");
+                }else{
+                    $(this).text('아니오');
+                }
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <h1>웹디이론</h1>
+
+    <p><button class="open">새탭(창)열기-네이버</button></p>
+    <p>당신은 인간입니까? <button class="answer">답변</button></p>
+</body>
+</html>
