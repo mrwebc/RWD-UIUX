@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>330-setInterval(), clearInterval()로 박스 애니메이션</title>
+    <style type="text/css">
+      #wrap{width:800px;margin:0 auto;text-align:center;border:1px solid red;}
+      header>h1{height:100px;line-height:100px;}
+      section{
+          position: relative;
+          background-color: #dedede;
+      }
+
+      section>p.box{
+          position: absolute;
+          left: 0;
+          top: 0;
+          width:100px;height:100px;
+          line-height:100px;
+          background-color:#FF0;
+          border:1px solid black;
+          box-sizing:border-box;         
+      }
+
+      footer p{margin-top:200px;}
+    </style>      
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            const $box = $('.box');
+
+            //null값의 의미 : "지금 현재 값을 알 수 없다"는 값
+            let intervalKey = null;
+
+
+            $('.start').on('click', function(){
+
+                //intervalKey = setInterval(콜백함수,시간);
+                //1초마다 콜백함수를 호출한다.  
+                intervalKey = setInterval(function(){
+                    
+                    $box.stop().animate({
+                        left:700
+                    }).animate({left:0},400);
+
+                },1000);
+
+
+            });
+        
+        
+            $('.stop').on('click', function(){
+                clearInterval(intervalKey);
+            });
+        });
+    </script>
+</head>
+<body>
+   <div id="wrap">
+      <header><h1>일정 시간 간격으로 움직이는 박스</h1></header>
+      
+      <section><p class="box">애니박스</p></section>
+      
+      <footer>
+         <p>
+            <button type="button" class="start">start</button>
+            <button type="button" class="stop">stop</button>
+         </p>
+      </footer>
+   </div>
+</body>
+</html> 

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>350-setInterval()로 달리는 캐릭터 만들기</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        #wrap{text-align: center;}
+        p{margin-bottom: 20px;}
+        button{width: 70px;height: 30px;}
+    </style>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        //문제) setInterval(), clearInterval() 를 이용하여 코드를 작성하시오.
+        $(function(){
+            const $button = $('button');
+            const $character = $('p>img');
+            let intervalKey = null;
+            let num = 1;
+
+            $button.first().on('click',function(){
+                clearInterval(intervalKey);
+                
+                intervalKey = setInterval(function(){
+                    if(num<10){
+                        num++;
+                    }else{
+                        num=1;
+                    }
+
+                    console.log('num = ', num);
+
+                    $character.attr({
+                        src : './images/run_'+num+'.gif'
+                    });
+
+                },50);
+            });
+
+
+            $button.last().on('click',function(){
+                clearInterval(intervalKey);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">달리는 캐릭터</h1>
+        <p>
+            <img src="./images/run_1.gif" alt="#" class="run">
+        </p>
+        <button>달리기</button>
+        <button>멈추기</button>
+    </div>
+</body>
+</html>

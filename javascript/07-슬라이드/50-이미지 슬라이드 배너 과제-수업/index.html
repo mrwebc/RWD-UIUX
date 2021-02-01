@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이전/다음 슬라이드</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- jquery cdn 방식 연결하고 싶다 => 구글링 => jquery cdnjs 검색 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./js/function.js"></script>
+
+</head>
+<body>
+    <div id="wrap">
+        <h1>이전/다음 기능의 슬라이드</h1>
+
+        <div id="slides">
+            <ul class="slides-container">
+                <li><a href="#">이디야 벨기에 와플</a></li>
+                <li><a href="#">이디야 모슈 라떼 텀블러</a></li>
+                <li><a href="#">피치블러솜</a></li>
+                <li><a href="#">봄이오는가봄-이디야멤버스 이벤트</a></li>
+                <li><a href="#">이디야 메이트 희망기금</a></li>
+            </ul>
+            <ol class="slides-pagination">
+                <li class="on"><a href="#">01</a></li>
+                <li><a href="#">02</a></li>
+                <li><a href="#">03</a></li>
+                <li><a href="#">04</a></li>
+                <li><a href="#">05</a></li>
+            </ol>
+            <a href="#" class="slides-navigation slides-prev">이전</a>
+            <a href="#" class="slides-navigation slides-next">다음</a>
+        </div>
+    </div>
+</body>
+</html>

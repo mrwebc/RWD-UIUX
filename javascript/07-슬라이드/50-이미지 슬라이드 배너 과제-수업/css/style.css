@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+#wrap{
+    width: 1180px;
+    margin: 0 auto;
+}
+
+h1{
+    line-height: 100px;
+    text-align: center;
+}
+
+#slides{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 620px;
+    outline: 1px solid #ccc;
+}
+
+#slides>.slides-container{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(1180px * 5);
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#slides>.slides-container>li{
+    width: 1180px;
+}
+
+#slides>.slides-container>li:nth-child(1){background-image: url(../images/slide_1.jpg);}
+#slides>.slides-container>li:nth-child(2){background-image: url(../images/slide_2.jpg);}
+#slides>.slides-container>li:nth-child(3){background-image: url(../images/slide_3.jpg);}
+#slides>.slides-container>li:nth-child(4){background-image: url(../images/slide_4.jpg);}
+#slides>.slides-container>li:nth-child(5){background-image: url(../images/slide_5.jpg);}
+
+#slides>.slides-container>li>a{
+    display: block;
+    height: 620px;
+    text-indent: -9999px;
+}
+
+#slides>.slides-pagination{
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: row;
+    flex-wrap: nowrap; */
+
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    width: 120px;
+    margin-left: -60px;
+}
+
+#slides>.slides-pagination>li{
+    width: 16px;
+    background-color: #fff;
+    border: 1px solid #222;
+    border-radius: 50%;
+}
+
+#slides>.slides-pagination>li:hover,
+#slides>.slides-pagination>li.on{
+    background-color: rgb(240, 105, 105);
+}
+
+#slides>.slides-pagination>li>a{
+    display: block;
+    height: 16px;
+    text-indent: -9999px;
+}
+
+/* 이전, 다음 */
+#slides>.slides-navigation{
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 80px;
+    height: 100px;
+    margin-top: -50px;
+    text-indent: -9999px;
+    background-image: url(../images/btn_navigation.png);
+}
+
+#slides>.slides-navigation.slides-prev{left:0;background-position: -5px -225px;}
+#slides>.slides-navigation.slides-prev:hover{background-position: -5px -335px;}
+
+#slides>.slides-navigation.slides-next{right:0;background-position: -5px -5px;}
+#slides>.slides-navigation.slides-next:hover{background-position: -5px -115px;}

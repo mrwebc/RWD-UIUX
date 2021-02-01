@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>움직이는 파비콘</title>
+    <link id="fav" rel="shortcut icon" href="#" type="image/x-icon">
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        const $fav = $('#fav');
+        let num = 1;
+
+        //문제 주어진 코드와 setInterval()를 활용하여 움직이는 파비콘을 만드시오
+        setInterval(function(){
+            //num 변수값이 변하는 로직
+            if(num<20){
+                num++;
+            }else{
+                num=1;
+            }
+
+            console.log('num = %d',num);
+
+            $fav.attr({
+                href : './images/'+num+'.ico'
+            });
+
+        },50);
+
+    </script>
+</head>
+<body>
+    <h1>움직이는 파비콘</h1>
+</body>
+</html>
