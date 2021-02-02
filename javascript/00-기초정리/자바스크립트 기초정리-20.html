@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트 기초정리-20</title>
+    <style>dd{margin-bottom: 10px;}</style>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        //한줄 주석입니다. 주석은 화면에 노출되지 않습니다.
+
+        /*
+            여러줄로 주석을 작성할 수 있습니다.
+            CSS 주석과 표기법이 같습니다.
+
+            자바스크립트에 주석을 작성하면 실행화면에는 보이지 않지만
+            소스보기를 하면 다 보입니다.
+        */
+
+        let money = 100 + 50 + "원";
+        console.log('money = ',money);//150원
+            
+        let pocket = 100 + "50" + "원";
+        console.log('pocket = ',pocket);//10050원
+
+
+        //비교, 논리 연산자 이해하기
+        let A = 180;
+        let B = 150;
+
+        let result = null;
+        
+        result = A>B;//true
+        result = true;
+
+        result = A<B;//false
+        result = false;
+
+        result = A>=B;//true
+
+        result = A<=B;//false
+
+        result = A==B;//false;
+
+        result = A!=B;//true;
+        alert(result);
+
+
+    </script>
+</head>
+<body>
+    <h1>자바스크립트에서 주의할 점</h1>
+    
+    <h2>대소문자 구별해서 작성</h2>
+    <img src="../images/big100.png" alt="#">
+
+
+    <h2>변수에 대해서는 이것만 알면 된다.</h2>
+    <dl>
+        <dt>DOM을 셀렉팅하는 변수명</dt>
+        <dd>관례적으로 $로 시작한다.</dd>
+
+        <dt>const 키워드는 상수선언시 사용</dt>
+        <dd>중간에 상태값을 변경할 수 없다.</dd>
+
+        <dt>let 키워드는 변수선언시 사용</dt>
+        <dd>중간에 상태값 변경(재할당)이 가능하다.</dd>
+
+        <dt>변수명 작성시 특수문자 사용 불가</dt>
+        <dd>특별히 $, _(언더바) 만 사용 가능</dd>
+    </dl>
+
+
+    <hr>
+
+    <h2>연산자에 핵심정리</h2>
+
+    <dl>
+        <dt>+ 기호가 ★연결연산자★ 로 인식되는 경우</dt>
+        <dd>const name = "김수한" + "무거북이와두루미";</dd>
+        <dd>let money = 100 + "50" + "원";</dd>
+
+        <dt>약식 대입연산자(버카충)</dt>
+        <dd>a = a+b;</dd>
+        <dd>a += b;</dd>
+
+        <dt>1씩 증감연산자</dt>
+        <dd>a = a+1;</dd>
+        <dd>a += 1;</dd>
+        <dd>a++;</dd>
+
+        <dd>b = b-1;</dd>
+        <dd>b -= 1;</dd>
+        <dd>b--;</dd>
+    </dl>
+
+</body>
+</html>
