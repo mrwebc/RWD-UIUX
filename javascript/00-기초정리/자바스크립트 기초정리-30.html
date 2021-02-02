@@ -2,13 +2,67 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>자바스크립트 기초정리-30</title>
     <script src="../js/jquery.min.js"></script>
     <script>
-    
+        //아래 조건식에 직접적으로 true 라고 작성하면 콘솔창에 메세지가 출력될까요? 안될까요?
+        //코드 작성중 테스트를 할 경우는 가끔 조건식 부분에 true, false를 넣은 경우가 있습니다.
+        //하지만 대게 조건식 부분에는 실제로 true,false를 결과값으로 리턴하는 (비교/논리) 조건식을 작성함.
+        if(true){
+            console.log("3교시 입니다.");
+        }
+
+        if(false){
+            console.log("곧 점심시간입니다.");
+        }
+
+        
+
+        //예제) 시간에 따른 메세지 출력
+
+        let hour = 12;//12시
+
+        //조건식 - 만약 현재시간이 12시 이전이면 
+        if(hour<12){
+            alert('아직 오전입니다.');
+        }
+
+
+        //조건식 - 만약 현재시간이 12시를 포함해서 넘었으면
+        if(hour>=12){
+            alert('벌써 오후입니다.');
+        }
+
+
+        //if~else문으로 합치면....
+        if (hour < 12) {
+            alert('아직 오전입니다.');
+        } else {
+            alert('벌써 오후입니다.');
+        }
+        
+
+        // 조건문 - 만약 (hour<11) 으면 '아침먹을 시간입니다.'
+        // 만약 (11<hour<오후3)이면 '점심 먹을 시간입니다'
+        // 만약 (hour>=15) 이면 '저녁먹을 시간입니다.' 
+        // 중첩된 Nested if문
+        if(hour<11){
+            alert('아침먹을 시간입니다.');
+        }else{
+
+            if(hour>=15){
+                alert('저녁먹을 시간입니다.');
+            }else{
+                alert('점심먹을 시간입니다.');
+            }
+
+        }
+
+
+
     </script>
 </head>
 <body>
-    
+    <h1>if 조건문 완전정복</h1>
 </body>
 </html>
