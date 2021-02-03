@@ -7,7 +7,7 @@
     <style>
         #wrap{width:500px;margin:0 auto;}
         section{border:1px solid #ccc;}
-        h1,address{line-height:100px;text-align:center;}
+        h1,h2,address{line-height:100px;text-align:center;}
         section>p{margin-bottom:10px;text-align:center;}
         section>p>input{width:150px;}
     </style>
@@ -24,7 +24,24 @@
                     return false;
                 }
 
-                console.log(inputDay);
+                //입력받은 날짜정보를 날짜객체로 변환
+                const now = new Date();
+                const firstDay = new Date(inputDay);
+
+
+                const toNow = now.getTime();//밀리세컨즈초로 변환
+                const toFirst = firstDay.getTime();//밀리세컨즈초로 변환
+
+                //1일 = 24시간 * 60분 * 60초 * 1000
+                //두 날짜 사이의 차이값
+                const passedTime = toNow - toFirst + (24*60*60*1000);
+
+                //밀리초를 날짜수로 변환 후 반올림
+                const passedDay = Math.round(passedTime/(24*60*60*1000));                
+                $(".term").text(passedDay);
+                
+                
+
             });
         });
     </script>
@@ -34,6 +51,7 @@
         <h1>기념일 계산</h1>
 
         <section>
+            <h2>우리 만난지 <span class="term">?</span>일</h2>
             <p>
                 <label for="inputDay" class="sr-only">날짜선택</label>
                 <input type="date" id="inputDay" />
