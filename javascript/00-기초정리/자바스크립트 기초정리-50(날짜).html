@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트 기초정리-50(날짜)</title>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            const today = new Date();
+    
+            $('.year').text();
+        });
+        
+    </script>
+</head>
+<body>
+    <h1>날짜 정보 가져오기</h1>
+
+    <h2>올해는 <span class="year">?</span>년</h2>
+
+
+    <h2>?</h2>
+    <script>
+        let now = new Date();//현시점의 날짜정보를 담은 객체를 리턴
+
+        /*
+            new Date()에서 리턴되는 객체는 대략 이럴것이다.
+
+            let now = {
+                getFullYear : function(){....},
+                getMonth : function(){....},
+                getDate : function(){....},
+                .
+                .
+                .
+                .
+                getTime : function(){....}
+            }
+        */
+
+
+        $('h2').text(now);
+    </script>
+</body>
+</html>
