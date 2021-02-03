@@ -59,6 +59,31 @@
         }
 
 
+        //회원이 탈퇴하려고 할때 정말 탈퇴할것인지 다시한번 확인하고 싶다.
+        const secession = confirm("정말 회원탈퇴 하실건가요?");
+
+       if(secession){
+            alert("탈퇴완료");
+       }else{
+            alert("탈퇴취소");
+       }
+
+
+        //다중 if문
+        const score = 75;
+
+        if(score>=90){
+            console.log('A학점');
+        }else if(score>=80){
+            console.log('B학점');
+        }else if(score>=70){
+            console.log('C학점');
+        }else if(score>=60){
+            console.log('D학점');
+        }else{
+            console.log('F학점');
+        }
+
 
     </script>
 </head>

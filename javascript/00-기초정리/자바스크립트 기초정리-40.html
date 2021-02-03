@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트 기초정리-40</title>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        const mycar = {
+            brand : "현대",
+            name : "펠리셰이드",
+            color : "black",
+            price : 50000000,
+
+            drive : function(){alert('갈릉으로 출발~!');}
+        }
+
+        console.log(mycar.name);//값을 출력
+        mycar.drive();
+
+
+        //문제) 객체변수를 선언하고, 각 속성값을 콘솔창에 출력하시오
+        /*
+            변수명 : person
+            속성명 : name, age, id
+            속성값 : 마음대로....
+        */
+
+        const person = {
+           name : "초롱이",
+           age : 7,
+           id : "spice"
+       };
+
+       console.log(person.name);
+       console.log(person.age);
+       console.log(person.id);
+    </script>
+</head>
+<body>
+    <h1>자바스크립트 객체 핵심요약</h1>
+
+    <h2>1. 객체의 형태부터 구분할 수 있어야 한다. - {....}</h2>
+    <h2>2. 객체에 저장하는 데이터는 대게 서로 연관성을 가진 경우가 많다.</h2>
+    <h2>3. 값을 꺼내오는 방법 - 객체변수명.속성명</h2>
+    
+    <h2>4. 객체변수는 속성값으로 함수도 올(할당할) 수 있다.</h2>
+
+    <pre>
+        const mycar = {
+            brand : "현대",
+            name : "펠리셰이드",
+            color : "black",
+            price : 50000000,
+
+            drive : function(){alert('갈릉으로 출발~!');}
+
+        }
+    </pre>
+</body>
+</html>
