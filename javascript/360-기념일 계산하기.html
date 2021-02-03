@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>360-기념일 계산하기</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        #wrap{width:500px;margin:0 auto;}
+        section{border:1px solid #ccc;}
+        h1,address{line-height:100px;text-align:center;}
+        section>p{margin-bottom:10px;text-align:center;}
+        section>p>input{width:150px;}
+    </style>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("button").on('click', function(){
+                const inputDay = $('#inputDay').val();
+                
+                //유효성검사 - 우리가 의도한 값이 아닌경우를 검사
+                if(inputDay==""){
+                    alert("날짜를 선택해 주세요");
+                    $('#inputDay').focus();
+                    return false;
+                }
+
+                console.log(inputDay);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>기념일 계산</h1>
+
+        <section>
+            <p>
+                <label for="inputDay" class="sr-only">날짜선택</label>
+                <input type="date" id="inputDay" />
+                <button type="button">확인</button>
+            </p>
+        </section>
+        
+        <address>&copy;Programming by 홍길동</address>
+    </div>
+</body>
+</html>
