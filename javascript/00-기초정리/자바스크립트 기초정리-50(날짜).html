@@ -9,7 +9,49 @@
 
             const today = new Date();
     
-            $('.year').text(today);
+            $('.year').text(today.getFullYear());
+            $('.month').text(today.getMonth()+1);
+            $('.date').text(today.getDate());
+
+            $('.day').text(today.getDay());//0~6 사이의 값
+
+            let dayName = null;//일~토
+
+            switch(today.getDay()){
+                case 0 :
+                    dayName = "일";
+                    break;
+
+                case 1 :
+                    dayName = "월";
+                    break;
+
+                case 2 :
+                    dayName = "화";
+                    break;
+
+                case 3 :
+                    dayName = "수";
+                    break;
+
+                case 4 :
+                    dayName = "목";
+                    break;
+
+                case 5 :
+                    dayName = "금";
+                    break;
+
+                case 6 :
+                    dayName = "토";
+                    break;
+
+                default : 
+                    dayName = "공휴";
+            }
+
+            $(".day").text(dayName);
+
         });
         
     </script>
@@ -17,7 +59,16 @@
 <body>
     <h1>날짜 정보 가져오기</h1>
 
-    <p>올해는 <span class="year">?</span>년</p>
+    <p>
+        올해는 
+        <span class="year">?</span>년 
+        <span class="month">?</span>월
+        <span class="date">?</span>일
+
+        <span class="day">?</span>요일
+        
+    </p>
+ 
 
 
     <h2>?</h2>
