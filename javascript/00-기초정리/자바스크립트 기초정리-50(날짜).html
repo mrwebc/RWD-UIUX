@@ -13,10 +13,13 @@
             $('.month').text(today.getMonth()+1);
             $('.date').text(today.getDate());
 
-            $('.day').text(today.getDay());//0~6 사이의 값
+            //$('.day').text(today.getDay());//0~6 사이의 값
 
+            //한글요일 추출법
             let dayName = null;//일~토
 
+            //switch문은 변수의 값에 따른 서로다른 로직을 실행시키고 싶을때
+            //사실 switch문은 다중 if문과 똑같다.
             switch(today.getDay()){
                 case 0 :
                     dayName = "일";
@@ -49,8 +52,25 @@
                 default : 
                     dayName = "공휴";
             }
-
             $(".day").text(dayName);
+
+
+            setInterval(function(){
+                const current = new Date();
+                //12시간 표기법과 오전/오후를 표기하기
+                let hours = current.getHours();//0~23
+
+                if(hours<12){
+                    hours = "am "+ hours%12;
+                }else{
+                    hours = "pm "+ hours%12;
+                }
+
+                $('.hour').text(hours);
+                $('.min').text(current.getMinutes());
+                $('.sec').text(current.getSeconds());
+ 
+            },1000);
 
         });
         
@@ -64,9 +84,14 @@
         <span class="year">?</span>년 
         <span class="month">?</span>월
         <span class="date">?</span>일
-
         <span class="day">?</span>요일
-        
+    </p>
+
+    <p>
+        지금시간은
+        <span class="hour">?</span>시 
+        <span class="min">?</span>분 
+        <span class="sec">?</span>초
     </p>
  
 
