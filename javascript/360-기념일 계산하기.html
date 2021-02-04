@@ -18,7 +18,7 @@
                 const inputDay = $('#inputDay').val();
                 
                 //유효성검사 - 우리가 의도한 값이 아닌경우를 검사
-                if(inputDay==""){
+                if(inputDay==""){//날짜를 입력하지 않아서 값이 없다.
                     alert("날짜를 선택해 주세요");
                     $('#inputDay').focus();
                     return false;
