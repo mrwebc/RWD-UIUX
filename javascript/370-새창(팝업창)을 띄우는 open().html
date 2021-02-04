@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>370-새창(팝업창)을 띄우는 open()</title>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            const $btnOpen = $('button').first();
+            const $btnClse = $('button').last();
+
+            let clseKey = null;
+
+            $btnOpen.on('click', function(){
+                clseKey = open("371-공지창.html","gongi","directories=no, width=500, height=500");
+            });
+
+            $btnClse.on('click', function(){
+                clseKey.close();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>새창 띄우기</h1>
+
+        <p>
+            <button type="button">새창 열기</button>
+            <button type="button">새창 닫기</button>
+        </p>
+    </div>
+</body>
+</html>

@@ -18,12 +18,17 @@
         const array = [100, '사과', 200, '배', 300, '딸기'];
 
         //콘솔창에 array 배열에 담긴 데이터를 100번 출력하세요.
-        console.log(array[0]);
-        console.log(array[1]);
-        console.log(array[2]);
-        console.log(array[3]);
-        console.log(array[4]);
-        console.log(array[5]);
+        //중첩 for문
+        for(let i=0;i<100;i++){
+            
+            console.log("--%s번째 출력--",i+1);
+
+            for(let k=0;k<array.length;k++){
+                console.log(array[k]);
+            }
+
+        }
+
 
         //array 배열에 '옥수수' 데이터를 추가하시오.
         array[6] = '옥수수';
