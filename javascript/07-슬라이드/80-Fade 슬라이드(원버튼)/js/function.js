@@ -48,6 +48,7 @@ $(function(){
         fadeActionFn();
     });
 
+    
     //다음
     $(".slides-next").on('click', function(evt){
         evt.preventDefault();
