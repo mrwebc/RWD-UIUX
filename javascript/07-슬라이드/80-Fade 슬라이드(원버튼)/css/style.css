@@ -64,3 +64,30 @@
     height: 12px;
     text-indent: -9999px;
 }
+
+/* 이전, 다음 */
+#slides>.slides-navigation{
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 42px;
+    height: 42px;
+    margin-top: -21px;
+    text-indent: -9999px;
+    opacity: 0.9;
+    transition: all 0.2s;
+}
+
+#slides>.slides-navigation:hover{
+    opacity: 1;
+}
+
+#slides>.slides-navigation.slides-prev{
+    left: 0;
+    background-image: url(../images/slide_nav_left.png);
+}
+
+#slides>.slides-navigation.slides-next{
+    right: 0;
+    background-image: url(../images/slide_nav_right.png);
+}
