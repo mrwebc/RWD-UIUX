@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>400-마우스 포인터가 요소안으로 입장하고 퇴장때 반응하는 mouseenter, mouseleave, hover()</title>
+    <style>
+        p.box{
+            width: 500px;
+            height: 300px;
+            margin: 0 auto;
+            color: white;
+            line-height: 300px;
+            text-align: center;
+            background-color: #f0f;            
+            border: 1px solid #000;
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            //.box 요소에 대한 mouseenter 이벤트 구문 작성
+            // 마우스가 요소 안으로 들어오면 텍스트내용이 "마우스 포인터가 박스안으로 들어왔습니다." 출력
+            $('.box').on('mouseenter', function(){
+                $(this).text('마우스 포인터가 박스안으로 들어왔습니다.');
+            });
+
+            // 마우스가 요소 안에서 떠나면 텍스트내용이 "마우스 포인터가 박스에서 떠났습니다." 출력
+            $('.box').on('mouseleave', function(){
+                $(this).text('마우스 포인터가 박스에서 떠났습니다.');
+            });
+
+
+            //on() 메소드의 구문작성법 중 하나
+            $('.box').on({
+                'mouseenter':function(){
+                    $(this).text('마우스 포인터가 박스안으로 들어왔습니다.');
+                }
+                ,
+                'mouseleave':function(){
+                    $(this).text('마우스 포인터가 박스에서 떠났습니다.');
+                }
+            });
+
+
+            // 마우스가 요소 안으로 들어오면 글자색이 노란색으로 출력되고, 떠나면 파란색으로 출력되는 코드를 .hover()를 사용해서 작성하세요.
+            //$('.box').hover(함수1-mouseenter, 함수2-mouseleave);
+            $('.box').hover(function(){
+                $(this).css('color','yellow');//mouseenter 일때
+            }, function(){
+                $(this).css('color','blue');//mouseout 일때
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>hover = mouseenter + mouseleave</h1>
+
+        <p class="box">마우스를 요소안으로 들여 보내세요</p>
+    </div>
+</body>
+</html>

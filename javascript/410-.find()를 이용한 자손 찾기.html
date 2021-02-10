@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>.find() 메소드를 이용한 자손 찾기</title>
+    <style>
+      *{margin:0;padding:0;}
+      ul{list-style:none;}
+      
+      #wrap{
+         width:800px;
+         margin:0 auto;
+         text-align:center;
+      }
+      
+      header>h1, section>h2, article>h2{
+         height:100px;
+         line-height:100px;
+      }
+      
+      p{color:red;font-weight:600;font-size:20px;}
+      
+      dl{margin-bottom:30px;}
+      dl>dt{margin-bottom:10px;color:blue;font-size:30px;}
+      dl>dd{height:30px;line-height:30px;}
+      
+      li{margin-bottom:10px;}
+    </style>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            /*
+                em을 선택하는 방법
+                $("#wrap em") => $("#wrap").find('em')
+                $("dl em") => $("dl").find('em')
+                $("section em") => $('section').find('em')
+            */
+
+            //문제1) .find() 메소드를 사용하여 dl 요소의 자손중 em 요소를 선택한 후, 해당 요소의 글자색을 빨간색으로 바꾸세요.
+            $("dl").find('em').css({
+                color:'red'
+            });
+
+            const $article = $("article");
+
+            //문제2) $article의 자손 .who 요소를 find() 메소드를 이용하는 방식으로 셀렉팅해서 배경색을 핑크로 바꾸세요.
+            $article.find('.who').css({
+                'background-color':'pink'
+            });
+
+            //문제3) $article의 자손 img 요소를 find() 메소드를 이용하는 방식으로 셀렉팅해서 적당한 테두리를 주세요.
+            $article.find('img').css({
+                'border': '3px solid green'
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>자손을 찾고 싶다면 .find( ) 메소드 활용</h1>
+        </header>
+        <section>
+            <h2>사전식목록을 나타내는 태그 dl,dt,dd</h2>
+            <dl>
+                <dt>여러 요소중에서</dt>
+                <dd><em>이탤릭 단어의</em> 글자색을</dd>
+                <dd><em>빨간색으로</em> 변경한다.</dd>
+            </dl>
+            <p>.find( ) 메소드는 <em>깊이에 상관없다.</em></p>
+        </section>
+        <article>
+            <h2>특정 요소의 자손을 셀렉팅하는 .find( )</h2>
+            <ul>
+                <li>자연</li>
+                <li class="who">소녀</li>
+                <li><img src="./images/dog.png" alt="#" /></li>
+            </ul>
+        </article>
+    </div>    
+</body>
+</html>

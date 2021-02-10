@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>390-직계자식을 셀렉팅하는 children()</title>
+    <style>
+        /* p>span{border: 3px double #000;} */
+    </style>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            $("button").on('click', function(){
+                
+                //p요소의 직계자식인 span에게 3px의 이중테두리선을 나타내는 코드를 작성하세요.
+                $("p").children("span").css({
+                    border : "3px double #000"
+                });
+
+
+                //li요소의 직계자식중 .blue 클래스를 가진 요소에 CSS 속성을 다음과 같이 설정하세요 color : blue 로 설정하세요.
+                $('li').children(".blue").css({
+                    color:"blue"
+                });
+
+
+                $("ol").children().css({
+                    "background-color":"yellow"
+                });
+
+                $("ol").children(".how").css({
+                    "background-color":"pink"
+                });
+
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>텍스트를 빼놓고 직계자식 셀렉팅 - children() 메소드</h1>
+        <p>안녕하세요, <span class="smart">수강생 여러분~!</span></p>
+        <ol>
+            <li><span class="blue">즐거운 제이쿼리 시간입니다.</span></li>
+            <li class="how">어때요?</li>
+            <li>생각보다 쉽지요?</li>
+        </ol>
+        <p>이렇게 열심히 하다보면 어느 순간엔가 <span>유능한 퍼블리셔</span>가 되어 있을 거에요</p>
+        <button type="button">클릭~!</button>
+    </div>   
+</body>
+</html>
