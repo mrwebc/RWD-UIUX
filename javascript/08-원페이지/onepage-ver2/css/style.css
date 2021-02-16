@@ -50,6 +50,12 @@ header>nav>.gnb>li>a{
     text-align: center;
 }
 
+header>nav>.gnb>li:hover>a,
+header>nav>.gnb>li.on>a{
+    color:#00f;
+    font-weight: 800;
+}
+
 
 
 section>article{
