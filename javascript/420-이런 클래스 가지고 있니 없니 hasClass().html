@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>어떤 요소에 특정 클래스가 있는지 검사하는 .hasClass() API</title>
+    <style>
+        *{margin:0;padding:0;}
+        
+        #wrap{
+            width:800px;
+            margin:0 auto;
+        }
+        
+        h1{
+            height:100px;
+            line-height:100px;
+            text-align:center;
+        }
+        
+        p{
+            width:336px;
+            margin:0 auto;
+        }
+        
+        p>span{
+            display:inline-block;
+            width:100px;
+            height:100px;
+            line-height:100px;
+            text-align:center;
+            border:1px solid black;
+            box-sizing: border-box;
+            border-radius:50px;
+        }
+
+        p>span.on{
+            background-color: pink;
+            border: 0;
+        }
+                
+    </style>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('span').on('click', function(){
+                
+                //toggle() = show() + hide()
+                //toggleClass() = addClass() + removeClass()
+                //$(this).toggleClass('on');
+
+                //이번에 클릭한 요소가 .on 을 가지고 있다면 제거하고, 없으면 .on 을 추가한다.
+                //조건식은 반드시 true, false 값이어야 한다.
+                /*
+                    .hasClass()는 선택된 요소가 해당 클래스를 가지고 있으면 true를 리턴하고
+                    가지고 있지 않으면 false 를 리턴
+                */
+                if($(this).hasClass('on')){
+                    $(this).removeClass('on');
+                }else{
+                    $(this).addClass('on');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>true, false값을 리턴하는 .hasClass() 메소드</h1>
+        
+        <p>
+            <span class="on">박스-1</span>
+            <span>박스-2</span>
+            <span>박스-3</span>
+        </p>
+    </div>
+</body>
+</html>

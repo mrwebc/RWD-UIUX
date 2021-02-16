@@ -91,3 +91,20 @@
     right: 0;
     background-image: url(../images/slide_nav_right.png);
 }
+
+#slides>.slides-auto{
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 16px;
+    width: 20px;
+    height: 20px;
+    margin-left: 50px;
+    text-indent: -9999px;
+    background-image: url(../images/icons.png);
+    background-position: -62px -24px;
+}
+
+#slides>.slides-auto.pause{
+    background-position: 0 -57px;
+}
