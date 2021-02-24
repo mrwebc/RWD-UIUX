@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>430-delay() 를 이용한 서클파장 효과</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        body{background-color: rgb(90, 90, 90);}
+        h1{color: #fff;}
+
+        .phone{
+            position: relative;
+            width: 730px;
+            height: 732px;
+            margin: 100px auto;
+            background-image: url(./images/phone.png);
+        }
+
+        .ring{
+            display: block;
+            position: absolute;
+            border: 2px solid #fff;
+            border-radius: 50%;
+        }
+
+        .ring_1{
+            right: -50px;
+            top: 30px;
+            width: 100px;
+            height: 100px;
+            opacity: 0.9;
+        }
+
+        .ring_2{
+            right: -65px;
+            top: 15px;
+            width: 130px;
+            height: 130px;
+            opacity: 0.7;
+        }
+
+        .ring_3{
+            right: -80px;
+            top: 0;
+            width: 160px;
+            height: 160px;
+            opacity: 0.5;
+        }
+
+        .ring_4{
+            right: -95px;
+            top: -15px;
+            width: 190px;
+            height: 190px;
+            opacity: 0.3;
+        }
+
+        .ring_5{
+            right: -110px;
+            top: -30px;
+            width: 220px;
+            height: 220px;
+            opacity: 0.2;
+        }
+
+        .ring_6{
+            right: -125px;
+            top: -45px;
+            width: 250px;
+            height: 250px;
+            opacity: 0.1;
+        }
+
+    </style>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            const $ring = $(".ring");
+
+            for(let i=0;i<6;i++){
+                $ring.eq(i).delay((i+6)*100).fadeOut(600);
+            }
+                //i=0   (i+6)*100    600
+                //i=1                700
+                //i=2                800 
+                //i=3                900
+
+            //$ring.eq(0).delay(600).fadeOut(600);
+            //$ring.eq(1).delay(700).fadeOut(600);
+            //$ring.eq(2).delay(800).fadeOut(600);
+            //$ring.eq(3).delay(900).fadeOut(600);
+            //$ring.eq(4).delay(1000).fadeOut(600);
+            //$ring.eq(5).delay(1100).fadeOut(600);
+
+
+            for(let k=0;k<6;k++){
+                $ring.eq(k).delay((k*100)+100).fadeIn(600);
+            }
+
+            //$ring.eq(0).delay(100).fadeIn(600);
+            //$ring.eq(1).delay(200).fadeIn(600);
+            //$ring.eq(2).delay(300).fadeIn(600);
+            //$ring.eq(3).delay(400).fadeIn(600);
+            //$ring.eq(4).delay(500).fadeIn(600);
+            //$ring.eq(5).delay(600).fadeIn(600);
+
+            setInterval(function(){
+                for(let i=0;i<6;i++){
+                    $ring.eq(i).delay((i+6)*100).fadeOut(600);
+                }
+
+                for(let k=0;k<6;k++){
+                    $ring.eq(k).delay((k*100)+100).fadeIn(600);
+                }
+            },3000);
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">
+            .delay() 를 이용한 서클파장 효과
+        </h1>
+
+        <p class="phone">
+            <span class="ring ring_1"></span>
+            <span class="ring ring_2"></span>
+            <span class="ring ring_3"></span>
+            <span class="ring ring_4"></span>
+            <span class="ring ring_5"></span>
+            <span class="ring ring_6"></span>
+        </p>
+    </div>
+</body>
+</html>

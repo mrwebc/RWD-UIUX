@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스의 최대 최소 크기 지정</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        /* 1200px 보다 큰 wide PC */
+        #wrap{
+            width: 1200px;
+            /*width: 250px;*/
+            /*height: 300px;*/
+            margin: 0 auto;
+            padding-bottom: 50px;
+            background-color: pink;
+        }
+
+        p{
+            width: 100%;/* 현재 1200px */
+            max-width: 300px;/* 현재 300px */
+            height: 100%;
+            min-height: 130px;
+            background-color: yellow;
+        }
+
+        /* 보통의 옛날 일반 PC */
+        @media screen and (max-width:1200px){
+            #wrap{
+                width: 960px;
+                background-color: orange;
+            }
+        }/* end of 1200*/
+
+
+        /* 태블릿 */
+        @media screen and (max-width:992px){
+            #wrap{
+                width: 800px;
+                background-color: blue;
+            }
+        }/* end of 992*/
+
+
+        /* 사이즈가 조금 큰 스마트폰 */
+        @media screen and (max-width:640px){
+            #wrap{
+                width: 100%; 
+                background-color: green;
+            }
+        }
+
+
+        /* 사이즈가 작은 스마트폰 */
+        @media screen and (max-width:480px){
+            #wrap{
+                background-color: purple;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">박스의 최대 최소 크기 지정</h1>
+        <p>
+            max-width <br />
+            min-width <br />
+            
+            max-height <br />
+            min-height
+        </p>
+    </div>
+</body>
+</html>

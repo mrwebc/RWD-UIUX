@@ -1,0 +1,64 @@
+▣ 옆으로 움직이는 슬라이드 작업순서
+
+    1. HTML/CSS 구조를 만들긴 하는데.... JS를 어떻게 구현할건지를 고려해서
+        #slides
+            .slides-container - 슬라이드를 담는 컨테이너 - flex 또는 float 적용
+            .slides-pagination - 인디케이터
+            .slides-navigation - 이전/다음
+            .slides-auto.pause - 재생 원버튼 
+
+    2. 자바스크립트 코드 구현
+        1) 인디케이터에 대한 click 이벤트 구문 작성
+            (1) index()를 이용해서 nowIdx 추출
+            (2) 컨테이너 animate()
+            (3) 활성화 표시
+
+        2) 이전/다음에 대한 click 이벤트 구문 작성
+            (1) if~else 구문을 이용해서 nowIdx 추출
+            (2) 컨테이너 animate()
+            (3) 활성화 표시    
+
+        3) 반복되는 코드 (2~3)를 함수로 정의 => 리팩토링
+
+        4) 자동재생 setInterval()
+            (1) if~else 구문을 이용해서 nowIdx 추출
+            (2) 3에서 만든 함수 호출
+
+        5) 다음번 index를 추출하는 함수를 정의 => 리팩토링
+
+
+
+▣ 페이드 슬라이드 작업순서
+    1. HTML/CSS 구조를 만들긴 하는데.... JS를 어떻게 구현할건지를 고려해서
+        #slides
+            .slides-container - 슬라이드를 담는 컨테이너 - position 적용
+            .slides-pagination - 인디케이터
+            .slides-navigation - 이전/다음
+            .slides-auto.pause - 재생 원버튼 
+
+    2. 자바스크립트 코드 구현
+        1) oldIdx, nowIdx로 인덱스를 구분
+            oldIdx 는 사라질 슬라이드
+            nowIdx 는 나타날 슬라이드
+
+        2) 인디케이터에 대한 click 이벤트 구문 작성
+            (1) oldIdx = nowIdx 먼저 저장
+            (2) index()를 이용해서 나타날 슬라이드에 대한 nowIdx 추출
+            (3) 사라질 슬라이드를 fadeOut()
+            (4) 나타날 슬라이드를 fadeIn()
+            (5) 활성화 표시   
+
+        3) 이전/다음에 대한 click 이벤트 구문 작성
+            (1) oldIdx = nowIdx 먼저 저장
+            (2) if~else 구문을 이용해서 nowIdx 추출
+            (3) 사라질 슬라이드를 fadeOut()
+            (4) 나타날 슬라이드를 fadeIn()
+            (5) 활성화 표시 
+
+        4) 반복되는 코드 (2~3)를 함수로 정의 => 리팩토링              
+
+        5) 자동재생 setInterval()
+            (1) if~else 구문을 이용해서 nowIdx 추출
+            (2) 4에서 만든 함수 호출
+
+        6) 다음번 index를 추출하는 함수를 정의 => 리팩토링

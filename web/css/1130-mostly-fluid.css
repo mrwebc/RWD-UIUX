@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* 현재는 모든 접속장치가 대상이지만 미디어쿼리를 적용한 후에는 wide pc가 주 대상이 될 것입니다. */
+#wrap{
+    width: 1200px;
+    margin: 0 auto;
+    border: 1px solid #000;
+}
+
+section{}
+
+.box1{background-color: blue;}
+
+.box2{background-color: red;}
+
+.box3{background-color: green;}
+
+.box4{background-color: yellow;}
+
+.box5{background-color: brown;}

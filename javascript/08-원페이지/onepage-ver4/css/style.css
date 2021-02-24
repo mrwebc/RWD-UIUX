@@ -9,7 +9,7 @@ header{
     background-color: #fff;
     border-bottom: 3px solid #000;
     z-index: 1000;
-    opacity: 0.5;/* 임시 */
+    /* opacity: 0.5;임시 */
 }
 
 header>.logo{
@@ -56,13 +56,23 @@ header>nav>.gnb>li.on>a{
     font-weight: 800;
 }
 
-section{margin-top: 69px;}
+section{
+    width: 1100px;
+    margin: 0 auto;
+}
+
+section.visual{    
+    height: 560px;
+    margin-top: 69px;
+    text-indent: -9999px;
+    background-image: url(../images/visual.png);
+}
 
 section>article{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 150px;
+    font-size: 100px;
 }
 
 .cont0{
@@ -97,4 +107,36 @@ section>article{
 .cont4{
     height: 1000px;
     background-color: #6fc;
+}
+
+footer{
+    height: 300px;
+    line-height: 300px;
+    font-size: 150px;
+    text-align: center;
+    background-color: pink;
+}
+
+aside{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 51px;
+    height: 51px;
+    text-indent: -9999px;
+    background-image: url(../images/top.png);
+    background-size: cover;
+    cursor: pointer;
+}
+
+aside:hover:before{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 51px;
+    height: 51px;
+    background-color: #fff;
+    opacity: 0.2;
+    content: '';
 }
