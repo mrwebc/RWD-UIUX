@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+#wrap {
+  display: flex;
+  width: 1024px;
+  margin: 0 auto;
+  align-content: stretch; /* 기본값 => .box1의 높이가 늘어난 이유*/
+}
+
+.box1 {
+  order: 100;
+  width: 25%;
+  background-color: blue;
+}
+
+.container {
+  order: 200;
+  width: 75%;
+}
+
+.container > .box2 {
+  height: 150px;
+  background-color: red;
+}
+
+.container > .box3 {
+  height: 150px;
+  background-color: green;
+}
+
+/* 태블릿 */
+@media screen and (max-width: 992px) {
+  #wrap {
+    width: 100%;
+    margin: 0;
+  }
+
+  .box1 {
+    order: 300;
+  }
+}
+
+/* 모바일 */
+@media screen and (max-width: 640px) {
+  #wrap {
+    flex-wrap: wrap;
+  }
+
+  .box1,
+  .container {
+    width: 100%;
+  }
+
+  .box1 {
+    order: initial;
+    min-height: 150px;
+  }
+
+  .container > .box3 {display: none;}
+}

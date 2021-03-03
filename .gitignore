@@ -2,7 +2,8 @@ homework/
 setup/
 photoshop/
 php/
-00-취업
+00-취업/
+00-프로필사이트/
 01-UI디자인/
 02-콘셉트기획
 03-UIUX 요구분석
@@ -16,6 +17,8 @@ php/
 web/grid
 
 .gitignore
+bookmarks_21. 2. 10..html
+QR_UIUX.hwp
 *.zip
 *.pptx
 팀뷰어접속번호.txt
@@ -23,5 +26,3 @@ web/grid
 추첨 - 복사본.html
 000-과제확인.html
 빡케어 회원리스트.txt
-QR_UIUX.hwp
-bookmarks_21. 2. 10.html

@@ -1,19 +1,91 @@
 @charset "utf-8";
 /* 현재는 모든 접속장치가 대상이지만 미디어쿼리를 적용한 후에는 wide pc가 주 대상이 될 것입니다. */
-#wrap{
-    width: 1200px;
-    margin: 0 auto;
-    border: 1px solid #000;
+#wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 1200px;
+  margin: 0 auto;
+  border: 1px solid #000;
 }
 
-section{}
+section {
+  height: 150px;
+  color: white;
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 150px;
+  text-align: center;
+}
 
-.box1{background-color: blue;}
+.box1 {
+  order: 100;
+  width: 40%;
+  background-color: blue;
+}
 
-.box2{background-color: red;}
+.box2 {
+  order: 200;
+  width: 60%;
+  background-color: red;
+}
 
-.box3{background-color: green;}
+.box3 {
+  order: 300;
+  width: 33.33333%;
+  background-color: green;
+}
 
-.box4{background-color: yellow;}
+.box4 {
+  order: 400;
+  width: 33.33333%;
+  background-color: yellow;
+}
 
-.box5{background-color: brown;}
+.box5 {
+  order: 500;
+  width: 33.33333%;
+  background-color: brown;
+}
+
+/* 1200px 에 대한 미디어쿼리 구문 - 일반 PC대상 */
+@media screen and (max-width: 1200px) {
+  #wrap {
+    width: 800px;
+  }
+}
+
+/* 992px 에 대한 미디어쿼리 구문 - 태블릿 */
+@media screen and (max-width:992px){
+    #wrap{
+        width: 100%;
+        margin: 0;
+    }
+
+    .box1{width: 50%;}
+
+    .box2{
+        order:30;
+        width: 100%;
+    }
+
+    .box3, .box4{
+        width: 50%;
+    }
+
+    .box5{
+        order:50;
+        width: 50%;
+    }
+}
+
+
+
+/* 640px 에 대한 미디어쿼리 구문 - 스마트폰 */
+@media screen and (max-width:640px){
+    .box1,.box2,.box3,.box4,.box5{width: 100%;}
+
+    .box5{order:150;}
+
+    .box3{order:500;}
+}

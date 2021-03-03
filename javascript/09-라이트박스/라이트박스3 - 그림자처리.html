@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라이트박스 기초-3</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        p{text-align: center;}
+        p>.book{
+            display: inline-block;
+            overflow: hidden;
+            width: 140px;
+            height: 190px;
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .shadow{
+            display: none;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: #000;
+            opacity: 0.75;
+        }
+
+        .lightbox{
+            display: none;
+            position: fixed;
+            left: 50%;
+            top:50%;
+            width: 400px;
+            height: 500px;
+            margin: -250px 0 0 -200px;
+            border: 1px solid #000;
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            const $lightbox = $(".lightbox");
+            
+            $(".book").on('click', function(evt){
+                evt.preventDefault();
+
+                $lightbox.children('img').attr({
+                    src:$(this).attr('href'),
+                    alt:$(this).children('img').attr('alt')
+                });
+
+
+                $(".shadow").show();
+                $lightbox.show();
+            })
+
+
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">라이트박스-이미지확대</h1>
+
+        <p>
+            <a href="./images/big_1.png" class="book"><img src="./images/thumb_1.png" alt="반응형웹퍼블리싱"></a>
+            <a href="./images/big_2.png" class="book"><img src="./images/thumb_2.png" alt="UX/UI 디자인"></a>
+        </p>
+
+        <div class="shadow"></div>
+
+        <div class="lightbox">
+            <img />
+        </div>
+    </div>
+
+</body>
+</html>

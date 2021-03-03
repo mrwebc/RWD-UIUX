@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>450-mouseenter와 mouseover의 차이</title>
+    <style>
+        *{margin:0;padding:0;}
+        #wrap{width:800;margin:0 auto;}
+        header>h1{
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        .park{
+            position: relative;
+            width: 410px;
+            height: 300px;
+            margin: 0 auto;
+            background-image: url(images/park.jpg);
+            background-size: cover;
+            border: 1px solid #000;
+        }
+
+        .game{
+            position: absolute;
+            left: 50%;
+            bottom:50px;
+            width: 200px;
+            height: 100px;
+            margin-left: -100px;
+            background-image: url(images/game.jpg);
+            background-size: cover;
+            border: 3px solid #ff0;
+        }
+
+        h2, h3, h4, h5{text-align: center;}
+        hr{margin: 20px 0;}
+
+    </style>    
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            /*
+                mouseenter/mouseleave 와 mouseover/mouseout 이벤트의 차이
+
+                1. 부모 자식 관계가 설정되어 있지 않을 경우는 아무런 차이가 없음.
+                   즉, 같다.
+
+                2. 부모자식 관계가 설정된 경우
+                   1) mouseover/mouseout - 자식에게 발생한 이벤트가 부모에게도 일어남 (이벤트전파 propagation)
+
+                   2) mouseenter/mouseleave - 자식에게 발생한 이벤트가 부모에게 발생하지 않음(이벤트전파 안됨, 각각 독립적)
+            */
+
+            let count_park_in = 0;
+            let count_park_out = 0;
+
+            let count_game_in = 0;
+            let count_game_out = 0;
+
+            //park에 입장했을 때 카운트 변수 1증가
+            $(".park").on("mouseover", function(){
+                count_park_in++;
+                $("h2>span").text(count_park_in);
+            });
+
+            //park에서 퇴장했을 때 카운트 변수 1증가
+            $(".park").on("mouseout", function(){
+                count_park_out++;
+                $("h4>span").text(count_park_out);
+            });
+
+
+            //게임장에 입장했을 때 카운트 변수 1증가
+            $(".game").on("mouseenter", function(){
+                count_game_in++;
+                $("h3>span").text(count_game_in);
+            });
+
+
+            //게임장에서 퇴장했을 때 카운트 변수 1증가
+            $(".game").on("mouseleave", function(){
+                count_game_out++;
+                $("h5>span").text(count_game_out);
+            });
+
+        })
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>놀이동산과 게임파크(입장료 정산횟수)</h1>
+        </header>
+        
+        <section>
+
+            <div class="park">
+                <p class="game"></p>
+            </div>
+
+         
+            <h2>park 입장횟수 : <span>0</span></h2>
+            <h3>game 입장횟수 : <span>0</span></h3>
+
+            <hr />
+            
+            <h4>park 퇴장횟수 : <span>0</span></h4>
+            <h5>game 퇴장횟수 : <span>0</span></h5>
+                
+
+        </section>
+    </div>
+</body>
+</html>
